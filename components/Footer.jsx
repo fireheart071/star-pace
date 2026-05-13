@@ -15,9 +15,9 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-grid">
         <div className="footer-brand">
-          <img src="/favicon.png" alt="Atlas Rent-A-Car Logo" style={{ height: 48, objectFit: 'contain', marginBottom: 16 }} />
+          <img src="/favicon.png" alt="Star Pace Logo" style={{ height: 48, objectFit: 'contain', marginBottom: 16 }} />
           <p>
-            The premium standard for luxury vehicle rentals and private mobility across Ghana.
+            The premium standard for luxury vehicle rentals and elite stays across Ghana.
             Experience unrivaled comfort, safety, and exclusivity.
           </p>
           <div style={{ marginTop: 24, display: 'flex', gap: 12, fontSize: 13, fontWeight: 700 }}>
@@ -33,8 +33,9 @@ export default function Footer() {
           <h5>Quick Links</h5>
           <ul>
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/vehicles">Vehicles</Link></li>
-            <li><Link href="/about">About Atlas</Link></li>
+            <li><Link href="/vehicles">Fleet</Link></li>
+            <li><Link href="/stays">Stays</Link></li>
+            <li><Link href="/about">About Star Pace</Link></li>
             <li><Link href="/gallery">Gallery</Link></li>
             <li><Link href="/contact">Contact</Link></li>
             <li><Link href="/reservations">My Reservations</Link></li>
@@ -90,7 +91,7 @@ export default function Footer() {
         color: 'var(--text-secondary)'
       }}>
         <div style={{ fontSize: 13 }}>
-          © {new Date().getFullYear()} Atlas Rent-A-Car. All Rights Reserved.
+          © {new Date().getFullYear()} Star Pace. All Rights Reserved.
         </div>
 
         <div style={{ display: 'flex', gap: 24, fontSize: 13 }}>

@@ -5,10 +5,10 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { ChevronRight } from 'lucide-react'
 
-const CATEGORIES = ['Business Cars', 'Economic Cars', 'Luxury Cars', 'Premium Cars']
+const CATEGORIES = ['Luxury Stays', 'Premium Stays', 'Premium Cars', 'Luxury Cars', 'Business Cars', 'Economic Cars']
 
 function HeritageShowcase({ items }) {
-  const [activeCategory, setActiveCategory] = useState('Premium Cars')
+  const [activeCategory, setActiveCategory] = useState('Luxury Stays')
   const [activeVehicleId, setActiveVehicleId] = useState(null)
   const [activeImgIdx, setActiveImgIdx] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
@@ -50,7 +50,7 @@ function HeritageShowcase({ items }) {
              fontStyle: 'italic',
              lineHeight: 1.1
            }}>
-             The Atlas <span style={{ color: '#000' }}>Collection.</span>
+             The Pace <span style={{ color: '#000' }}>Collection.</span>
            </h2>
         </div>
 
@@ -325,7 +325,7 @@ export default function Products({ limit, isMobile: propIsMobile }) {
        <div style={{ maxWidth: 1440, margin: '0 auto' }}>
           {limit && (
             <div style={{ textAlign: 'center', marginBottom: isMobile ? 60 : 100 }}>
-               <div style={{ fontSize: isMobile ? 11 : 13, fontWeight: 800, color: '#DF9738', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 16 }}>The Sovereign Selection</div>
+               <div style={{ fontSize: isMobile ? 11 : 13, fontWeight: 800, color: '#F59E0B', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 16 }}>The Sovereign Selection</div>
                <h2 style={{ 
                  fontSize: isMobile ? 32 : 64, 
                  fontWeight: 400, 
@@ -335,7 +335,7 @@ export default function Products({ limit, isMobile: propIsMobile }) {
                  fontStyle: 'italic',
                  lineHeight: 1.1
                }}>
-                 The Atlas <span style={{ color: '#000' }}>Collection.</span>
+                 The Pace <span style={{ color: '#000' }}>Collection.</span>
                </h2>
             </div>
           )}

@@ -49,10 +49,10 @@ function Counter({ value, duration = 2 }) {
 
 function Statistics() {
   const stats = [
-    { icon: <Heart size={56} strokeWidth={1.5} />, value: '5657', label: 'HAPPY CUSTOMERS' },
-    { icon: <Car size={56} strokeWidth={1.5} />, value: '657', label: 'TOTAL CAR COUNT' },
-    { icon: <Flag size={56} strokeWidth={1.5} />, value: '1.255.657', label: 'TOTAL KM/MIL' },
-    { icon: <MessageCircle size={56} strokeWidth={1.5} />, value: '1255', label: 'CALL CENTER SOLUTIONS' },
+    { icon: <Heart size={56} strokeWidth={1.5} />, value: '5657', label: 'HAPPY GUESTS' },
+    { icon: <Car size={56} strokeWidth={1.5} />, value: '657', label: 'CARS & SUITES' },
+    { icon: <Flag size={56} strokeWidth={1.5} />, value: '1.255.657', label: 'JOURNEYS COMPLETED' },
+    { icon: <MessageCircle size={56} strokeWidth={1.5} />, value: '1255', label: 'CONCIERGE SUPPORTS' },
   ];
 
   return (
@@ -201,7 +201,7 @@ function News({ newsItems, isMobile }) {
       <div style={{ marginBottom: isMobile ? 40 : 64, display: 'flex', alignItems: 'center', gap: isMobile ? 16 : 24 }}>
         <div style={{ width: 4, height: isMobile ? 32 : 40, background: 'var(--accent-gold)' }} />
         <div>
-           <div style={{ fontSize: isMobile ? 9 : 11, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 4 }}>The Atlas Journal</div>
+           <div style={{ fontSize: isMobile ? 9 : 11, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 4 }}>The Pace Journal</div>
            <h2 style={{ fontSize: isMobile ? 32 : 48, fontWeight: 900, color: 'var(--accent)', margin: 0, letterSpacing: '-0.02em', lineHeight: 1.1 }}>Latest Insights</h2>
         </div>
       </div>
@@ -250,7 +250,7 @@ function News({ newsItems, isMobile }) {
                 </div>
               )}
               <div style={{ flex: 1 }}>
-                 <div style={{ fontSize: isMobile ? 8 : 9, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 4 }}>{n.category || 'Journal'}</div>
+                 <div style={{ fontSize: isMobile ? 8 : 9, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 4 }}>{n.category || 'Pace'}</div>
                  <h3 style={{ 
                    fontSize: isMobile ? 14 : 16, 
                    fontWeight: 800, 

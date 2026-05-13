@@ -30,7 +30,7 @@
 }
 
 :root {
-  /* Elegant Blue, Black, and White Theme */
+  /* Star Pace — Indigo & Electric Gold Theme */
   
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
@@ -41,15 +41,15 @@
   --text-muted: #94a3b8;
   --text-inverse: #ffffff;
   
-  --accent: #24276F;
-  --accent-hover: #1b1e5a;
-  --accent-gold: #DF9738;
-  --accent-gold-hover: #c9822a;
+  --accent: #4F46E5; /* Indigo 600 */
+  --accent-hover: #4338CA; /* Indigo 700 */
+  --accent-gold: #F59E0B; /* Amber 500 (Vibrant Gold) */
+  --accent-gold-hover: #D97706; /* Amber 600 */
   
   --border-color: #e2e8f0;
   --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
   --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08);
-  --shadow-glow: 0 10px 30px rgba(223, 151, 56, 0.25);
+  --shadow-glow: 0 10px 30px rgba(79, 70, 229, 0.25);
   
   --glass-bg: rgba(255, 255, 255, 0.85);
   --glass-border: rgba(255, 255, 255, 0.4);

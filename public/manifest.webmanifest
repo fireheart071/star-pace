@@ -1,10 +1,10 @@
 {
-  "name": "Atlas Rent-A-Car",
-  "short_name": "Atlas",
+  "name": "Star Pace",
+  "short_name": "StarPace",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#24276F",
-  "theme_color": "#24276F",
+  "background_color": "#4F46E5",
+  "theme_color": "#4F46E5",
   "icons": [
     {
       "src": "/favicon.png",

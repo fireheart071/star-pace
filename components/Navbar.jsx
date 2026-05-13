@@ -85,7 +85,8 @@ export default function Navbar() {
       <nav style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
         <div className={`links ${open ? 'mobile-open' : ''}`} aria-hidden={!open}>
           <Link href="/" onClick={() => setOpen(false)} className={router.pathname === '/' ? 'active' : ''}>Home</Link>
-          <Link href="/vehicles" onClick={() => setOpen(false)} className={router.pathname === '/vehicles' ? 'active' : ''}>Vehicles</Link>
+          <Link href="/vehicles" onClick={() => setOpen(false)} className={router.pathname === '/vehicles' ? 'active' : ''}>Fleet</Link>
+          <Link href="/stays" onClick={() => setOpen(false)} className={router.pathname === '/stays' ? 'active' : ''}>Stays</Link>
           <Link href="/about" onClick={() => setOpen(false)} className={router.pathname === '/about' ? 'active' : ''}>About</Link>
           <Link href="/gallery" onClick={() => setOpen(false)} className={router.pathname === '/gallery' ? 'active' : ''}>Gallery</Link>
           <Link href="/blog" onClick={() => setOpen(false)} className={router.pathname === '/blog' ? 'active' : ''}>Blog</Link>

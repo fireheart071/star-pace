@@ -103,7 +103,7 @@ export default function Hero() {
               margin: 0,
             }}
           >
-            Exceptional Service.
+            Elite Stays.
           </motion.h1>
         </div>
 
@@ -122,7 +122,7 @@ export default function Hero() {
             maxWidth: isMobile ? '100%' : 480,
           }}
         >
-          Experience the ultimate in private mobility. Premium vehicles, elite chauffeurs, and 24/7 assistance across Ghana.
+          Discover the future of mobility and hospitality. Luxury vehicles and premium rooms curated for the discerning traveler.
         </motion.p>
 
         {/* Booking panel */}
@@ -306,7 +306,7 @@ export default function Hero() {
               onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              {isMobile ? <Search size={14} /> : 'Find Vehicle'}
+              {isMobile ? <Search size={14} /> : 'Explore Now'}
             </button>
           </div>
         </motion.div>

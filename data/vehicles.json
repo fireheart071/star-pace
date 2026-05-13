@@ -115,5 +115,47 @@
       "transmission": "Automatic",
       "fuelType": "Petrol"
     }
+  },
+  {
+    "id": "skyline-penthouse",
+    "name": "The Skyline Penthouse",
+    "category": "Luxury Stays",
+    "price": "4500",
+    "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=1200",
+    "gallery": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=1200",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "desc": "Panoramic city views with world-class amenities.",
+    "features": ["3 Master Bedrooms", "Private Rooftop Pool", "Personal Chef Available", "High-Speed Starlink", "Smart Home Integration", "24/7 Security"],
+    "status": "active",
+    "specs": {
+      "battery": "3 Bedrooms",
+      "drive": "4 Baths",
+      "seats": "6 Guests",
+      "transmission": "Penthouse",
+      "fuelType": "Wifi Included"
+    }
+  },
+  {
+    "id": "coastal-villa",
+    "name": "Coastal Breeze Villa",
+    "category": "Premium Stays",
+    "price": "3800",
+    "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&q=80&w=1200",
+    "gallery": [
+      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&q=80&w=1200",
+      "https://images.unsplash.com/photo-1475855581690-80accde3ae2b?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "desc": "A serene escape by the ocean.",
+    "features": ["4 Bedrooms", "Direct Beach Access", "Outdoor Infinity Pool", "Garden & BBQ Area", "Daily Housekeeping", "Private Parking"],
+    "status": "active",
+    "specs": {
+      "battery": "4 Bedrooms",
+      "drive": "5 Baths",
+      "seats": "8 Guests",
+      "transmission": "Beachfront",
+      "fuelType": "Breakfast Included"
+    }
   }
 ]

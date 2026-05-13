@@ -18,7 +18,7 @@ export default function AboutPage() {
       role: "Chairperson",
       bio: (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-          <span>Mr. Felix Gyekye chairs the Board of Atlas. He is a chartered accountant and banker by profession. He currently is the Chief Executive Officer(CEO) of the following companies;</span>
+          <span>Mr. Felix Gyekye chairs the Board of Star Pace. He is a chartered accountant and banker by profession. He currently is the Chief Executive Officer(CEO) of the following companies;</span>
           <div style={{ paddingLeft: 12, display: 'flex', flexDirection: 'column', gap: 8 }}>
             {["Cardinal Petroleum", "Petrobay Ghana."].map((item, idx) => (
               <div key={idx} style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
@@ -44,13 +44,13 @@ export default function AboutPage() {
     {
       name: "Mr. Kojo Addae-Mensah",
       role: "Member",
-      bio: `Mr. Addae-Mensah was appointed as a member of the Board of Atlas Rent A Car in 2012. He is a banker by profession. He is currently the CEO of databank. He was the Chief Operating Officer (COO) at Ghana Commercial Bank ltd. He was appointed the COO in January 2012. Before his appointment he had worked diligently as the Chief Operating Officer at Barclays Bank Ghana Ltd from January 2009 to January 2012. Prior to Barclays Bank Ghana as the COO, he worked with Standard Chartered Bank in several capacities. He went to the University of Ghana, Legon. He serves on the Board of Atlas, Changing life's Endowment Fund, and Databank Balance Fund.`,
+      bio: `Mr. Addae-Mensah was appointed as a member of the Board of Star Pace Rent A Car in 2012. He is a banker by profession. He is currently the CEO of databank. He was the Chief Operating Officer (COO) at Ghana Commercial Bank ltd. He was appointed the COO in January 2012. Before his appointment he had worked diligently as the Chief Operating Officer at Barclays Bank Ghana Ltd from January 2009 to January 2012. Prior to Barclays Bank Ghana as the COO, he worked with Standard Chartered Bank in several capacities. He went to the University of Ghana, Legon. He serves on the Board of Star Pace, Changing life's Endowment Fund, and Databank Balance Fund.`,
       icon: <Award size={24} />
     },
     {
       name: "Mr. Kenerick Akwasi Marfo",
       role: "A.G. Managing",
-      bio: `Mr. Akwasi holds B.Sc. Degree in Biochemistry from the Kwame Nkrumah University Science and Technology, and Entrepreneurial Management Certificate from EMPRETEC. He has over ten years working experience in the transport service business, having founded Atlas-Rent-A-Car in 2003. Akwasi manages staff strength of 36 and has a hands-on approach to managing the company. He is also a director of Optimal Microfinance Ltd,a bank of Ghana licensed microfinance company.`,
+      bio: `Mr. Akwasi holds B.Sc. Degree in Biochemistry from the Kwame Nkrumah University Science and Technology, and Entrepreneurial Management Certificate from EMPRETEC. He has over ten years working experience in the transport service business, having founded Star Pace-Rent-A-Car in 2003. Akwasi manages staff strength of 36 and has a hands-on approach to managing the company. He is also a director of Optimal Microfinance Ltd,a bank of Ghana licensed microfinance company.`,
       icon: <GraduationCap size={24} />
     },
     {
@@ -203,7 +203,7 @@ export default function AboutPage() {
             transition={{ duration: 1, delay: 0.8 }}
             style={{ fontSize: isMobile ? 14 : 20, lineHeight: 1.6, color: 'rgba(255,255,255,0.7)', maxWidth: 650, margin: '0 auto' }}
           >
-            Atlas Rent-a-Car is your trusted mobility partner in Dansoman. We provide reliable, high-end services tailored to your unique travel needs.
+            Star Pace Rent-a-Car is your trusted mobility partner in Dansoman. We provide reliable, high-end services tailored to your unique travel needs.
           </motion.p>
         </motion.div>
       </section>
@@ -239,7 +239,7 @@ export default function AboutPage() {
                 display: 'block',
                 marginBottom: 20
               }}>
-                The Atlas Advantage
+                The Star Pace Advantage
               </span>
               <h2 style={{
                 fontFamily: "'Playfair Display', serif",
@@ -251,7 +251,7 @@ export default function AboutPage() {
                 letterSpacing: '-0.02em'
               }}>
                 Why Choose <br />
-                <span style={{ color: 'var(--accent-gold)' }}>The Atlas Experience</span>?
+                <span style={{ color: 'var(--accent-gold)' }}>The Star Pace Experience</span>?
               </h2>
               <p style={{
                 fontSize: 18,
@@ -409,7 +409,7 @@ export default function AboutPage() {
           `}</style>
       </section>
 
-      {/* New Section: The Atlas Narrative */}
+      {/* New Section: The Star Pace Narrative */}
       <section style={{ position: 'relative', padding: isMobile ? '60px 24px' : '120px 64px', background: '#fff', overflow: 'hidden' }}>
         {/* Background Watermark */}
         {!isMobile && (
@@ -425,7 +425,7 @@ export default function AboutPage() {
             whiteSpace: 'nowrap',
             fontFamily: 'Inter'
           }}>
-            ATLAS
+            STAR PACE
           </div>
         )}
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
@@ -437,7 +437,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div style={{ fontSize: 12, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 24 }}>The Atlas Narrative</div>
+              <div style={{ fontSize: 12, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 24 }}>The Star Pace Narrative</div>
               <h2 style={{ fontSize: isMobile ? 32 : 54, fontWeight: 900, color: 'var(--accent)', marginBottom: isMobile ? 32 : 48, lineHeight: 1.1 }}>
                 Over Two Decades of <br />
                 <span style={{ color: 'var(--accent-gold)' }}>Pioneering</span> Mobility
@@ -452,13 +452,13 @@ export default function AboutPage() {
 
               <div style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.8, display: 'flex', flexDirection: 'column', gap: 24 }}>
                 <p>
-                  Atlas Rent-A-Car began operations in 2003 with a team of experienced staff and a fleet of four vehicles. Over nearly 22 years, the company has focused on a vision of becoming a leading light in Ghana's car rental industry by treating the customer as king.
+                  Star Pace Rent-A-Car began operations in 2003 with a team of experienced staff and a fleet of four vehicles. Over nearly 22 years, the company has focused on a vision of becoming a leading light in Ghana's car rental industry by treating the customer as king.
                 </p>
                 <p>
                   Their operational success is highlighted by long-term partnerships with <strong>Tullow Ghana Limited</strong> and <strong>Anadarko WTCP Company</strong>, for whom they provide 4X4 and cross-country vehicles to support operations in the Jubilee Fields. The company maintains a strong presence in the oil and gas sector and offers a 24-hour emergency assistance hotline as part of its commitment to quality service.
                 </p>
                 <p>
-                  Strategically, Atlas operates three car ports located close to principal clients to decrease turnaround times and allow for the rapid replacement of vehicles on short notice. Their specialized fleet includes <strong>Mitsubishi Pajero, Toyota Land Cruiser, and Toyota Prado</strong> models, chosen for their reliability and off-road capabilities in the diverse terrain of Ghana and the West African sub-region.
+                  Strategically, Star Pace operates three car ports located close to principal clients to decrease turnaround times and allow for the rapid replacement of vehicles on short notice. Their specialized fleet includes <strong>Mitsubishi Pajero, Toyota Land Cruiser, and Toyota Prado</strong> models, chosen for their reliability and off-road capabilities in the diverse terrain of Ghana and the West African sub-region.
                 </p>
                 {isMobile && (
                   <p>
@@ -694,7 +694,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The Atlas Board Section - Timeless Minimalist Design */}
+      {/* The Star Pace Board Section - Timeless Minimalist Design */}
       <section style={{ 
         padding: isMobile ? '80px 24px' : '140px 64px', 
         background: '#fff', 
@@ -737,7 +737,7 @@ export default function AboutPage() {
                 margin: 0,
                 lineHeight: 1
               }}>
-                The Atlas <span style={{ color: 'var(--accent-gold)' }}>Board</span>
+                The Star Pace <span style={{ color: 'var(--accent-gold)' }}>Board</span>
               </h2>
             </motion.div>
 
@@ -1190,7 +1190,7 @@ export default function AboutPage() {
             <div style={{ maxWidth: 800, margin: '0 auto' }}>
               <div style={{ fontSize: 11, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: 16 }}>Third Party Fleet Agreements</div>
               <p style={{ color: '#64748b', fontSize: 15, lineHeight: 1.6, marginBottom: 32 }}>
-                Atlas Rent-A-Car also provides vehicles to the following companies based on professional third-party agreements:
+                Star Pace Rent-A-Car also provides vehicles to the following companies based on professional third-party agreements:
               </p>
 
               <div style={{
