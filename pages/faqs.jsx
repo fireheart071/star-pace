@@ -4,24 +4,32 @@ import Layout from '../components/Layout'
 import { Search, Phone, Mail, ChevronDown, HelpCircle } from 'lucide-react'
 
 const FAQ_DATA = [
-  { q: "What happens if I return the car late?", a: "Late returns may incur additional charges. Please notify us in advance if you need to extend your rental." },
-  { q: "Where can I pick up and drop off the car?", a: "You can pick up and drop off the car at our office or choose a delivery option for an additional fee." },
-  { q: "Can I return the car to a different location?", a: "One-way rentals are available for an additional fee. Contact us for details." },
-  { q: "What types of cars do you offer for rent?", a: "We offer a wide range of vehicles, including sedans, SUVs, vans, and luxury cars. Check our fleet page for details." },
-  { q: "How do I make a reservation?", a: "You can book online through our website, via phone, or in person at our office." },
-  { q: "Can I modify or cancel my reservation?", a: "Yes, you can modify or cancel your reservation online or by contacting our customer service team." },
-  { q: "Is there a minimum rental period?", a: "The minimum rental period is 24 hours. Longer rentals may qualify for discounts." },
-  { q: "Do you offer long-term rentals?", a: "Yes, we offer discounts for long-term rentals. Contact us for more details." },
-  { q: "What is included in the rental price?", a: "The rental price includes the base rate, taxes, and standard insurance. Additional fees may apply for extras like GPS or child seats." },
-  { q: "Are there any hidden fees?", a: "No, all fees are transparent and listed during the booking process." },
-  { q: "What payment methods do you accept?", a: "We accept card payments, Momo and bank transfers." },
-  { q: "Do you offer discounts or promotions?", a: "Yes, we regularly offer discounts and promotions. Check our website or subscribe to our newsletter for updates." },
-  { q: "Can I drive the rental car outside the city or country?", a: "Yes, but additional fees or restrictions may apply. Contact us for details." },
-  { q: "What should I do in case of an accident or breakdown?", a: "In case of an accident or breakdown, contact our emergency hotline immediately. We’ll assist you with the next steps." },
-  { q: "Is there a mileage limit?", a: "Most rentals include unlimited mileage. Check your rental agreement for details." },
-  { q: "Can I drive myself?", a: "Yes, but only with certain cars, other cars require a driver. Contact us for more information." },
-  { q: "How can I contact customer support?", a: "You can reach us by phone, email, or through the contact form on our website. Our support team is available 24/7." },
-  { q: "Can I rent a car for a special event?", a: "Yes, we offer special rates for events like weddings, corporate functions, and more. Contact us for details." }
+  // General & Booking
+  { q: "How do I make a reservation for a car or a stay?", a: "You can book directly through our website, or contact our elite concierge team via phone or email for a personalized booking experience." },
+  { q: "What payment methods do you accept?", a: "We accept all major credit/debit cards, Mobile Money (Momo), and bank transfers for your convenience." },
+  { q: "Can I modify or cancel my booking?", a: "Yes, modifications and cancellations are possible. Please refer to your specific booking terms or contact support for assistance with your changes." },
+  { q: "Do you require a security deposit?", a: "A refundable security deposit is required for both vehicle rentals and property stays. This is processed at the time of booking and released upon successful return/check-out." },
+  
+  // Fleet (Car Rentals)
+  { q: "Do you offer self-drive options?", a: "Yes, self-drive is available for select vehicles in our fleet. Other premium vehicles may require a Star Pace certified chauffeur for your safety and comfort." },
+  { q: "What are the requirements for renting a vehicle?", a: "You must be at least 21 years old, possess a valid driver's license, and provide a valid form of identification. International drivers may need an International Driving Permit." },
+  { q: "Do you offer vehicle delivery and pickup?", a: "Yes. We can deliver your vehicle to your home, office, or directly to the airport. Fees may apply depending on the location." },
+  { q: "What is your fuel policy?", a: "Our vehicles are delivered with a full tank of fuel. We ask that they are returned full. A refueling fee applies if the vehicle is returned with less than a full tank." },
+  { q: "Can I drive the car outside of the city or country?", a: "Inter-city travel within Ghana is permitted. However, cross-border travel into neighboring countries requires prior written authorization and additional insurance coverage." },
+  { q: "Can I rent a car for a special event or wedding?", a: "Absolutely. We specialize in luxury event logistics. Contact us for bespoke packages including decorated wedding cars and professional chauffeur service." },
+
+  // Stays (Airbnb/Accommodations)
+  { q: "What are the standard check-in and check-out times?", a: "Standard check-in is at 2:00 PM and check-out is at 11:00 AM. Early check-in or late check-out can be arranged based on availability." },
+  { q: "Are your stays fully furnished and serviced?", a: "Yes, all Star Pace Stays are fully furnished to elite standards and include regular housekeeping, high-speed Wi-Fi, and 24/7 security." },
+  { q: "What is your policy on guests and parties?", a: "Our properties are designed for serene living. While visitors are welcome, large parties and loud events are strictly prohibited to respect the privacy of our neighbors." },
+  { q: "Are pets allowed in your properties?", a: "We love animals, but to maintain the highest hygiene standards for all guests, pets are generally not allowed unless specifically stated for a 'pet-friendly' property." },
+  { q: "Is smoking permitted inside the residences?", a: "All Star Pace Stays are strictly non-smoking. Guests may smoke in designated outdoor areas only." },
+  { q: "Do the properties have backup power and water?", a: "Sustainability and comfort are key. All our properties are equipped with backup generators and water storage systems to ensure an uninterrupted experience." },
+  { q: "Can I book a stay and a car rental together?", a: "Yes, we highly recommend our 'Stay & Drive' packages. Booking both together entitles you to exclusive concierge benefits and a seamless transition from airport to home." },
+  
+  // Support
+  { q: "Do you offer airport meet-and-greet services?", a: "Yes. For our elite clients, we offer a full meet-and-greet service where our chauffeur will meet you at the arrivals hall and assist with your luggage." },
+  { q: "How do I reach the concierge in case of an emergency?", a: "Our elite support team is available 24/7. You can reach us via the emergency hotline provided in your booking confirmation or through our WhatsApp support." }
 ]
 
 function Accordion({ question, answer, isOpen, onClick }) {
