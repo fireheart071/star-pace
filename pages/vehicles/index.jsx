@@ -11,9 +11,9 @@ export default function VehiclesPage() {
     <Layout>
       <div style={{ paddingTop: 100, paddingBottom: 60 }}>
         <section style={{ padding: '40px 24px', textAlign: 'center' }}>
-           <div style={{ fontSize: 13, fontWeight: 800, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 16 }}>Premium Mobility</div>
+           <div style={{ fontSize: 13, fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 16 }}>Premium Mobility</div>
            <h1 style={{ fontSize: 48, fontWeight: 900, color: 'var(--accent)', marginBottom: 24, letterSpacing: '-0.02em' }}>
-             The Pace <span style={{ color: 'var(--accent-gold)' }}>Fleet</span>
+             The Pace <span style={{ color: 'var(--accent)' }}>Fleet</span>
            </h1>
         </section>
         <Products />

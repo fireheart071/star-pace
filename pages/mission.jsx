@@ -48,7 +48,7 @@ export default function MissionPage() {
             </motion.h1>
 
             <motion.p variants={fadeUp} style={{ color: 'var(--muted)', fontSize: isMobile ? 16 : 18, lineHeight: 1.8, marginBottom: 32 }}>
-              We are committed to fully meeting and satisfying our customers' requirements and expectations by providing friendly, reliable, cost-effective, timely, and high-quality rental services across Ghana.
+              Founded on the principles of empathy, elegance, and efficiency, Star Pace is a female-led enterprise dedicated to redefining the hospitality landscape in Ghana. We don't just provide transport; we ensure your journey is safe, serene, and perfectly tailored to your lifestyle.
             </motion.p>
 
             <motion.div variants={fadeUp} style={{ display: 'grid', gap: 20 }}>

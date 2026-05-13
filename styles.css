@@ -30,29 +30,32 @@
 }
 
 :root {
-  /* Star Pace — Indigo & Electric Gold Theme */
+  /* Star Pace — Velvet Estate Theme (Burgundy & Bone) */
   
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-inverse: #000000;
+  --bg-primary: #F9F6F0; /* Warm Bone White */
+  --bg-secondary: #F1EDE4; 
+  --bg-inverse: #7F1D1D;
   
-  --text-primary: #000000;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --text-primary: #1C1C1C; /* Soft Black */
+  --text-secondary: #4A4A4A;
+  --text-muted: #8C8C8C;
   --text-inverse: #ffffff;
   
-  --accent: #4F46E5; /* Indigo 600 */
-  --accent-hover: #4338CA; /* Indigo 700 */
-  --accent-gold: #F59E0B; /* Amber 500 (Vibrant Gold) */
-  --accent-gold-hover: #D97706; /* Amber 600 */
+  --brand-fleet: #7F1D1D; 
+  --brand-stays: #7F1D1D; 
   
-  --border-color: #e2e8f0;
-  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08);
-  --shadow-glow: 0 10px 30px rgba(79, 70, 229, 0.25);
+  --accent: #7F1D1D; /* Deep Burgundy */
+  --accent-hover: #631717; 
+  --accent-gold: #4A4A4A; /* Soft Slate instead of Yellow */
+  --accent-gold-hover: #1C1C1C;
   
-  --glass-bg: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(255, 255, 255, 0.4);
+  --border-color: #E2DDD3;
+  --shadow-sm: 0 4px 20px rgba(127, 29, 29, 0.08);
+  --shadow-lg: 0 12px 40px rgba(127, 29, 29, 0.12);
+  --shadow-glow: 0 10px 30px rgba(127, 29, 29, 0.2);
+  
+  --glass-bg: rgba(249, 246, 240, 0.85);
+  --glass-border: rgba(127, 29, 29, 0.1);
   
   /* Legacy mapping bindings */
   --bg: var(--bg-primary);
@@ -174,11 +177,11 @@ h1, h2, h3, h4 {
 }
 
 .nav .links a.active, .nav .links a:hover {
-  color: var(--accent-gold);
+  color: var(--accent);
 }
 
 .nav .links a.cta {
-  background: var(--accent-gold);
+  background: var(--accent);
   color: #fff;
   padding: 12px 28px;
   border-radius: 999px;
@@ -189,8 +192,8 @@ h1, h2, h3, h4 {
 
 .nav .links a.cta:hover {
   transform: translateY(-2px);
-  background: var(--accent-gold-hover);
-  box-shadow: 0 14px 40px rgba(212, 175, 55, 0.4);
+  background: var(--accent-hover);
+  box-shadow: 0 14px 40px rgba(127, 29, 29, 0.4);
 }
 
 .theme-toggle {
@@ -241,7 +244,7 @@ main {
 
 .hero-text-area {
   max-width: 680px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(249, 246, 240, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 0;

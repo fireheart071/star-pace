@@ -35,16 +35,16 @@ function HeritageShowcase({ items }) {
   const gallery = current?.gallery?.length > 0 ? current.gallery : [current?.image]
 
   return (
-    <section className="collection-showcase" style={{ background: '#fff', padding: isMobile ? '64px 0' : '160px 0' }}>
+    <section className="collection-showcase" style={{ background: 'var(--bg-primary)', padding: isMobile ? '64px 0' : '160px 0' }}>
       <div style={{ maxWidth: 1440, margin: '0 auto', padding: isMobile ? '0 20px' : '0 48px' }}>
         
         {/* Heritage Header */}
         <div style={{ textAlign: 'center', marginBottom: isMobile ? 60 : 100 }}>
-           <div style={{ fontSize: isMobile ? 11 : 13, fontWeight: 800, color: '#DF9738', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 16 }}>The Sovereign Selection</div>
+           <div style={{ fontSize: isMobile ? 11 : 13, fontWeight: 800, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 16 }}>The Sovereign Selection</div>
            <h2 style={{ 
              fontSize: isMobile ? 32 : 64, 
              fontWeight: 400, 
-             color: '#24276F', 
+             color: 'var(--accent)', 
              fontFamily: 'serif', 
              letterSpacing: '-0.02em',
              fontStyle: 'italic',
@@ -60,7 +60,7 @@ function HeritageShowcase({ items }) {
           justifyContent: isMobile ? 'flex-start' : 'center',
           gap: isMobile ? 32 : 60,
           marginBottom: isMobile ? 40 : 100,
-          borderBottom: '1px solid #f1f5f9',
+          borderBottom: '1px solid var(--border-color)',
           overflowX: isMobile ? 'auto' : 'visible',
           whiteSpace: 'nowrap',
           paddingBottom: isMobile ? 8 : 0
@@ -70,14 +70,14 @@ function HeritageShowcase({ items }) {
               key={cat} onClick={() => setActiveCategory(cat)}
               style={{
                 padding: isMobile ? '16px 0' : '24px 0', background: 'none', border: 'none', cursor: 'pointer',
-                color: activeCategory === cat ? '#24276F' : '#cbd5e1',
+                color: activeCategory === cat ? 'var(--accent)' : '#cbd5e1',
                 fontSize: 13, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.15em',
                 transition: 'all 0.4s ease', position: 'relative',
                 flexShrink: 0
               }}
             >
               {cat}
-              {activeCategory === cat && <div style={{ position: 'absolute', bottom: -1, left: '50%', transform: 'translateX(-50%)', width: 40, height: 1, background: '#DF9738' }} />}
+              {activeCategory === cat && <div style={{ position: 'absolute', bottom: -1, left: '50%', transform: 'translateX(-50%)', width: 40, height: 1, background: 'var(--accent-gold)' }} />}
             </button>
           ))}
         </div>
@@ -101,7 +101,7 @@ function HeritageShowcase({ items }) {
                 maxHeight: '400px', 
                 overflowY: 'auto',
                 paddingRight: '12px',
-                borderRight: '1px solid #f8fafc'
+                borderRight: '1px solid var(--border-color)'
               }}
             >
               {categoryItems.map(item => (
@@ -109,7 +109,7 @@ function HeritageShowcase({ items }) {
                   key={item.id} onClick={() => setActiveVehicleId(item.id)}
                   style={{
                     textAlign: 'left', padding: '12px 0', cursor: 'pointer', border: 'none', background: 'none',
-                    color: activeVehicleId === item.id ? '#24276f' : '#cbd5e1',
+                    color: activeVehicleId === item.id ? 'var(--accent)' : '#cbd5e1',
                     fontSize: 14, fontWeight: 700,
                     transition: 'all 0.3s',
                     display: 'flex', alignItems: 'center', gap: 16
@@ -118,7 +118,7 @@ function HeritageShowcase({ items }) {
                   <div style={{ 
                     width: 6, height: 6, 
                     transform: 'rotate(45deg)', 
-                    background: activeVehicleId === item.id ? '#df9738' : 'transparent', 
+                    background: activeVehicleId === item.id ? 'var(--accent-gold)' : 'transparent', 
                     transition: '0.4s' 
                   }} />
                   <div style={{ overflow: 'hidden', whiteSpace: 'nowrap', width: '100%' }}>
@@ -143,7 +143,7 @@ function HeritageShowcase({ items }) {
                 gap: 24, 
                 overflowX: 'auto', 
                 paddingBottom: 20,
-                borderBottom: '1px solid #f1f5f9',
+                borderBottom: '1px solid var(--border-color)',
                 marginBottom: 32,
                 width: '100%'
               }}
@@ -153,7 +153,7 @@ function HeritageShowcase({ items }) {
                   key={item.id} onClick={() => setActiveVehicleId(item.id)}
                   style={{
                     padding: '8px 0', cursor: 'pointer', border: 'none', background: 'none',
-                    color: activeVehicleId === item.id ? '#24276f' : '#cbd5e1',
+                    color: activeVehicleId === item.id ? 'var(--accent)' : '#cbd5e1',
                     fontSize: 12, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em',
                     transition: 'all 0.3s',
                     whiteSpace: 'nowrap',
@@ -163,7 +163,7 @@ function HeritageShowcase({ items }) {
                 >
                   {item.name}
                   {activeVehicleId === item.id && (
-                    <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: 2, background: '#df9738' }} />
+                    <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: 2, background: 'var(--accent-gold)' }} />
                   )}
                 </button>
               ))}
@@ -192,7 +192,7 @@ function HeritageShowcase({ items }) {
                     key={i} onClick={() => setActiveImgIdx(i)}
                     style={{ 
                       width: isMobile ? 32 : 50, height: 2, padding: 0, cursor: 'pointer',
-                      border: 'none', background: activeImgIdx === i ? '#DF9738' : '#e2e8f0',
+                      border: 'none', background: activeImgIdx === i ? 'var(--accent-gold)' : '#e2e8f0',
                       transition: '0.6s'
                     }}
                   />
@@ -207,21 +207,21 @@ function HeritageShowcase({ items }) {
                <div style={{ 
                  fontSize: isMobile ? 36 : 56, 
                  fontWeight: 400, 
-                 color: '#24276F', 
+                 color: 'var(--accent)', 
                  fontFamily: 'serif',
                  letterSpacing: '-0.02em',
                  marginBottom: 4
                }}>
-                  <span style={{ fontSize: isMobile ? 20 : 24, verticalAlign: 'top', color: '#DF9738', marginRight: 4 }}>₵</span>
+                  <span style={{ fontSize: isMobile ? 20 : 24, verticalAlign: 'top', color: 'var(--accent-gold)', marginRight: 4 }}>₵</span>
                   {current?.price || current?.rate}
                </div>
                <div style={{ fontSize: 10, fontWeight: 800, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.2em' }}>Daily Sovereign Rate</div>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginBottom: 40, paddingBottom: 32, borderBottom: '1px solid #f8fafc', alignItems: isMobile ? 'center' : 'flex-start' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginBottom: 40, paddingBottom: 32, borderBottom: '1px solid var(--border-color)', alignItems: isMobile ? 'center' : 'flex-start' }}>
               {(current?.features || []).slice(0, 4).map((feat, i) => (
                 <div key={i} style={{ fontSize: 13, fontWeight: 700, color: '#64748b', display: 'flex', alignItems: 'center', gap: 12 }}>
-                   <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#DF9738' }} />
+                   <div style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--accent-gold)' }} />
                    {feat}
                 </div>
               ))}
@@ -229,11 +229,11 @@ function HeritageShowcase({ items }) {
 
             <Link href={`/reservation/${current?.id}`}>
                <button style={{ 
-                 width: '100%', padding: '20px', background: '#24276f', color: '#fff', 
+                 width: '100%', padding: '20px', background: 'var(--accent)', color: '#fff', 
                  border: 'none', borderRadius: 12, fontWeight: 800, fontSize: 13, 
                  textTransform: 'uppercase', letterSpacing: '0.2em', cursor: 'pointer',
                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,
-                 boxShadow: '0 20px 40px rgba(36, 39, 111, 0.1)'
+                 boxShadow: '0 20px 40px rgba(79, 70, 229, 0.1)'
                }}>
                  RESERVE NOW <ChevronRight size={16} />
                </button>
@@ -321,7 +321,7 @@ export default function Products({ limit, isMobile: propIsMobile }) {
     : filteredItems.slice((currentPage - 1) * pageSize, currentPage * pageSize)
 
   return (
-     <section style={{ background: '#fff', padding: limit ? (isMobile ? '40px 16px' : '120px 48px') : (isMobile ? '16px 16px' : '32px 48px') }}>
+     <section style={{ background: 'var(--bg-primary)', padding: limit ? (isMobile ? '40px 16px' : '120px 48px') : (isMobile ? '16px 16px' : '32px 48px') }}>
        <div style={{ maxWidth: 1440, margin: '0 auto' }}>
           {limit && (
             <div style={{ textAlign: 'center', marginBottom: isMobile ? 60 : 100 }}>
@@ -329,7 +329,7 @@ export default function Products({ limit, isMobile: propIsMobile }) {
                <h2 style={{ 
                  fontSize: isMobile ? 32 : 64, 
                  fontWeight: 400, 
-                 color: '#24276F', 
+                 color: 'var(--accent)', 
                  fontFamily: 'serif', 
                  letterSpacing: '-0.02em',
                  fontStyle: 'italic',
@@ -346,7 +346,7 @@ export default function Products({ limit, isMobile: propIsMobile }) {
               justifyContent: 'flex-start',
               gap: 24,
               marginBottom: 24,
-              borderBottom: '1px solid #f1f5f9',
+              borderBottom: '1px solid var(--border-color)',
               overflowX: 'auto',
               whiteSpace: 'nowrap',
               paddingBottom: 8
@@ -358,14 +358,14 @@ export default function Products({ limit, isMobile: propIsMobile }) {
                     key={cat} onClick={() => setActiveCategory(cat)}
                     style={{
                       padding: '16px 0', background: 'none', border: 'none', cursor: 'pointer',
-                      color: activeCategory === cat ? '#24276F' : '#cbd5e1',
+                      color: activeCategory === cat ? 'var(--accent)' : '#cbd5e1',
                       fontSize: 13, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.15em',
                       transition: 'all 0.4s ease', position: 'relative',
                       flexShrink: 0
                     }}
                   >
                     {displayCat === 'All' ? 'Our Fleet' : displayCat}
-                    {activeCategory === cat && <div style={{ position: 'absolute', bottom: -1, left: '50%', transform: 'translateX(-50%)', width: '100%', height: 2, background: '#DF9738' }} />}
+                    {activeCategory === cat && <div style={{ position: 'absolute', bottom: -1, left: '50%', transform: 'translateX(-50%)', width: '100%', height: 2, background: 'var(--accent-gold)' }} />}
                   </button>
                  )
               })}
@@ -384,8 +384,8 @@ export default function Products({ limit, isMobile: propIsMobile }) {
                        width: '100%',
                        padding: '14px 40px 14px 20px',
                        borderRadius: '99px',
-                       border: '1px solid #e2e8f0',
-                       background: '#f8fafc',
+                       border: '1px solid var(--border-color)',
+                       background: 'var(--bg-primary)',
                        fontSize: '14px',
                        fontWeight: '600',
                        outline: 'none',
@@ -415,8 +415,8 @@ export default function Products({ limit, isMobile: propIsMobile }) {
                      width: '100%',
                      padding: '14px 16px 14px 44px',
                      borderRadius: '99px',
-                     border: '1px solid #e2e8f0',
-                     background: '#f8fafc',
+                     border: '1px solid var(--border-color)',
+                     background: 'var(--bg-primary)',
                      fontSize: '14px',
                      fontWeight: '500',
                      outline: 'none',
@@ -442,7 +442,7 @@ export default function Products({ limit, isMobile: propIsMobile }) {
               gap: 8, 
               marginTop: 60,
               paddingTop: 40,
-              borderTop: '1px solid #f1f5f9'
+              borderTop: '1px solid var(--border-color)'
             }}>
               <button
                 onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
@@ -450,9 +450,9 @@ export default function Products({ limit, isMobile: propIsMobile }) {
                 style={{
                   padding: '10px 20px',
                   borderRadius: '12px',
-                  border: '1px solid #e2e8f0',
-                  background: '#fff',
-                  color: currentPage === 1 ? '#cbd5e1' : '#24276f',
+                  border: '1px solid var(--border-color)',
+                  background: 'var(--bg-primary)',
+                  color: currentPage === 1 ? '#cbd5e1' : 'var(--accent)',
                   fontWeight: '700',
                   fontSize: '13px',
                   cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
@@ -477,7 +477,7 @@ export default function Products({ limit, isMobile: propIsMobile }) {
                         height: '40px',
                         borderRadius: '12px',
                         border: 'none',
-                        background: currentPage === pageNum ? '#24276f' : '#f8fafc',
+                        background: currentPage === pageNum ? 'var(--accent)' : '#f8fafc',
                         color: currentPage === pageNum ? '#fff' : '#64748b',
                         fontWeight: '700',
                         fontSize: '13px',
@@ -498,8 +498,8 @@ export default function Products({ limit, isMobile: propIsMobile }) {
                   padding: '10px 20px',
                   borderRadius: '12px',
                   border: '1px solid #e2e8f0',
-                  background: '#fff',
-                  color: currentPage === totalPages ? '#cbd5e1' : '#24276f',
+                  background: 'var(--bg-primary)',
+                  color: currentPage === totalPages ? '#cbd5e1' : 'var(--accent)',
                   fontWeight: '700',
                   fontSize: '13px',
                   cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',

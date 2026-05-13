@@ -129,7 +129,7 @@ function Testimonials({ testimonials, isMobile }) {
           >
             {visibleTestimonials.map((t, idx) => (
               <div key={`${t.name}-${idx}`} style={{ 
-                background: '#fff', 
+                background: 'var(--bg-primary)', 
                 padding: isMobile ? 24 : 32, 
                 borderRadius: 16, 
                 boxShadow: 'var(--shadow-sm)',
@@ -309,7 +309,7 @@ function Awards({ isMobile }) {
   return (
     <section style={{ 
       padding: isMobile ? '80px 24px' : '120px 64px', 
-      backgroundColor: '#fff',
+      backgroundColor: 'var(--bg-primary)',
       color: 'var(--text-primary)',
       position: 'relative',
       overflow: 'hidden'
@@ -321,7 +321,7 @@ function Awards({ isMobile }) {
         left: '10%',
         width: '30%',
         height: '40%',
-        background: 'radial-gradient(circle, rgba(223, 151, 56, 0.05) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(245, 158, 11, 0.05) 0%, transparent 70%)',
         filter: 'blur(60px)',
         zIndex: 0
       }} />
@@ -390,7 +390,7 @@ function Awards({ isMobile }) {
             <div style={{
               position: 'absolute',
               inset: -20,
-              border: '1px solid rgba(223, 151, 56, 0.1)',
+              border: '1px solid rgba(245, 158, 11, 0.1)',
               borderRadius: '50%',
               animation: 'spin 30s linear infinite'
             }} />
@@ -429,13 +429,13 @@ function Awards({ isMobile }) {
               style={{
                 padding: '48px 40px',
                 borderRadius: 32,
-                background: 'var(--bg-secondary)',
+                background: '#fff',
                 border: '1px solid var(--border-color)',
                 transition: '0.4s cubic-bezier(0.16, 1, 0.3, 1)'
               }}
               whileHover={{ 
                 y: -12, 
-                background: '#fff',
+                background: 'var(--bg-primary)',
                 borderColor: 'var(--accent-gold)',
                 boxShadow: '0 30px 60px rgba(0,0,0,0.06)'
               }}
@@ -450,7 +450,7 @@ function Awards({ isMobile }) {
                 justifyContent: 'center',
                 marginBottom: 32,
                 color: '#fff',
-                boxShadow: '0 10px 20px rgba(223, 151, 56, 0.2)'
+                boxShadow: '0 10px 20px rgba(245, 158, 11, 0.2)'
               }}>
                 {award.icon}
               </div>

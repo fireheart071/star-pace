@@ -4,6 +4,8 @@ import CldOptimizedImage from './CldOptimizedImage'
 
 export default function ProductCard({ item }) {
   const router = useRouter()
+  const isStay = item.category?.toLowerCase().includes('stay')
+  const brandColor = isStay ? 'var(--brand-stays)' : 'var(--brand-fleet)'
 
   return (
     <article className="product-card" onClick={() => router.push(`/reservation/${item.id}`)} style={{ cursor: 'pointer' }}>
@@ -17,7 +19,7 @@ export default function ProductCard({ item }) {
       </div>
       
       <div className="product-card-content">
-        <div style={{ fontSize: 10, fontWeight: 800, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: 6 }}>
+        <div style={{ fontSize: 10, fontWeight: 800, color: brandColor, textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: 6 }}>
           {item.category ? item.category.replace(/ cars?/i, '') : 'Luxury'}
         </div>
         <h3>{item.name}</h3>
@@ -44,8 +46,8 @@ export default function ProductCard({ item }) {
           </div>
         </div>
 
-        <button className="btn-outline">
-          Reserve Vehicle
+        <button className="btn-outline" style={{ borderColor: brandColor, color: brandColor }}>
+          {isStay ? 'Reserve Stay' : 'Reserve Vehicle'}
         </button>
       </div>
     </article>

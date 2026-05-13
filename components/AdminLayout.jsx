@@ -62,8 +62,8 @@ export default function AdminLayout({ title, children }) {
       <aside className="admin-sidebar">
         <div className="sidebar-logo-area">
           <Link href="/admin/dashboard" style={{ textDecoration: 'none' }}>
-            <div style={{ fontSize: 16, fontWeight: 900, letterSpacing: '0.1em', color: '#24276F' }}>ATLAS</div>
-            <div style={{ fontSize: 8, fontWeight: 800, letterSpacing: '0.2em', color: '#DF9738', marginTop: 4 }}>ADMINISTRATION</div>
+            <div style={{ fontSize: 16, fontWeight: 900, letterSpacing: '0.1em', color: 'var(--primary)' }}>STAR PACE</div>
+            <div style={{ fontSize: 8, fontWeight: 800, letterSpacing: '0.2em', color: 'var(--primary-gold)', marginTop: 4 }}>ADMINISTRATION</div>
           </Link>
           <button className="mobile-close-btn" onClick={() => setIsSidebarOpen(false)}>
             <X size={20} />
@@ -117,8 +117,8 @@ export default function AdminLayout({ title, children }) {
 
           <div className="header-right">
              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <div style={{ width: 28, height: 28, background: '#F8FAFC', borderRadius: '50%', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 800, color: '#24276F' }}>A</div>
-                <span className="header-user-role" style={{ fontSize: 12, fontWeight: 700, color: '#24276F' }}>Executive</span>
+                <div style={{ width: 28, height: 28, background: 'var(--bg-secondary)', borderRadius: '50%', border: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 800, color: 'var(--primary)' }}>A</div>
+                <span className="header-user-role" style={{ fontSize: 12, fontWeight: 700, color: 'var(--primary)' }}>Executive</span>
              </div>
           </div>
         </header>

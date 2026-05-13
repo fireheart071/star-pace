@@ -2,11 +2,11 @@
 
 :root {
   /* Atlas Brand Colors */
-  --primary: #24276F; /* Navy */
-  --primary-hover: #1b1e5a;
-  --primary-gold: #DF9738; /* Gold */
-  --primary-gold-hover: #c9822a;
-  --primary-bg: rgba(36, 39, 111, 0.08);
+  --primary: #7F1D1D; /* Burgundy 900 */
+  --primary-hover: #631717;
+  --primary-gold: #C5A059; /* Gold */
+  --primary-gold-hover: #B4914F;
+  --primary-bg: rgba(127, 29, 29, 0.08);
   --danger: #FF3B30;
   --success: #34C759;
 
@@ -23,9 +23,9 @@
 .admin-shell {
   --bg-main: #F8FAFC; /* Clean Off-white */
   --bg-card: #FFFFFF;
-  --bg-sidebar: #24276F; /* Deep Navy Sidebar */
-  --header-bg: rgba(255, 255, 255, 0.95);
-  --sidebar-active: rgba(223, 151, 56, 0.15);
+  --bg-sidebar: #450a0a; /* Deep Burgundy Sidebar */
+  --header-bg: rgba(249, 246, 240, 0.95);
+  --sidebar-active: rgba(127, 29, 29, 0.15);
   --text-primary: #0F172A;
   --text-secondary: #475569;
   --text-muted: #94A3B8;
@@ -35,7 +35,7 @@
   --input-bg: #FFFFFF;
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 16px 40px -12px rgba(0, 0, 0, 0.08);
-  --shadow-accent: 0 10px 40px rgba(36, 39, 111, 0.1);
+  --shadow-accent: 0 10px 40px rgba(127, 29, 29, 0.1);
 }
 
 /* Dark Theme Overrides (Optional Toggle) */
@@ -44,7 +44,7 @@
   --bg-card: #151525;
   --bg-sidebar: #080810;
   --header-bg: rgba(11, 11, 20, 0.85);
-  --sidebar-active: rgba(223, 151, 56, 0.1);
+  --sidebar-active: rgba(127, 29, 29, 0.1);
   --text-primary: #FFFFFF;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --text-muted: rgba(255, 255, 255, 0.4);

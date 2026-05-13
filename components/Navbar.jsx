@@ -47,7 +47,7 @@ export default function Navbar() {
         padding: isMobile 
           ? (isTransparent ? '20px 20px' : '14px 20px') 
           : (scrolled ? '12px 24px' : '24px 48px'),
-        background: isTransparent ? 'transparent' : 'rgba(255, 255, 255, 0.95)',
+        background: isTransparent ? 'transparent' : 'rgba(249, 246, 240, 0.9)',
         borderBottomColor: isTransparent ? 'transparent' : 'var(--border-color)',
         backdropFilter: isTransparent ? 'none' : 'blur(16px)',
         WebkitBackdropFilter: isTransparent ? 'none' : 'blur(16px)',
@@ -63,14 +63,14 @@ export default function Navbar() {
           color: #ffffff !important;
         }
         .transparent-nav .links a.active {
-          color: var(--accent-gold) !important;
+          color: var(--accent) !important;
         }
       `}</style>
       <Link href="/" onClick={() => setOpen(false)} style={{ textDecoration: 'none', color: 'inherit', zIndex: 100 }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <img 
             src="/favicon.png" 
-            alt="Atlas Rent-A-Car Logo" 
+            alt="Star Pace Logo" 
             style={{ 
               height: isMobile 
                 ? (scrolled ? 28 : 36) 

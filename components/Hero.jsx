@@ -66,7 +66,7 @@ export default function Hero() {
             backdropFilter: 'blur(8px)',
           }}
         >
-          <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--accent-gold)', display: 'inline-block' }} />
+          <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--brand-stays)', display: 'inline-block' }} />
           <span style={{ fontSize: 10, fontWeight: 800, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.2em' }}>
             Ghana's Finest Fleet
           </span>
@@ -81,7 +81,7 @@ export default function Hero() {
             style={{
               fontSize: isMobile ? 42 : 76,
               fontWeight: 900,
-              color: '#fff',
+              color: 'var(--text-primary)',
               lineHeight: 1.1,
               letterSpacing: '-0.04em',
               margin: 0,
@@ -97,7 +97,7 @@ export default function Hero() {
               fontSize: isMobile ? 42 : 76,
               fontWeight: 900,
               fontStyle: 'italic',
-              color: 'var(--accent-gold)',
+              color: 'var(--accent)',
               lineHeight: 1.1,
               letterSpacing: '-0.04em',
               margin: 0,
@@ -117,7 +117,7 @@ export default function Hero() {
             color: 'rgba(255,255,255,0.7)',
             lineHeight: 1.6,
             marginBottom: isMobile ? 32 : 44,
-            borderLeft: '2px solid var(--accent-gold)',
+            borderLeft: '2px solid var(--brand-stays)',
             paddingLeft: 16,
             maxWidth: isMobile ? '100%' : 480,
           }}
@@ -283,7 +283,7 @@ export default function Hero() {
                 }
               }}
               style={{
-                background: 'var(--accent-gold)',
+                background: 'var(--brand-stays)',
                 color: '#fff',
                 border: 'none',
                 padding: isMobile ? '0' : '18px 32px',
@@ -294,7 +294,7 @@ export default function Hero() {
                 letterSpacing: '0.08em',
                 cursor: 'pointer',
                 transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-                boxShadow: isMobile ? '0 8px 24px rgba(223, 151, 56, 0.4)' : '0 10px 20px rgba(223, 151, 56, 0.3)',
+                boxShadow: isMobile ? '0 8px 24px rgba(127, 29, 29, 0.3)' : '0 10px 20px rgba(127, 29, 29, 0.2)',
                 width: isMobile ? '34px' : 'auto',
                 height: isMobile ? '34px' : 'auto',
                 display: 'flex',

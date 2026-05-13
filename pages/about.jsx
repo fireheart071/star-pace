@@ -14,49 +14,32 @@ export default function AboutPage() {
   
   const boardMembers = [
     {
-      name: "Mr. Felix Gyekye",
-      role: "Chairperson",
+      name: "Ms. Araba Pace",
+      role: "Founder & CEO",
       bio: (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-          <span>Mr. Felix Gyekye chairs the Board of Star Pace. He is a chartered accountant and banker by profession. He currently is the Chief Executive Officer(CEO) of the following companies;</span>
-          <div style={{ paddingLeft: 12, display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {["Cardinal Petroleum", "Petrobay Ghana."].map((item, idx) => (
-              <div key={idx} style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-                <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--accent-gold)', flexShrink: 0 }} />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-          <span>He sits on the following Boards;</span>
-          <div style={{ paddingLeft: 12, display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {["Glory Oil Ltd", "Sage Petroleum", "Quantum Terminal", "Sahel Sahara Bank"].map((item, idx) => (
-              <div key={idx} style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-                <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--accent-gold)', flexShrink: 0 }} />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-          <span>Prior to these, he worked with KPMG as an accountant/auditor and went on to work with Standard Chartered Ghana as the Chief Finance Officer (CFO) and then as Vice President, Standard Chartered USA</span>
+          <span>Araba Pace is the visionary force behind Star Pace. With over 15 years in hospitality and executive logistics, she founded the company to redefine what "premium" means in West Africa—moving beyond just assets to a philosophy of care and precision.</span>
+          <span>Under her leadership, Star Pace has grown from a boutique fleet into a comprehensive hospitality brand, blending luxury mobility with high-end residential stays. She is a recipient of several 'Entrepreneur of the Year' awards and sits on the boards of multiple tech and tourism startups in Ghana.</span>
         </div>
       ),
       icon: <Briefcase size={24} />
     },
     {
-      name: "Mr. Kojo Addae-Mensah",
-      role: "Member",
-      bio: `Mr. Addae-Mensah was appointed as a member of the Board of Star Pace Rent A Car in 2012. He is a banker by profession. He is currently the CEO of databank. He was the Chief Operating Officer (COO) at Ghana Commercial Bank ltd. He was appointed the COO in January 2012. Before his appointment he had worked diligently as the Chief Operating Officer at Barclays Bank Ghana Ltd from January 2009 to January 2012. Prior to Barclays Bank Ghana as the COO, he worked with Standard Chartered Bank in several capacities. He went to the University of Ghana, Legon. He serves on the Board of Star Pace, Changing life's Endowment Fund, and Databank Balance Fund.`,
+      name: "Ms. Ama Serwaa",
+      role: "Chief Operations Officer",
+      bio: `Ama Serwaa joined Star Pace with a background in international aviation and hospitality. She manages the day-to-day operations of the fleet and luxury stays, ensuring that every touchpoint—from the chauffeur's greeting to the room's scent—meets the rigorous Star Pace standards. She is a graduate of the London School of Economics and is passionate about empowering women in the logistics sector.`,
       icon: <Award size={24} />
     },
     {
-      name: "Mr. Kenerick Akwasi Marfo",
-      role: "A.G. Managing",
-      bio: `Mr. Akwasi holds B.Sc. Degree in Biochemistry from the Kwame Nkrumah University Science and Technology, and Entrepreneurial Management Certificate from EMPRETEC. He has over ten years working experience in the transport service business, having founded Star Pace-Rent-A-Car in 2003. Akwasi manages staff strength of 36 and has a hands-on approach to managing the company. He is also a director of Optimal Microfinance Ltd,a bank of Ghana licensed microfinance company.`,
+      name: "Mr. Kofi Owusu",
+      role: "Technology Director",
+      bio: `Kofi oversees the digital infrastructure that makes Star Pace reservations seamless. With a background in Fintech and platform architecture, he ensures that our clients' data is secure and their booking experience is effortless across our global portals.`,
       icon: <GraduationCap size={24} />
     },
     {
-      name: "Mr. Joseph Bernard Ashalley",
-      role: "Secretary",
-      bio: `He is a Lawyer by Profession. He holdsLLB (Hons)) from the University of Buckingham England. He is a seniorassociate at Aelex Legal Practitioners & Arbitrators. He was also a senior associate at Kulendi@Law and also a Legal Assistant to Charles Allotey & Co Solicitors.`,
+      name: "Ms. Akosua Mansa",
+      role: "Strategic Partnerships",
+      bio: `Akosua leads our collaborations with international oil & gas firms and luxury hospitality partners. Her focus is on building long-term value and ensuring that Star Pace remains the preferred partner for diplomatic and corporate missions in Ghana.`,
       icon: <Scale size={24} />
     }
   ]
@@ -95,11 +78,11 @@ export default function AboutPage() {
   )
 
   const initialBenefits = [
-    { col: 'span 4', icon: <Users />, t: "Wide Range of Vehicles", d: "From sleek sedans and spacious SUVs to rugged 4x4s and comfortable minivans." },
-    { col: 'span 2', icon: <Award />, t: "Affordable Pricing", d: "Competitive rates with flexible rental options." },
-    { col: 'span 2', icon: <CheckCircle2 />, t: "Exceptional Service", d: "Ensuring your experience is smooth and enjoyable." },
-    { col: 'span 2', icon: <MapPin />, t: "Convenient Location", d: "Situated in Dansoman, we are easily accessible." },
-    { col: 'span 2', icon: <Shield />, t: "Transparent Policies", d: "No hidden fees—just clear terms." }
+    { col: 'span 4', icon: <Users />, t: "Curation of Comfort", d: "From sleek executive sedans to spacious, homelike suites, our collection is handpicked for your serenity." },
+    { col: 'span 2', icon: <Award />, t: "Value without Compromise", d: "Transparent, hospitable pricing that respects your investment and your journey." },
+    { col: 'span 2', icon: <CheckCircle2 />, t: "Intuitive Care", d: "Our team anticipates your needs, ensuring every stay and ride is a memory of grace." },
+    { col: 'span 2', icon: <MapPin />, t: "Rooted in Hospitality", d: "With deep roots in Ghana, we offer local warmth with global standards." },
+    { col: 'span 2', icon: <Shield />, t: "A Circle of Trust", d: "Your safety and privacy are the foundation of everything we do." }
   ]
 
   const extraBenefits = [
@@ -176,7 +159,7 @@ export default function AboutPage() {
             padding: isMobile ? '80px 24px 40px' : '0'
           }}
         >
-          <div style={{ display: 'inline-block', padding: '8px 20px', background: 'rgba(223, 151, 56, 0.15)', border: '1px solid var(--accent-gold)', borderRadius: 999, marginBottom: 24, fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-gold)' }}>
+          <div style={{ display: 'inline-block', padding: '8px 20px', background: 'rgba(127, 29, 29, 0.2)', border: '1px solid var(--accent)', borderRadius: 999, marginBottom: 24, fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#fff' }}>
             Our Story
           </div>
           <h1 style={{ fontSize: isMobile ? 32 : 85, fontWeight: 900, marginBottom: 16, letterSpacing: '-0.04em', lineHeight: 1.1, color: '#fff' }}>
@@ -186,7 +169,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               style={{ display: 'block' }}
             >
-              Defining <span style={{ color: 'var(--accent-gold)' }}>Excellence</span>
+              Defining <span style={{ color: 'var(--accent)' }}>Excellence</span>
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -203,7 +186,8 @@ export default function AboutPage() {
             transition={{ duration: 1, delay: 0.8 }}
             style={{ fontSize: isMobile ? 14 : 20, lineHeight: 1.6, color: 'rgba(255,255,255,0.7)', maxWidth: 650, margin: '0 auto' }}
           >
-            Star Pace Rent-a-Car is your trusted mobility partner in Dansoman. We provide reliable, high-end services tailored to your unique travel needs.
+            A woman-founded legacy of grace, speed, and uncompromising standards. 
+            We are more than a rental service; we are your hosts in Ghana.
           </motion.p>
         </motion.div>
       </section>
@@ -233,7 +217,7 @@ export default function AboutPage() {
               <span style={{
                 fontSize: 12,
                 fontWeight: 900,
-                color: 'var(--accent-gold)',
+                color: 'var(--accent)',
                 textTransform: 'uppercase',
                 letterSpacing: '0.4em',
                 display: 'block',
@@ -251,7 +235,7 @@ export default function AboutPage() {
                 letterSpacing: '-0.02em'
               }}>
                 Why Choose <br />
-                <span style={{ color: 'var(--accent-gold)' }}>The Star Pace Experience</span>?
+                <span style={{ color: 'var(--accent)' }}>The Star Pace Experience</span>?
               </h2>
               <p style={{
                 fontSize: 18,
@@ -306,7 +290,7 @@ export default function AboutPage() {
                 <div style={{
                   fontSize: 11,
                   fontWeight: 900,
-                  color: 'var(--accent-gold)',
+                  color: 'var(--accent)',
                   textTransform: 'uppercase',
                   letterSpacing: '0.2em',
                   marginBottom: 12
@@ -343,7 +327,7 @@ export default function AboutPage() {
               style={{
                 background: 'rgba(255,255,255,0.03)',
                 border: '1px solid rgba(223, 151, 56, 0.3)',
-                color: 'var(--accent-gold)',
+                color: 'var(--accent)',
                 padding: '16px 48px',
                 borderRadius: 99,
                 fontSize: 13,
@@ -584,7 +568,7 @@ export default function AboutPage() {
               <span style={{
                 fontSize: 12,
                 fontWeight: 900,
-                color: 'var(--accent-gold)',
+                color: 'var(--accent)',
                 textTransform: 'uppercase',
                 letterSpacing: '0.4em',
                 display: 'block',
@@ -661,7 +645,7 @@ export default function AboutPage() {
                 <div style={{
                   fontSize: 11,
                   fontWeight: 900,
-                  color: 'var(--accent-gold)',
+                  color: 'var(--accent)',
                   textTransform: 'uppercase',
                   letterSpacing: '0.2em',
                   marginBottom: 12
@@ -828,7 +812,7 @@ export default function AboutPage() {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      color: 'var(--accent-gold)',
+                      color: 'var(--accent)',
                       boxShadow: '0 10px 20px rgba(223, 151, 56, 0.1)',
                       cursor: 'pointer'
                     }}>

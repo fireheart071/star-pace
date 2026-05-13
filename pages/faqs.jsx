@@ -43,7 +43,7 @@ function Accordion({ question, answer, isOpen, onClick }) {
       >
         <span style={{ fontSize: 16, fontWeight: 700, color: 'var(--accent)', paddingRight: 20 }}>{question}</span>
         <motion.div animate={{ rotate: isOpen ? 180 : 0 }}>
-          <ChevronDown size={20} color="var(--accent-gold)" />
+          <ChevronDown size={20} color="var(--accent)" />
         </motion.div>
       </button>
       <AnimatePresence>
@@ -80,18 +80,18 @@ export default function FAQPage() {
 
   return (
     <Layout>
-      <div style={{ background: '#fff', minHeight: '100vh' }}>
+      <div style={{ background: 'var(--bg-primary)', minHeight: '100vh' }}>
         
         {/* Header Section */}
-        <section style={{ padding: isMobile ? '100px 20px 40px' : '160px 64px 80px', background: '#f8fafc' }}>
+        <section style={{ padding: isMobile ? '100px 20px 40px' : '160px 64px 80px', background: 'var(--bg-secondary)' }}>
           <div style={{ maxWidth: 1200, margin: '0 auto' }}>
             
             <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: 'flex-start', gap: isMobile ? 20 : 40, marginBottom: isMobile ? 32 : 48 }}>
-              <div style={{ width: 4, height: isMobile ? 40 : 80, background: 'var(--accent-gold)' }} />
+              <div style={{ width: 4, height: isMobile ? 40 : 80, background: 'var(--accent)' }} />
               <div>
-                <div style={{ fontSize: isMobile ? 11 : 13, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 12 }}>Atlas Help Center</div>
+                <div style={{ fontSize: isMobile ? 11 : 13, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 12 }}>Star Pace Help Center</div>
                 <h1 style={{ fontSize: isMobile ? 32 : 64, fontWeight: 900, color: 'var(--accent)', letterSpacing: '-0.04em', lineHeight: 1.1 }}>
-                  Frequently Asked <br/> <span style={{ color: 'var(--accent-gold)' }}>Questions</span>.
+                  Frequently Asked <br/> <span style={{ color: 'var(--accent)' }}>Questions</span>.
                 </h1>
               </div>
             </div>
@@ -146,40 +146,58 @@ export default function FAQPage() {
             {/* Support Sidebar */}
             <aside>
                <div style={{ 
-                 background: '#fff', 
-                 padding: isMobile ? '40px 0 0' : '40px 0', 
+                 background: 'var(--bg-primary)', 
+                 padding: isMobile ? '40px 24px' : '48px 32px', 
                  position: isMobile ? 'relative' : 'sticky', 
                  top: 120,
-                 borderTop: '4px solid var(--accent-gold)'
+                 borderRadius: 32,
+                 border: '1px solid var(--border-color)',
+                 boxShadow: 'var(--shadow-sm)',
+                 overflow: 'hidden'
                }}>
-                  <div style={{ fontSize: 10, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 16 }}>Official Support</div>
-                  <h3 style={{ fontSize: isMobile ? 22 : 24, fontWeight: 900, color: 'var(--accent)', marginBottom: 16, letterSpacing: '-0.02em' }}>Need Personal Assistance?</h3>
-                  <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.7, marginBottom: 32, borderLeft: '2px solid #f1f5f9', paddingLeft: 20 }}>
-                     Contact us if you need help with anything. Our team is standing by.
+                  {/* Decorative Accent */}
+                  <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 6, background: 'var(--accent)' }} />
+
+                  <div style={{ fontSize: 10, fontWeight: 900, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 16 }}>Elite Concierge</div>
+                  <h3 style={{ fontSize: isMobile ? 22 : 28, fontWeight: 900, color: 'var(--accent)', marginBottom: 16, letterSpacing: '-0.03em', lineHeight: 1.2 }}>Personalized Assistance</h3>
+                  <p style={{ fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 40 }}>
+                     At Star Pace, hospitality is our heartbeat. Our concierge team is ready to curate your perfect journey.
                   </p>
                   
-                  <div style={{ display: 'grid', gap: 0 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '20px 0', borderBottom: '1px solid #f1f5f9' }}>
-                      <Phone size={18} color="var(--accent-gold)" />
+                  <div style={{ display: 'grid', gap: 24 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+                      <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'rgba(127, 29, 29, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(127, 29, 29, 0.1)' }}>
+                        <Phone size={18} color="var(--accent)" />
+                      </div>
                       <div>
-                        <div style={{ fontSize: 9, color: '#94a3b8', textTransform: 'uppercase', fontWeight: 900, letterSpacing: '0.1em', marginBottom: 2 }}>Call Us</div>
-                        <div style={{ fontSize: 15, fontWeight: 800, color: 'var(--accent)' }}>+233 30 230 1081</div>
+                        <div style={{ fontSize: 9, color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 900, letterSpacing: '0.12em', marginBottom: 2 }}>Call Us Directly</div>
+                        <a href="tel:+233302301081" style={{ fontSize: 16, fontWeight: 800, color: 'var(--accent)', textDecoration: 'none' }}>+233 30 230 1081</a>
                       </div>
                     </div>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '20px 0' }}>
-                      <Mail size={18} color="var(--accent-gold)" />
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+                      <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'rgba(127, 29, 29, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(127, 29, 29, 0.1)' }}>
+                        <Mail size={18} color="var(--accent)" />
+                      </div>
                       <div>
-                        <div style={{ fontSize: 9, color: '#94a3b8', textTransform: 'uppercase', fontWeight: 900, letterSpacing: '0.1em', marginBottom: 2 }}>Email Support</div>
-                        <div style={{ fontSize: 15, fontWeight: 800, color: 'var(--accent)' }}>contact@atlasrent-a-car.com</div>
+                        <div style={{ fontSize: 9, color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 900, letterSpacing: '0.12em', marginBottom: 2 }}>Digital Inquiry</div>
+                        <a href="mailto:contact@starpaceghana.com" style={{ fontSize: 14, fontWeight: 800, color: 'var(--accent)', textDecoration: 'none' }}>contact@starpaceghana.com</a>
                       </div>
                     </div>
                   </div>
 
-                  <div style={{ marginTop: 32, padding: 24, background: '#f8fafc', borderRadius: 20 }}>
-                    <div style={{ fontSize: 11, fontWeight: 800, color: 'var(--accent)', marginBottom: 8 }}>Available 24/7</div>
-                    <p style={{ fontSize: 13, color: '#64748b', margin: 0, lineHeight: 1.6 }}>Our executive support team is standing by to ensure your journey is seamless.</p>
+                  <div style={{ marginTop: 48, padding: 24, background: 'var(--bg-secondary)', borderRadius: 24, border: '1px solid var(--border-color)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
+                      <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981' }} />
+                      <div style={{ fontSize: 11, fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Available 24/7</div>
+                    </div>
+                    <p style={{ fontSize: 13, color: 'var(--text-secondary)', margin: 0, lineHeight: 1.6 }}>Our executive support team is standing by unconditionally to ensure your journey is seamless.</p>
                   </div>
+
+                  {/* Aesthetic Footer Link */}
+                  <button className="btn-outline" style={{ width: '100%', marginTop: 24, padding: '14px', borderRadius: 16, fontSize: 13, fontWeight: 700 }}>
+                    Inquire Online
+                  </button>
                </div>
             </aside>
 

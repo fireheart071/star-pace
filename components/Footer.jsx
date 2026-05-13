@@ -20,12 +20,9 @@ export default function Footer() {
             The premium standard for luxury vehicle rentals and elite stays across Ghana.
             Experience unrivaled comfort, safety, and exclusivity.
           </p>
-          <div style={{ marginTop: 24, display: 'flex', gap: 12, fontSize: 13, fontWeight: 700 }}>
-            <a href="https://www.google.com/maps/place/Atlas+Rent-A-Car/@5.5585689,-0.2655181,17z" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>Accra</a>
-            <span style={{ color: 'var(--text-secondary)' }}>·</span>
-            <a href="https://www.google.com/maps/place/ATLAS+RENT+A+CAR/@4.8933068,-1.7617523,17z" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>Takoradi</a>
-            <span style={{ color: 'var(--text-secondary)' }}>·</span>
-            <a href="https://www.google.com/maps/place/Atlas+Rent-A-Car/@6.6826469,-1.6038393,17z" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>Kumasi</a>
+          <div style={{ marginTop: 24, fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+            <div style={{ fontWeight: 800, color: '#fff', marginBottom: 4 }}>Headquarters</div>
+            Dansoman Estate, Accra, Ghana
           </div>
         </div>
 
@@ -59,8 +56,8 @@ export default function Footer() {
           </p>
           <div style={{ display: 'grid', gap: 16 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-              <div style={{ padding: '8px', background: 'rgba(223, 151, 56, 0.1)', borderRadius: 8 }}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.19-2.19a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+              <div style={{ padding: '8px', background: 'rgba(127, 29, 29, 0.2)', borderRadius: 8 }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.19-2.19a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                 <a href="tel:+233302301081" style={{ fontSize: 13, fontWeight: 700, color: '#fff', textDecoration: 'none' }}>+233 30 230 1081</a>
@@ -68,10 +65,10 @@ export default function Footer() {
               </div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-              <div style={{ padding: '8px', background: 'rgba(223, 151, 56, 0.1)', borderRadius: 8 }}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+              <div style={{ padding: '8px', background: 'rgba(127, 29, 29, 0.2)', borderRadius: 8 }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
               </div>
-              <a href="mailto:contact@atlasrent-a-car.com" style={{ fontSize: 13, color: '#94a3b8', textDecoration: 'none' }}>contact@atlasrent-a-car.com</a>
+              <a href="mailto:contact@starpaceghana.com" style={{ fontSize: 13, color: '#94a3b8', textDecoration: 'none' }}>contact@starpaceghana.com</a>
             </div>
           </div>
         </div>
@@ -95,13 +92,13 @@ export default function Footer() {
         </div>
 
         <div style={{ display: 'flex', gap: 24, fontSize: 13 }}>
-          <a href="https://www.instagram.com/atlasghana/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Instagram</a>
-          <a href="https://x.com/atlasghana" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Twitter</a>
-          <a href="https://www.facebook.com/AtlasGhana/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Facebook</a>
+          <a href="https://www.instagram.com/starpaceghana/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Instagram</a>
+          <a href="https://x.com/starpaceghana" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Twitter</a>
+          <a href="https://www.facebook.com/starpaceghana/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Facebook</a>
         </div>
 
         <div style={{ fontSize: 13 }}>
-          Designed by <a href="https://skytechghana.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: 600 }}>SkyTech Ghana</a>
+          Designed by <a href="https://skytechghana.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: 600 }}>SkyTech Ghana</a>
         </div>
       </div>
     </footer>
