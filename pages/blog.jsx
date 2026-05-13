@@ -40,7 +40,7 @@ export default function BlogPage() {
     return (
       <Layout>
         <div style={{ padding: '160px 64px', textAlign: 'center' }}>
-          <p style={{ color: '#94a3b8' }}>Accessing Journal Archives...</p>
+          <p style={{ color: 'var(--text-muted)' }}>Curating Your Journal...</p>
         </div>
       </Layout>
     )
@@ -48,137 +48,159 @@ export default function BlogPage() {
 
   return (
     <Layout>
-      <div style={{ background: '#fff', minHeight: '100vh' }}>
+      <div style={{ background: 'var(--bg-primary)', minHeight: '100vh' }}>
         
         {/* Header Section */}
-        <section style={{ padding: isMobile ? '120px 24px 60px' : '160px 64px 80px', background: '#f8fafc' }}>
+        <section style={{ padding: isMobile ? '120px 24px 60px' : '160px 64px 80px', background: 'var(--bg-secondary)' }}>
           <div style={{ maxWidth: 1200, margin: '0 auto' }}>
             <div style={{ display: 'flex', gap: 40, alignItems: 'center' }}>
-               <div style={{ width: 4, height: 80, background: 'var(--accent-gold)' }} />
-               <div>
-                  <div style={{ fontSize: 13, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 16 }}>The Atlas Journal</div>
-                  <h1 style={{ fontSize: isMobile ? 36 : 64, fontWeight: 900, color: 'var(--accent)', letterSpacing: '-0.04em', lineHeight: 1.1, margin: 0 }}>
-                    Architectural <br/> <span style={{ color: 'var(--accent-gold)' }}>Insights.</span>
-                  </h1>
-               </div>
+                <div style={{ width: 4, height: 80, background: 'var(--accent)' }} />
+                <div>
+                   <div style={{ fontSize: 13, fontWeight: 900, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 16 }}>The Star Pace Muse</div>
+                   <h1 style={{ fontSize: isMobile ? 36 : 64, fontWeight: 900, color: 'var(--accent)', letterSpacing: '-0.04em', lineHeight: 1.1, margin: 0 }}>
+                     Refined Travel <br/> <span style={{ color: 'var(--accent)' }}>& Living.</span>
+                   </h1>
+                </div>
             </div>
           </div>
         </section>
 
-        {/* Main Blog Feed */}
-        <section style={{ padding: isMobile ? '60px 24px' : '100px 64px' }}>
-          <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1.8fr 1fr', gap: isMobile ? 60 : 100 }}>
-              
-              {/* Posts Column */}
-              <div style={{ display: 'grid', gap: 100 }}>
-                {filteredPosts.map((post, index) => (
+        {/* Main Blog Feed - Editorial Redesign */}
+        <section style={{ padding: isMobile ? '60px 20px' : '100px 64px' }}>
+          <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+            
+            {/* Minimalist Search & Filter Bar */}
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 80 }}>
+              <div style={{ position: 'relative', width: '100%', maxWidth: 600 }}>
+                 <Search style={{ position: 'absolute', left: 24, top: '50%', transform: 'translateY(-50%)', color: 'var(--accent)', opacity: 0.5 }} size={20} />
+                 <input 
+                   type="text" 
+                   placeholder="Discover stories, travel tips, and fleet news..."
+                   value={search}
+                   onChange={(e) => setSearch(e.target.value)}
+                   style={{ 
+                     width: '100%', 
+                     padding: '20px 24px 20px 64px', 
+                     borderRadius: 99, 
+                     border: '1px solid rgba(127, 29, 29, 0.1)', 
+                     background: 'rgba(127, 29, 29, 0.02)',
+                     outline: 'none', 
+                     fontSize: 16,
+                     color: 'var(--accent)',
+                     fontWeight: 500
+                   }}
+                 />
+              </div>
+            </div>
+
+            {/* The Grid */}
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)', 
+              gap: isMobile ? 40 : 80 
+            }}>
+              {filteredPosts.map((post, index) => {
+                const isFeatured = !isMobile && index === 0;
+                return (
                   <motion.article 
                     key={post.id || index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ duration: 0.8, delay: (index % 2) * 0.2 }}
                     viewport={{ once: true }}
-                    style={{ borderBottom: '1px solid #f1f5f9', paddingBottom: 100 }}
+                    style={{ 
+                      gridColumn: isFeatured ? '1 / span 2' : 'auto',
+                      marginBottom: isMobile ? 0 : 40
+                    }}
                   >
-                    {(post.image || post.img) && (
-                      <Link href={`/blog/${post.slug || post.id}`}>
+                    <Link href={`/blog/${post.slug || post.id}`}>
+                      <div style={{ cursor: 'pointer', group: 'true' }}>
+                        {/* Image Container */}
                         <div style={{ 
-                          height: isMobile ? 250 : 450, 
+                          height: isFeatured ? 600 : (isMobile ? 280 : 450), 
                           borderRadius: 32, 
                           overflow: 'hidden', 
-                          background: '#f1f5f9',
+                          background: 'var(--bg-secondary)',
                           position: 'relative',
-                          cursor: 'pointer'
+                          marginBottom: 32,
+                          boxShadow: '0 20px 40px rgba(0,0,0,0.03)'
                         }}>
-                          <img src={post.image || post.img} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                          <div style={{ position: 'absolute', top: 32, left: 32, padding: '8px 16px', background: 'var(--accent-gold)', color: '#fff', fontSize: 11, fontWeight: 900, textTransform: 'uppercase', borderRadius: 999 }}>
-                            {post.category || 'Article'}
+                          <motion.img 
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 1.2 }}
+                            src={post.image || post.img} 
+                            alt={post.title} 
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                          />
+                          <div style={{ 
+                            position: 'absolute', 
+                            top: 32, 
+                            left: 32, 
+                            padding: '10px 20px', 
+                            background: 'var(--accent)', 
+                            color: '#fff', 
+                            fontSize: 11, 
+                            fontWeight: 900, 
+                            textTransform: 'uppercase', 
+                            borderRadius: 999,
+                            letterSpacing: '0.1em'
+                          }}>
+                            {post.category || 'Lifestyle'}
                           </div>
                         </div>
-                      </Link>
-                    )}
-                    
-                    <div style={{ marginTop: 40 }}>
-                      <div style={{ display: 'flex', gap: 24, marginBottom: 16, color: '#94a3b8', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                         <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}><Calendar size={14} /> {post.date}</span>
-                         <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}><User size={14} /> {post.author}</span>
-                         <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}><MessageSquare size={14} /> {post.comments_count || 0} Comments</span>
-                      </div>
-                      <Link href={`/blog/${post.slug || post.id}`}>
-                        <h2 style={{ fontSize: isMobile ? 28 : 40, fontWeight: 900, color: 'var(--accent)', marginBottom: 20, lineHeight: 1.2, cursor: 'pointer' }}>{post.title}</h2>
-                      </Link>
-                      <div 
-                        style={{ 
-                          fontSize: 18, color: '#64748b', lineHeight: 1.8, marginBottom: 32,
-                          display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden'
-                        }}
-                        dangerouslySetInnerHTML={{ __html: post.excerpt || post.content }}
-                      />
-                      <Link href={`/blog/${post.slug || post.id}`}>
-                        <button style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 14, fontWeight: 800, color: 'var(--accent)', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
-                          Read Continued <ArrowRight size={18} color="var(--accent-gold)" />
-                        </button>
-                      </Link>
-                    </div>
-                  </motion.article>
-                ))}
-              </div>
 
-              {/* Sidebar */}
-              <aside>
-                 <div style={{ position: 'sticky', top: 120, display: 'grid', gap: 60 }}>
-                    
-                    {/* Search */}
-                    <div>
-                      <h4 style={{ fontSize: 14, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 24, color: 'var(--accent)' }}>Search</h4>
-                      <div style={{ position: 'relative' }}>
-                         <Search style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', color: '#94a3b8' }} size={16} />
-                         <input 
-                           type="text" 
-                           placeholder="Type here..."
-                           value={search}
-                           onChange={(e) => setSearch(e.target.value)}
-                           style={{ width: '100%', padding: '14px 16px 14px 44px', borderRadius: 12, border: '1px solid #e2e8f0', outline: 'none', fontSize: 14 }}
-                         />
-                      </div>
-                    </div>
+                        {/* Text Content */}
+                        <div style={{ maxWidth: isFeatured ? 800 : 'none' }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 20, color: 'var(--text-secondary)', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                             <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}><Calendar size={14} color="var(--accent)" /> {post.date}</span>
+                             <span style={{ height: 4, width: 4, borderRadius: '50%', background: 'var(--accent)', opacity: 0.3 }} />
+                             <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}><User size={14} color="var(--accent)" /> {post.author}</span>
+                          </div>
+                          
+                          <h2 style={{ 
+                            fontSize: isFeatured ? (isMobile ? 32 : 56) : (isMobile ? 24 : 36), 
+                            fontWeight: 900, 
+                            color: 'var(--accent)', 
+                            marginBottom: 24, 
+                            lineHeight: 1.1, 
+                            letterSpacing: '-0.02em' 
+                          }}>
+                            {post.title}
+                          </h2>
+                          
+                          <div 
+                            style={{ 
+                              fontSize: isFeatured ? 20 : 18, 
+                              color: 'var(--text-secondary)', 
+                              lineHeight: 1.8, 
+                              marginBottom: 32,
+                              display: '-webkit-box', 
+                              WebkitLineClamp: isFeatured ? 3 : 2, 
+                              WebkitBoxOrient: 'vertical', 
+                              overflow: 'hidden'
+                            }}
+                            dangerouslySetInnerHTML={{ __html: post.excerpt || post.content }}
+                          />
 
-                    {/* Recent Posts List */}
-                    <div>
-                      <h4 style={{ fontSize: 14, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 24, color: 'var(--accent)' }}>Recent Posts</h4>
-                      <div style={{ display: 'grid', gap: 20 }}>
-                        {posts.slice(0, 5).map((p, i) => (
-                          <Link key={i} href={`/blog/${p.slug}`}>
-                            <div style={{ cursor: 'pointer', group: 'true' }}>
-                               <div style={{ fontSize: 14, fontWeight: 800, color: 'var(--accent)', marginBottom: 4, transition: 'color 0.2s' }}>{p.title}</div>
-                               <div style={{ fontSize: 11, color: '#94a3b8', fontWeight: 700, textTransform: 'uppercase' }}>{p.date}</div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Gallery Post Preview */}
-                    {posts.some(p => p.image || p.img) && (
-                      <div>
-                        <h4 style={{ fontSize: 14, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 24, color: 'var(--accent)' }}>Post Gallery</h4>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
-                          {posts.filter(p => p.image || p.img).map((p, i) => (
-                            <Link key={i} href={`/blog/${p.slug || p.id}`}>
-                              <div style={{ paddingTop: '100%', position: 'relative', borderRadius: 12, overflow: 'hidden', cursor: 'pointer', background: '#f1f5f9' }}>
-                                <img src={p.image || p.img} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} alt="Gallery Snapshot" />
-                              </div>
-                            </Link>
-                          ))}
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 14, fontWeight: 900, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                            Read the Story <ArrowRight size={18} />
+                          </div>
                         </div>
                       </div>
-                    )}
-
-                 </div>
-              </aside>
-
+                    </Link>
+                  </motion.article>
+                );
+              })}
             </div>
+
+            {filteredPosts.length === 0 && (
+              <div style={{ textAlign: 'center', padding: '100px 0' }}>
+                <div style={{ fontSize: 48, marginBottom: 20 }}>✧</div>
+                <h3 style={{ fontSize: 24, fontWeight: 900, color: 'var(--accent)' }}>No stories found in the collection.</h3>
+                <p style={{ color: 'var(--text-secondary)' }}>Try refining your search terms.</p>
+              </div>
+            )}
+
           </div>
         </section>
 

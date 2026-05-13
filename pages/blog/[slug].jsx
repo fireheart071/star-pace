@@ -125,7 +125,7 @@ export default function ArticlePage({ post: initialPost }) {
           <p style={{ color: '#94a3b8', marginTop: 16 }}>The content your are looking for may have been archived.</p>
           <Link href="/blog">
             <button style={{ marginTop: 24, padding: '12px 32px', background: 'var(--accent)', color: '#fff', borderRadius: 999, border: 'none', fontWeight: 700, cursor: 'pointer' }}>
-              Back to Journal
+              Back to The Muse
             </button>
           </Link>
         </div>
@@ -134,7 +134,7 @@ export default function ArticlePage({ post: initialPost }) {
   }
 
   // Handle OG Image logic with absolute URL support
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : (process.env.NEXT_PUBLIC_SITE_URL || 'https://atlasrentacar.com');
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : (process.env.NEXT_PUBLIC_SITE_URL || 'https://starpaceghana.com');
   const rawImage = post.image || post.img;
   const ogImage = rawImage 
     ? (rawImage.startsWith('http') ? rawImage : `${siteUrl}${rawImage}`)
@@ -143,7 +143,7 @@ export default function ArticlePage({ post: initialPost }) {
   return (
     <Layout>
       <Head>
-        <title>{`${post.title} | Atlas Rent-A-Car`}</title>
+        <title>{`${post.title} | Star Pace`}</title>
         <meta name="description" content={post.excerpt} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
@@ -156,14 +156,14 @@ export default function ArticlePage({ post: initialPost }) {
       </Head>
 
 
-      <div style={{ background: '#fff', minHeight: '100vh' }}>
+      <div style={{ background: 'var(--bg-primary)', minHeight: '100vh' }}>
 
         {/* Article Header */}
-        <section style={{ padding: isMobile ? '100px 20px 40px' : '160px 64px 80px', background: '#f8fafc' }}>
+        <section style={{ padding: isMobile ? '100px 20px 40px' : '160px 64px 80px', background: 'var(--bg-secondary)' }}>
           <div style={{ maxWidth: 1000, margin: '0 auto' }}>
             <Link href="/blog">
-              <button style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'none', border: 'none', color: 'var(--accent-gold)', fontWeight: 800, cursor: 'pointer', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: isMobile ? 20 : 32 }}>
-                <ArrowLeft size={16} /> Back to Journal
+              <button style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'none', border: 'none', color: 'var(--accent)', fontWeight: 800, cursor: 'pointer', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: isMobile ? 20 : 32 }}>
+                <ArrowLeft size={16} /> Back to The Muse
               </button>
             </Link>
             <h1 style={{ fontSize: isMobile ? 32 : 56, fontWeight: 900, color: 'var(--accent)', letterSpacing: '-0.04em', lineHeight: 1.1, marginBottom: isMobile ? 24 : 32 }}>
@@ -275,15 +275,15 @@ export default function ArticlePage({ post: initialPost }) {
             <aside>
               <div style={{ position: 'relative', top: isMobile ? 0 : 120, display: 'grid', gap: isMobile ? 32 : 48 }}>
                 <div>
-                  <h4 style={{ fontSize: 11, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-gold)', marginBottom: 12 }}>Published By</h4>
+                  <h4 style={{ fontSize: 11, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent)', marginBottom: 12 }}>Published By</h4>
                   <div style={{ fontSize: 15, fontWeight: 800, color: 'var(--accent)' }}>{post.author}</div>
                 </div>
                 <div>
-                  <h4 style={{ fontSize: 11, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-gold)', marginBottom: 12 }}>Category</h4>
+                  <h4 style={{ fontSize: 11, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent)', marginBottom: 12 }}>Category</h4>
                   <div style={{ fontSize: 15, fontWeight: 800, color: 'var(--accent)' }}>{post.category}</div>
                 </div>
                 <div>
-                  <h4 style={{ fontSize: 11, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-gold)', marginBottom: 12 }}>Appreciate</h4>
+                  <h4 style={{ fontSize: 11, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent)', marginBottom: 12 }}>Appreciate</h4>
                   <button 
                     onClick={handleLike}
                     disabled={isLiked}
@@ -304,7 +304,7 @@ export default function ArticlePage({ post: initialPost }) {
                   </button>
                 </div>
                 <div>
-                  <h4 style={{ fontSize: 11, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-gold)', marginBottom: 12 }}>Share This</h4>
+                  <h4 style={{ fontSize: 11, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent)', marginBottom: 12 }}>Share This</h4>
                   <div style={{ display: 'flex', gap: 16 }}>
                     <a href={shareLinks.facebook} target="_blank" rel="noreferrer"><Facebook size={20} style={{ cursor: 'pointer' }} color="var(--accent)" /></a>
                     <a href={shareLinks.twitter} target="_blank" rel="noreferrer"><Twitter size={20} style={{ cursor: 'pointer' }} color="var(--accent)" /></a>
@@ -321,7 +321,7 @@ export default function ArticlePage({ post: initialPost }) {
                   position: 'relative',
                   overflow: 'hidden'
                 }}>
-                  <div style={{ position: 'absolute', top: 0, left: 32, width: 40, height: 4, background: 'var(--accent-gold)' }} />
+                  <div style={{ position: 'absolute', top: 0, left: 32, width: 40, height: 4, background: 'var(--accent)' }} />
                   <h4 style={{
                     fontFamily: "'Playfair Display', serif",
                     fontSize: 22,
