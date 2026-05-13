@@ -16,7 +16,7 @@ export default function VehiclesPage() {
              The Pace <span style={{ color: 'var(--accent)' }}>Fleet</span>
            </h1>
         </section>
-        <Products />
+        <Products endpoint="/api/vehicles" />
       </div>
     </Layout>
   )

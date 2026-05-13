@@ -5,10 +5,12 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { ChevronRight } from 'lucide-react'
 
-const CATEGORIES = ['Luxury Stays', 'Premium Stays', 'Premium Cars', 'Luxury Cars', 'Business Cars', 'Economic Cars']
+const VEHICLE_CATEGORIES = ['Premium Cars', 'Luxury Cars', 'Business Cars', 'Economic Cars']
+const STAY_CATEGORIES = ['Luxury Residences', 'Premium Residences', 'Elite Suites', 'Coastal Villas']
 
-function HeritageShowcase({ items }) {
-  const [activeCategory, setActiveCategory] = useState('Luxury Stays')
+function HeritageShowcase({ items, endpoint }) {
+  const CATEGORIES = endpoint === '/api/residence' ? STAY_CATEGORIES : VEHICLE_CATEGORIES
+  const [activeCategory, setActiveCategory] = useState(CATEGORIES[0])
   const [activeVehicleId, setActiveVehicleId] = useState(null)
   const [activeImgIdx, setActiveImgIdx] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
@@ -20,7 +22,10 @@ function HeritageShowcase({ items }) {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const categoryItems = items.filter(item => item.category === activeCategory)
+  const categoryItems = items.filter(item => {
+    if (activeCategory === 'All') return true
+    return item.category === activeCategory
+  })
   
   useEffect(() => {
     if (categoryItems.length > 0) {
@@ -246,7 +251,9 @@ function HeritageShowcase({ items }) {
   )
 }
 
-export default function Products({ limit, isMobile: propIsMobile }) {
+export default function Products({ limit, isMobile: propIsMobile, endpoint = '/api/vehicles' }) {
+  const isResidence = endpoint === '/api/residence' || endpoint === '/api/stays'
+  const CATEGORIES = isResidence ? STAY_CATEGORIES : VEHICLE_CATEGORIES
   const router = useRouter()
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
@@ -286,7 +293,7 @@ export default function Products({ limit, isMobile: propIsMobile }) {
   }, [propIsMobile])
 
   useEffect(() => {
-    fetch('/api/vehicles')
+    fetch(endpoint)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {
@@ -303,13 +310,9 @@ export default function Products({ limit, isMobile: propIsMobile }) {
     if (activeCategory !== 'All' && i.category !== activeCategory) return false;
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
-      const specs = `
-        ${i.name || ''} 
-        ${i.specs?.seats || '4'} seats 
-        ${i.specs?.transmission || 'Automatic'} 
-        ${i.specs?.fuelType || 'Petrol / EV'} 
-        ${i.range || 'Unlimited km'}
-      `.toLowerCase();
+      const specs = isResidence
+        ? `${i.name || ''} ${i.specs?.bedrooms || '0'} beds ${i.specs?.bathrooms || '0'} baths ${i.specs?.guests || '0'} guests ${i.specs?.type || ''}`.toLowerCase()
+        : `${i.name || ''} ${i.specs?.seats || '4'} seats ${i.specs?.transmission || ''} ${i.specs?.fuelType || ''} ${i.range || ''}`.toLowerCase();
       if (!specs.includes(q)) return false;
     }
     return true;
@@ -364,7 +367,7 @@ export default function Products({ limit, isMobile: propIsMobile }) {
                       flexShrink: 0
                     }}
                   >
-                    {displayCat === 'All' ? 'Our Fleet' : displayCat}
+                    {displayCat === 'All' ? (isResidence ? 'Our Residences' : 'Our Fleet') : displayCat}
                     {activeCategory === cat && <div style={{ position: 'absolute', bottom: -1, left: '50%', transform: 'translateX(-50%)', width: '100%', height: 2, background: 'var(--accent-gold)' }} />}
                   </button>
                  )
@@ -397,7 +400,7 @@ export default function Products({ limit, isMobile: propIsMobile }) {
                    >
                      {['All', ...CATEGORIES].map(cat => (
                        <option key={cat} value={cat}>
-                         {cat === 'All' ? 'Select Category : Our Fleet' : `Category : ${cat.replace(/ cars?/i, '')}`}
+                         {cat === 'All' ? `Select Category : ${isResidence ? 'Our Residences' : 'Our Fleet'}` : `Category : ${cat.replace(/ (cars?|residences?)/i, '')}`}
                        </option>
                      ))}
                    </select>
@@ -408,7 +411,7 @@ export default function Products({ limit, isMobile: propIsMobile }) {
                <div style={{ position: 'relative', width: isMobile ? '100%' : '360px' }}>
                  <input 
                    type="text" 
-                   placeholder="Search models, seats, fuel type..." 
+                   placeholder={isResidence ? "Search residences, beds, baths..." : "Search models, seats, fuel type..."} 
                    value={searchQuery}
                    onChange={(e) => setSearchQuery(e.target.value)}
                    style={{
@@ -516,7 +519,7 @@ export default function Products({ limit, isMobile: propIsMobile }) {
 
           {limit && (
             <div style={{ textAlign: 'center', marginTop: isMobile ? 40 : 60 }}>
-              <Link href="/vehicles">
+              <Link href={isResidence ? "/residence" : "/vehicles"}>
                 <button className="btn-premium">View Full Collection</button>
               </Link>
             </div>

@@ -13,7 +13,8 @@ import {
   Settings,
   Menu,
   X,
-  Image as ImageIcon
+  Image as ImageIcon,
+  Home
 } from 'lucide-react'
 
 export default function AdminLayout({ title, children }) {
@@ -42,6 +43,7 @@ export default function AdminLayout({ title, children }) {
     { href: '/admin/dashboard', label: 'Dashboard', icon: <LayoutDashboard size={20} /> },
     { href: '/admin/orders', label: 'Orders', icon: <ShoppingCart size={20} /> },
     { href: '/admin/vehicles', label: 'Vehicles', icon: <Box size={20} /> },
+    { href: '/admin/residence', label: 'Elite Residences', icon: <Home size={20} /> },
     { href: '/admin/blog', label: 'Editorial Blog', icon: <Newspaper size={20} /> },
     { href: '/admin/testimonials', label: 'Reviews', icon: <MessageSquare size={20} /> },
     { href: '/admin/gallery', label: 'Gallery', icon: <ImageIcon size={20} /> },

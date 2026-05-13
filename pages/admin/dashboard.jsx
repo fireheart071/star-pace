@@ -13,7 +13,8 @@ import {
   Activity,
   Calendar,
   Zap,
-  ChevronRight
+  ChevronRight,
+  Home
 } from 'lucide-react'
 import AdminLayout from '../../components/AdminLayout'
 
@@ -21,8 +22,8 @@ export default function AdminDashboard() {
   const router = useRouter()
   const [loading, setLoading] = React.useState(true)
   const [error, setError] = React.useState('')
-  const [data, setData] = React.useState({ orders: [], vehicles: [], news: [], testimonials: [] })
-  const [counts, setCounts] = React.useState({ orders: 0, vehicles: 0, news: 0, testimonials: 0 })
+  const [data, setData] = React.useState({ orders: [], vehicles: [], stays: [], news: [], testimonials: [] })
+  const [counts, setCounts] = React.useState({ orders: 0, vehicles: 0, stays: 0, news: 0, testimonials: 0 })
 
   React.useEffect(() => {
     const token = typeof window !== 'undefined' ? localStorage.getItem('admin_token') : null
@@ -31,31 +32,34 @@ export default function AdminDashboard() {
     let mounted = true
       ; (async () => {
         try {
-          const [oRes, mRes, nRes, tRes] = await Promise.all([
+          const [oRes, mRes, nRes, tRes, sRes] = await Promise.all([
             fetch('/api/orders', { headers: { Authorization: `Bearer ${token}` } }),
             fetch('/api/vehicles', { headers: { Authorization: `Bearer ${token}` } }),
             fetch('/api/news', { headers: { Authorization: `Bearer ${token}` } }),
-            fetch('/api/testimonials', { headers: { Authorization: `Bearer ${token}` } })
+            fetch('/api/testimonials', { headers: { Authorization: `Bearer ${token}` } }),
+            fetch('/api/residence', { headers: { Authorization: `Bearer ${token}` } })
           ])
 
-          if (oRes.status === 401 || mRes.status === 401 || nRes.status === 401 || tRes.status === 401) {
+          if (oRes.status === 401 || mRes.status === 401 || nRes.status === 401 || tRes.status === 401 || sRes.status === 401) {
             localStorage.removeItem('admin_token')
             router.replace('/admin/login')
             return
           }
 
-          const [o, m, n, t] = await Promise.all([
+          const [o, m, n, t, s] = await Promise.all([
             oRes.ok ? oRes.json() : [],
             mRes.ok ? mRes.json() : [],
             nRes.ok ? nRes.json() : [],
-            tRes.ok ? tRes.json() : []
+            tRes.ok ? tRes.json() : [],
+            sRes.ok ? sRes.json() : []
           ])
           
           if (mounted) {
-            setData({ orders: o, vehicles: m, news: n, testimonials: t })
+            setData({ orders: o, vehicles: m, stays: s, news: n, testimonials: t })
             setCounts({
               orders: Array.isArray(o) ? o.length : 0,
               vehicles: Array.isArray(m) ? m.length : 0,
+              stays: Array.isArray(s) ? s.length : 0,
               news: Array.isArray(n) ? n.length : 0,
               testimonials: Array.isArray(t) ? t.length : 0
             })
@@ -79,6 +83,7 @@ export default function AdminDashboard() {
     },
     { label: 'Total Orders', value: counts.orders, icon: <ShoppingBag size={24} />, color: '#fff', bg: 'var(--primary)', href: '/admin/orders', trend: 'Live Feed' },
     { label: 'Fleet Assets', value: counts.vehicles, icon: <Box size={24} />, color: '#fff', bg: 'var(--primary)', href: '/admin/vehicles', trend: 'In Stock' },
+    { label: 'Residential Assets', value: counts.stays, icon: <Home size={24} />, color: '#fff', bg: 'var(--primary)', href: '/admin/residence', trend: 'In Collection' },
     { label: 'Editorial Dispatches', value: counts.news, icon: <Newspaper size={24} />, color: '#fff', bg: 'var(--primary)', href: '/admin/blog', trend: 'Latest' }
   ]
 

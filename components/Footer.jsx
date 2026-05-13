@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="footer-brand">
           <img src="/favicon.png" alt="Star Pace Logo" style={{ height: 48, objectFit: 'contain', marginBottom: 16 }} />
           <p>
-            The premium standard for luxury vehicle rentals and elite stays across Ghana.
+            The premium standard for luxury vehicle rentals and elite residences across Ghana.
             Experience unrivaled comfort, safety, and exclusivity.
           </p>
           <div style={{ marginTop: 24, fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.6 }}>
@@ -31,7 +31,7 @@ export default function Footer() {
           <ul>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/vehicles">Fleet</Link></li>
-            <li><Link href="/stays">Stays</Link></li>
+            <li><Link href="/residence">Residences</Link></li>
             <li><Link href="/about">About Star Pace</Link></li>
             <li><Link href="/gallery">Gallery</Link></li>
             <li><Link href="/contact">Contact</Link></li>

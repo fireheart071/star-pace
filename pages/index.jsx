@@ -50,7 +50,7 @@ function Counter({ value, duration = 2 }) {
 function Statistics() {
   const stats = [
     { icon: <Heart size={56} strokeWidth={1.5} />, value: '5657', label: 'HAPPY GUESTS' },
-    { icon: <Car size={56} strokeWidth={1.5} />, value: '657', label: 'CARS & SUITES' },
+    { icon: <Car size={56} strokeWidth={1.5} />, value: '657', label: 'CARS & RESIDENCES' },
     { icon: <Flag size={56} strokeWidth={1.5} />, value: '1.255.657', label: 'JOURNEYS COMPLETED' },
     { icon: <MessageCircle size={56} strokeWidth={1.5} />, value: '1255', label: 'CONCIERGE SUPPORTS' },
   ];

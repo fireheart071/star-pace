@@ -8,6 +8,7 @@ import { ArrowRight, ChevronRight, Search } from 'lucide-react'
 export default function Hero() {
   const [isMobile, setIsMobile] = useState(false)
   const router = useRouter()
+  const [searchType, setSearchType] = useState('fleet')
   const [location, setLocation] = useState('')
   const [pickUpDate, setPickUpDate] = useState('')
   const [category, setCategory] = useState('All')
@@ -103,7 +104,7 @@ export default function Hero() {
               margin: 0,
             }}
           >
-            Elite Stays.
+            Elite Residences.
           </motion.h1>
         </div>
 
@@ -122,7 +123,7 @@ export default function Hero() {
             maxWidth: isMobile ? '100%' : 480,
           }}
         >
-          Discover the future of mobility and hospitality. Luxury vehicles and premium rooms curated for the discerning traveler.
+          Discover the future of mobility and hospitality. Luxury vehicles and premium residences curated for the discerning traveler.
         </motion.p>
 
         {/* Booking panel */}
@@ -138,6 +139,33 @@ export default function Hero() {
             zIndex: 10
           }}
         >
+          {/* Search Tabs */}
+          <div style={{ display: 'flex', gap: 32, marginBottom: isMobile ? 12 : 16, paddingLeft: isMobile ? 4 : 8 }}>
+            <button 
+              onClick={() => { setSearchType('fleet'); setCategory('All'); }}
+              style={{
+                background: 'none', border: 'none', padding: '0 0 8px', cursor: 'pointer',
+                fontSize: isMobile ? 10 : 13, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.2em',
+                color: searchType === 'fleet' ? '#fff' : 'rgba(255,255,255,0.4)',
+                borderBottom: searchType === 'fleet' ? '2px solid var(--brand-stays)' : '2px solid transparent',
+                transition: '0.3s'
+              }}
+            >
+              Elite Fleet
+            </button>
+            <button 
+              onClick={() => { setSearchType('residence'); setCategory('All'); }}
+              style={{
+                background: 'none', border: 'none', padding: '0 0 8px', cursor: 'pointer',
+                fontSize: isMobile ? 10 : 13, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.2em',
+                color: searchType === 'residence' ? '#fff' : 'rgba(255,255,255,0.4)',
+                borderBottom: searchType === 'residence' ? '2px solid var(--brand-stays)' : '2px solid transparent',
+                transition: '0.3s'
+              }}
+            >
+              Exclusive Residences
+            </button>
+          </div>
           <div style={{
             display: isMobile ? 'flex' : 'grid',
             flexDirection: isMobile ? 'row' : 'unset',
@@ -249,7 +277,7 @@ export default function Hero() {
                 marginBottom: isMobile ? 2 : 4,
                 whiteSpace: 'nowrap'
               }}>
-                {isMobile ? 'Category' : 'VEHICLE CLASS'}
+                {isMobile ? 'Category' : (searchType === 'fleet' ? 'VEHICLE CLASS' : 'PROPERTY TYPE')}
               </label>
               <select
                 value={category}
@@ -267,19 +295,31 @@ export default function Hero() {
                 }}
               >
                 <option value="All" style={{ color: '#000' }}>{isMobile ? 'All' : 'All Categories'}</option>
-                <option value="Premium Cars" style={{ color: '#000' }}>Premium</option>
-                <option value="Luxury Cars" style={{ color: '#000' }}>Luxury</option>
-                <option value="Business Cars" style={{ color: '#000' }}>Business</option>
-                <option value="Economic Cars" style={{ color: '#000' }}>Economic</option>
+                {searchType === 'fleet' ? (
+                  <>
+                    <option value="Premium Cars" style={{ color: '#000' }}>Premium</option>
+                    <option value="Luxury Cars" style={{ color: '#000' }}>Luxury</option>
+                    <option value="Business Cars" style={{ color: '#000' }}>Business</option>
+                    <option value="Economic Cars" style={{ color: '#000' }}>Economic</option>
+                  </>
+                ) : (
+                  <>
+                    <option value="Luxury Residences" style={{ color: '#000' }}>Luxury Residences</option>
+                    <option value="Premium Residences" style={{ color: '#000' }}>Premium Residences</option>
+                    <option value="Elite Suites" style={{ color: '#000' }}>Elite Suites</option>
+                    <option value="Coastal Villas" style={{ color: '#000' }}>Coastal Villas</option>
+                  </>
+                )}
               </select>
             </div>
 
             <button
               onClick={() => {
+                const path = searchType === 'fleet' ? '/vehicles' : '/residence'
                 if (category && category !== 'All') {
-                  router.push(`/vehicles?category=${encodeURIComponent(category)}`)
+                  router.push(`${path}?category=${encodeURIComponent(category)}`)
                 } else {
-                  router.push('/vehicles')
+                  router.push(path)
                 }
               }}
               style={{
