@@ -25,8 +25,8 @@ export default function GalleryPage() {
   return (
     <div className="gallery-page">
       <Head>
-        <title>Visual Gallery | Atlas Rent-A-Car</title>
-        <meta name="description" content="Explore our premium fleet and corporate events through our visual gallery." />
+        <title>The Collection | Star Pace</title>
+        <meta name="description" content="Explore the Star Pace universe of elite mobility and hospitality through our visual gallery." />
       </Head>
 
       <main style={{ paddingTop: 120 }}>
@@ -37,17 +37,17 @@ export default function GalleryPage() {
               <motion.h1 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 900, color: '#24276F', letterSpacing: '-0.02em', marginBottom: 16 }}
+                style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 900, color: 'var(--accent)', letterSpacing: '-0.02em', marginBottom: 16 }}
               >
-                Our Visual <span style={{ color: '#DF9738' }}>Journey</span>
+                The <span style={{ color: 'var(--accent)' }}>Collection</span>
               </motion.h1>
               <motion.p 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 }}
-                style={{ fontSize: 18, color: '#64748B', maxWidth: 600, lineHeight: 1.6, margin: 0 }}
+                style={{ fontSize: 18, color: 'var(--text-secondary)', maxWidth: 600, lineHeight: 1.6, margin: 0 }}
               >
-                A curated collection of our premium fleet, corporate milestones, and the exceptional experiences we deliver.
+                A curated archive of our elite fleet, bespoke stays, and the refined hospitality we provide across Ghana.
               </motion.p>
             </div>
 
@@ -61,9 +61,9 @@ export default function GalleryPage() {
                     padding: '10px 24px',
                     borderRadius: 100,
                     border: '1px solid',
-                    borderColor: filter === cat ? '#24276F' : '#E2E8F0',
-                    background: filter === cat ? '#24276F' : 'transparent',
-                    color: filter === cat ? '#fff' : '#64748B',
+                    borderColor: filter === cat ? 'var(--accent)' : 'rgba(127, 29, 29, 0.1)',
+                    background: filter === cat ? 'var(--accent)' : 'transparent',
+                    color: filter === cat ? '#fff' : 'var(--text-secondary)',
                     fontSize: 13,
                     fontWeight: 700,
                     cursor: 'pointer',
@@ -82,8 +82,8 @@ export default function GalleryPage() {
           <div style={{ maxWidth: 1400, margin: '0 auto' }}>
             {loading ? (
               <div style={{ textAlign: 'center', padding: '100px 0', color: '#64748B' }}>
-                <div className="spinner" style={{ width: 40, height: 40, border: '3px solid #f3f3f3', borderTop: '3px solid #24276F', borderRadius: '50%', margin: '0 auto 20px', animation: 'spin 1s linear infinite' }} />
-                <p style={{ fontWeight: 700, textTransform: 'uppercase', letterSpacing: 2, fontSize: 12 }}>Loading Gallery...</p>
+                <div className="spinner" style={{ width: 40, height: 40, border: '3px solid #f3f3f3', borderTop: '3px solid var(--accent)', borderRadius: '50%', margin: '0 auto 20px', animation: 'spin 1s linear infinite' }} />
+                <p style={{ fontWeight: 700, textTransform: 'uppercase', letterSpacing: 2, fontSize: 12, color: 'var(--accent)' }}>Curating The Collection...</p>
               </div>
             ) : (
               <motion.div 
@@ -133,8 +133,8 @@ export default function GalleryPage() {
                       className="hover-overlay"
                       >
                         <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
-                          <Tag size={12} color="#DF9738" />
-                          <span style={{ fontSize: 10, fontWeight: 800, color: '#DF9738', textTransform: 'uppercase', letterSpacing: 1 }}>{item.category}</span>
+                          <Tag size={12} color="var(--accent)" />
+                          <span style={{ fontSize: 10, fontWeight: 800, color: '#fff', textTransform: 'uppercase', letterSpacing: 1 }}>{item.category}</span>
                         </div>
                         <h3 style={{ color: '#fff', fontSize: 18, fontWeight: 700, margin: 0 }}>{item.caption}</h3>
                       </div>
@@ -196,7 +196,7 @@ export default function GalleryPage() {
                 style={{ maxWidth: '100%', maxHeight: '80vh', borderRadius: 16, boxShadow: '0 30px 60px -12px rgba(0,0,0,0.5)' }} 
               />
               <div style={{ marginTop: 24, textAlign: 'center' }}>
-                <span style={{ fontSize: 12, fontWeight: 800, color: '#DF9738', textTransform: 'uppercase', letterSpacing: 2 }}>{selected.category}</span>
+                <span style={{ fontSize: 12, fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: 2 }}>{selected.category}</span>
                 <h2 style={{ color: '#fff', fontSize: 24, fontWeight: 700, marginTop: 8 }}>{selected.caption}</h2>
               </div>
             </motion.div>
@@ -206,7 +206,7 @@ export default function GalleryPage() {
 
       <style jsx>{`
         .gallery-page {
-          background: #F8FAFC;
+          background: var(--bg-primary);
           min-height: 100vh;
         }
         .hover-overlay {
