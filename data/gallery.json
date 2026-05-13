@@ -1,0 +1,44 @@
+[
+  {
+    "id": "g-test1",
+    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&h=800&fit=crop",
+    "caption": "Luxury SUV fleet ready for executive transport.",
+    "category": "Fleet",
+    "createdAt": "2026-04-29T10:00:00Z"
+  },
+  {
+    "id": "g-test2",
+    "image": "https://images.unsplash.com/photo-1567627762722-0d99bc308af2?q=80&w=1200&h=800&fit=crop",
+    "caption": "Corporate event logistics at the Accra Financial Centre.",
+    "category": "Events",
+    "createdAt": "2026-04-29T11:00:00Z"
+  },
+  {
+    "id": "g-test3",
+    "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1200&h=800&fit=crop",
+    "caption": "Premium sedan for diplomatic missions.",
+    "category": "Fleet",
+    "createdAt": "2026-04-29T12:00:00Z"
+  },
+  {
+    "id": "g-test4",
+    "image": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=1200&h=800&fit=crop",
+    "caption": "Sports performance vehicles available for weekend rentals.",
+    "category": "Fleet",
+    "createdAt": "2026-04-29T13:00:00Z"
+  },
+  {
+    "id": "g-test5",
+    "image": "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&h=800&fit=crop",
+    "caption": "Our modern office reception in East Legon.",
+    "category": "Office",
+    "createdAt": "2026-04-29T14:00:00Z"
+  },
+  {
+    "id": "g-test6",
+    "image": "https://images.unsplash.com/photo-1469033095444-83988944f2ba?q=80&w=1200&h=800&fit=crop",
+    "caption": "Safari tour group exploring the Mole National Park.",
+    "category": "Tours",
+    "createdAt": "2026-04-29T15:00:00Z"
+  }
+]
