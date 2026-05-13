@@ -54,7 +54,7 @@ export default function AboutPage() {
       zIndex: 1
     }}>
       <div style={{ marginBottom: 32 }}>
-        <div style={{ fontSize: 40, fontWeight: 900, color: 'var(--accent-gold)', marginBottom: 8 }}>2003</div>
+        <div style={{ fontSize: 40, fontWeight: 900, color: 'var(--accent)', marginBottom: 8 }}>2003</div>
         <div style={{ fontSize: 13, fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Founded in Accra</div>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
@@ -64,7 +64,7 @@ export default function AboutPage() {
           { t: "24/7 Hotline", d: "Unwavering commitment to emergency assistance." }
         ].map((item, i) => (
           <div key={i} style={{ display: 'flex', gap: 16 }}>
-            <div style={{ width: 4, background: 'var(--accent-gold)', borderRadius: 2 }} />
+            <div style={{ width: 4, background: 'var(--accent)', borderRadius: 2 }} />
             <div>
               <h4 style={{ fontSize: 14, fontWeight: 800, color: 'var(--accent)', marginBottom: 4 }}>{item.t}</h4>
               <p style={{ fontSize: 13, color: '#64748b', margin: 0 }}>{item.d}</p>
@@ -115,7 +115,7 @@ export default function AboutPage() {
         right: '50%',
         marginLeft: '-50vw',
         marginRight: '-50vw',
-        minHeight: isMobile ? '60vh' : '85vh',
+        minHeight: isMobile ? '50vh' : '65vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -123,12 +123,12 @@ export default function AboutPage() {
         backgroundColor: '#0a0a0c',
         color: '#fff',
         textAlign: 'center',
-        padding: isMobile ? '0' : '100px 64px',
+        padding: isMobile ? '0' : '80px 64px 60px',
         overflow: 'hidden'
       }}>
         {/* background image */}
         <img
-          src="/assets/ab0ut.jpeg"
+          src="/araba_pace_founder_portrait_1778704289401.png"
           alt="Hero"
           style={{
             position: 'absolute',
@@ -137,7 +137,7 @@ export default function AboutPage() {
             height: '100%',
             objectFit: 'cover',
             /* push the image down more so faces are visible behind the heading */
-            objectPosition: 'center center',
+            objectPosition: 'center 20%',
             zIndex: 0,
             display: 'block'
           }}
@@ -145,7 +145,7 @@ export default function AboutPage() {
         <div style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(rgba(10, 10, 12, 0.6), rgba(15, 15, 20, 0.75))',
+          background: 'linear-gradient(rgba(10, 10, 12, 0.4), rgba(15, 15, 20, 0.6))',
           zIndex: 1
         }} />
 
@@ -156,28 +156,28 @@ export default function AboutPage() {
             maxWidth: 800,
             zIndex: 2,
             position: 'relative',
-            padding: isMobile ? '80px 24px 40px' : '0'
+            padding: isMobile ? '120px 24px 30px' : '60px 0 0'
           }}
         >
-          <div style={{ display: 'inline-block', padding: '8px 20px', background: 'rgba(127, 29, 29, 0.2)', border: '1px solid var(--accent)', borderRadius: 999, marginBottom: 24, fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#fff' }}>
+          <div style={{ display: 'inline-block', padding: '6px 16px', background: 'rgba(127, 29, 29, 0.2)', border: '1px solid var(--accent)', borderRadius: 999, marginBottom: 16, fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#fff' }}>
             Our Story
           </div>
-          <h1 style={{ fontSize: isMobile ? 32 : 85, fontWeight: 900, marginBottom: 16, letterSpacing: '-0.04em', lineHeight: 1.1, color: '#fff' }}>
+          <h1 style={{ fontSize: isMobile ? 28 : 64, fontWeight: 900, marginBottom: 12, letterSpacing: '-0.04em', lineHeight: 1.1, color: '#fff' }}>
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               style={{ display: 'block' }}
             >
-              Defining <span style={{ color: 'var(--accent)' }}>Excellence</span>
+              Hospitality <span style={{ color: 'var(--accent)' }}>Redefined</span>
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              style={{ opacity: 0.6, fontSize: isMobile ? 18 : 60, display: 'block', marginTop: 8 }}
+              style={{ opacity: 0.8, fontSize: isMobile ? 16 : 48, display: 'block', marginTop: 4 }}
             >
-              Since Day One
+              by Grace
             </motion.span>
           </h1>
           <motion.p
@@ -268,7 +268,7 @@ export default function AboutPage() {
                 whileHover={{
                   y: -12,
                   background: '#fff',
-                  borderColor: 'var(--accent-gold)',
+                  borderColor: 'var(--accent)',
                   boxShadow: '0 30px 60px rgba(0,0,0,0.06)'
                 }}
               >
@@ -276,13 +276,13 @@ export default function AboutPage() {
                   width: 64,
                   height: 64,
                   borderRadius: 20,
-                  background: 'linear-gradient(135deg, var(--accent-gold), #c9822a)',
+                  background: 'linear-gradient(135deg, var(--accent), #581c1c)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginBottom: 32,
                   color: '#fff',
-                  boxShadow: '0 10px 20px rgba(223, 151, 56, 0.2)'
+                  boxShadow: '0 10px 20px rgba(127, 29, 29, 0.2)'
                 }}>
                   {React.cloneElement(item.icon, { size: 24 })}
                 </div>
@@ -326,7 +326,7 @@ export default function AboutPage() {
               onClick={() => setShowAllBenefits(!showAllBenefits)}
               style={{
                 background: 'rgba(255,255,255,0.03)',
-                border: '1px solid rgba(223, 151, 56, 0.3)',
+                border: '1px solid rgba(127, 29, 29, 0.3)',
                 color: 'var(--accent)',
                 padding: '16px 48px',
                 borderRadius: 99,
@@ -421,10 +421,10 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div style={{ fontSize: 12, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 24 }}>The Star Pace Narrative</div>
+              <div style={{ fontSize: 12, fontWeight: 900, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 24 }}>The Star Pace Narrative</div>
               <h2 style={{ fontSize: isMobile ? 32 : 54, fontWeight: 900, color: 'var(--accent)', marginBottom: isMobile ? 32 : 48, lineHeight: 1.1 }}>
-                Over Two Decades of <br />
-                <span style={{ color: 'var(--accent-gold)' }}>Pioneering</span> Mobility
+                A Visionary Legacy of <br />
+                <span style={{ color: 'var(--accent)' }}>Hospitality</span>
               </h2>
 
               {/* Mobile Only Card Insertion */}
@@ -436,40 +436,23 @@ export default function AboutPage() {
 
               <div style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.8, display: 'flex', flexDirection: 'column', gap: 24 }}>
                 <p>
-                  Star Pace Rent-A-Car began operations in 2003 with a team of experienced staff and a fleet of four vehicles. Over nearly 22 years, the company has focused on a vision of becoming a leading light in Ghana's car rental industry by treating the customer as king.
+                  Star Pace was born from a simple yet profound realization by our founder, Ms. Araba Pace: that true luxury is not just in the vehicle or the suite, but in the peace of mind that comes from being genuinely cared for.
                 </p>
                 <p>
-                  Their operational success is highlighted by long-term partnerships with <strong>Tullow Ghana Limited</strong> and <strong>Anadarko WTCP Company</strong>, for whom they provide 4X4 and cross-country vehicles to support operations in the Jubilee Fields. The company maintains a strong presence in the oil and gas sector and offers a 24-hour emergency assistance hotline as part of its commitment to quality service.
+                  With a legacy spanning over two decades, we have evolved from a boutique fleet in Accra into a comprehensive hospitality ecosystem. We have intentionally moved away from traditional "rent-a-car" mentalities, choosing instead to embrace a philosophy of <strong>"Logistics-as-Hospitality."</strong>
                 </p>
                 <p>
-                  Strategically, Star Pace operates three car ports located close to principal clients to decrease turnaround times and allow for the rapid replacement of vehicles on short notice. Their specialized fleet includes <strong>Mitsubishi Pajero, Toyota Land Cruiser, and Toyota Prado</strong> models, chosen for their reliability and off-road capabilities in the diverse terrain of Ghana and the West African sub-region.
+                  Our collection of elite vehicles and stays is curated for those who value time, safety, and a certain level of grace. Every touchpoint—from the silence of our interiors to the warmth of our welcome—is a testament to our founder's vision of West African excellence.
                 </p>
-                {isMobile && (
-                  <p>
-                    Each vehicle is equipped with safety features such as anti-brake systems, high suspension capacity, and emergency kits including fire extinguishers and first aid supplies. Significant past achievements include being selected in 2008 as the transport provider for the <strong>SPORTFIVE</strong> film crew during the Confederation of African Nations Football tournament.
-                  </p>
-                )}
+                <img 
+                  src="/star_pace_luxury_fleet_estate_1778704315807.png" 
+                  style={{ width: '100%', borderRadius: 24, margin: '20px 0', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }} 
+                  alt="Star Pace Fleet"
+                />
               </div>
             </motion.div>
 
-            {/* Right Column: Milestone Card & Supplementary Narrative (Desktop) */}
-            {!isMobile && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                style={{ position: 'relative', paddingTop: 20 }}
-              >
-                <div style={{ marginBottom: 48 }}>
-                  <MilestoneCard />
-                </div>
-                <div style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.8 }}>
-                  <p>
-                    Each vehicle is equipped with safety features such as anti-brake systems, high suspension capacity, and emergency kits including fire extinguishers and first aid supplies. Significant past achievements include being selected in 2008 as the transport provider for the <strong>SPORTFIVE</strong> film crew during the Confederation of African Nations Football tournament.
-                  </p>
-                </div>
-              </motion.div>
-            )}
+
           </div>
         </div>
       </section>
@@ -497,9 +480,9 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               style={{ order: isMobile ? 2 : 1 }}
             >
-              <div style={{ fontSize: 12, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 24 }}>Our Core Philosophy</div>
+              <div style={{ fontSize: 12, fontWeight: 900, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 24 }}>Our Core Philosophy</div>
               <h2 style={{ fontSize: isMobile ? 32 : 54, fontWeight: 900, color: 'var(--accent)', marginBottom: 32, lineHeight: 1.1 }}>
-                A Commitment to <span style={{ color: 'var(--accent-gold)' }}>Uncompromising</span> Quality
+                A Commitment to <span style={{ color: 'var(--accent)' }}>Uncompromising</span> Quality
               </h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
                 {[
@@ -516,7 +499,7 @@ export default function AboutPage() {
                     style={{ display: 'flex', gap: 20 }}
                   >
                     <div style={{ width: 48, height: 48, borderRadius: 12, background: '#fff', border: '1px solid #f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: '0 10px 20px rgba(0,0,0,0.05)' }}>
-                      <CheckCircle2 size={20} color="var(--accent-gold)" />
+                      <CheckCircle2 size={20} color="var(--accent)" />
                     </div>
                     <div>
                       <h4 style={{ fontSize: 18, fontWeight: 800, color: 'var(--accent)', marginBottom: 8 }}>{v.title}</h4>
@@ -533,9 +516,9 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               style={{ order: isMobile ? 1 : 2, position: 'relative' }}
             >
-              <div style={{ position: 'absolute', top: -30, right: -30, width: 200, height: 200, border: '40px solid rgba(223, 151, 56, 0.05)', borderRadius: '50%', zIndex: 0 }} />
+              <div style={{ position: 'absolute', top: -30, right: -30, width: 200, height: 200, border: '40px solid rgba(127, 29, 29, 0.05)', borderRadius: '50%', zIndex: 0 }} />
               <img
-                src="assets/transparent.jpg"
+                src="/star_pace_elite_stay_hospitality_1778704352552.png"
                 style={{ width: '100%', borderRadius: 32, boxShadow: '0 40px 80px rgba(36, 39, 111, 0.15)', position: 'relative', zIndex: 1 }}
                 alt="Luxury Interior"
               />
@@ -586,7 +569,7 @@ export default function AboutPage() {
                 letterSpacing: '-0.02em'
               }}>
                 The Science of <br />
-                <span style={{ color: 'var(--accent-gold)' }}>Maintenance</span>
+                <span style={{ color: 'var(--accent)' }}>Maintenance</span>
               </h2>
               <p style={{
                 fontSize: 18,
@@ -623,7 +606,7 @@ export default function AboutPage() {
                 whileHover={{
                   y: -12,
                   background: '#fff',
-                  borderColor: 'var(--accent-gold)',
+                  borderColor: 'var(--accent)',
                   boxShadow: '0 30px 60px rgba(0,0,0,0.06)'
                 }}
               >
@@ -631,13 +614,13 @@ export default function AboutPage() {
                   width: 64,
                   height: 64,
                   borderRadius: 20,
-                  background: 'linear-gradient(135deg, var(--accent-gold), #c9822a)',
+                  background: 'linear-gradient(135deg, var(--accent), #581c1c)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginBottom: 32,
                   color: '#fff',
-                  boxShadow: '0 10px 20px rgba(223, 151, 56, 0.2)'
+                  boxShadow: '0 10px 20px rgba(127, 29, 29, 0.2)'
                 }}>
                   {item.icon}
                 </div>
@@ -705,7 +688,7 @@ export default function AboutPage() {
               <span style={{ 
                 fontSize: 11, 
                 fontWeight: 900, 
-                color: 'var(--accent-gold)', 
+                color: 'var(--accent)', 
                 textTransform: 'uppercase', 
                 letterSpacing: '0.4em',
                 display: 'block',
@@ -721,7 +704,7 @@ export default function AboutPage() {
                 margin: 0,
                 lineHeight: 1
               }}>
-                The Star Pace <span style={{ color: 'var(--accent-gold)' }}>Board</span>
+                The Star Pace <span style={{ color: 'var(--accent)' }}>Board</span>
               </h2>
             </motion.div>
 
@@ -753,7 +736,7 @@ export default function AboutPage() {
                     right: 0, 
                     width: '60px', 
                     height: 2, 
-                    background: 'var(--accent-gold)' 
+                    background: 'var(--accent)' 
                   }} />
                 )}
               </div>
@@ -773,7 +756,7 @@ export default function AboutPage() {
                 top: 0, 
                 bottom: 0, 
                 width: 1, 
-                background: 'linear-gradient(to bottom, var(--accent-gold), #f1f5f9)',
+                background: 'linear-gradient(to bottom, var(--accent), #f1f5f9)',
                 originY: 0,
                 zIndex: 1
               }} 
@@ -808,7 +791,7 @@ export default function AboutPage() {
                       height: 64, 
                       borderRadius: '50%', 
                       background: '#fff', 
-                      border: '2px solid var(--accent-gold)',
+                      border: '2px solid var(--accent)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -835,7 +818,7 @@ export default function AboutPage() {
                       <div style={{ 
                         fontSize: 11, 
                         fontWeight: 900, 
-                        color: 'var(--accent-gold)', 
+                        color: 'var(--accent)', 
                         textTransform: 'uppercase', 
                         letterSpacing: '0.2em', 
                         marginBottom: 8 
@@ -899,7 +882,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               style={{ marginBottom: 64 }}
             >
-              <h2 style={{ fontSize: isMobile ? 32 : 48, fontWeight: 900, color: '#1a1b1e', marginBottom: 16 }}>Meet Our <span style={{ color: 'var(--accent-gold)' }}>Leadership</span></h2>
+              <h2 style={{ fontSize: isMobile ? 32 : 48, fontWeight: 900, color: '#1a1b1e', marginBottom: 16 }}>Meet Our <span style={{ color: 'var(--accent)' }}>Leadership</span></h2>
               <p style={{ color: '#64748b', fontSize: 16 }}>The experts ensuring your safe and seamless travel.</p>
             </motion.div>
 
@@ -1056,7 +1039,7 @@ export default function AboutPage() {
                 <h3 style={{ fontSize: isMobile ? 28 : 40, fontWeight: 900, color: '#1a1b1e', marginBottom: 8 }}>{selectedPerson.name}</h3>
                 <div style={{ fontSize: 16, color: '#64748b', marginBottom: 40 }}>{selectedPerson.role}</div>
 
-                <div style={{ height: 1, width: 60, background: 'var(--accent-gold)', marginBottom: 32 }} />
+                <div style={{ height: 1, width: 60, background: 'var(--accent)', marginBottom: 32 }} />
 
                 <p style={{ fontSize: 16, color: '#4b5563', lineHeight: 1.8, margin: 0 }}>
                   {selectedPerson.bio}
@@ -1084,8 +1067,8 @@ export default function AboutPage() {
             }}
           >
             <div style={{ maxWidth: 600 }}>
-              <div style={{ fontSize: 12, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 16 }}>Tailored Services</div>
-              <h2 style={{ fontSize: isMobile ? 32 : 54, fontWeight: 900, color: 'var(--accent)', margin: 0, lineHeight: 1.1 }}>Elevating Every <br /><span style={{ color: 'var(--accent-gold)' }}>Interaction</span></h2>
+              <div style={{ fontSize: 12, fontWeight: 900, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 16 }}>Tailored Services</div>
+              <h2 style={{ fontSize: isMobile ? 32 : 54, fontWeight: 900, color: 'var(--accent)', margin: 0, lineHeight: 1.1 }}>Elevating Every <br /><span style={{ color: 'var(--accent)' }}>Interaction</span></h2>
             </div>
             <p style={{ maxWidth: 400, color: '#64748b', fontSize: 15, lineHeight: 1.8, marginBottom: 8 }}>
               Beyond standard rentals, we curate mobility solutions that align with the pace of your lifestyle and business requirements.
@@ -1125,121 +1108,13 @@ export default function AboutPage() {
         </div>
         <style jsx>{`
               .service-card:hover {
-                 box-shadow: 0 30px 60px rgba(36, 39, 111, 0.08);
-                 border-color: rgba(223, 151, 56, 0.2);
+                 box-shadow: 0 30px 60px rgba(127, 29, 29, 0.08);
+                 border-color: rgba(127, 29, 29, 0.2);
               }
            `}</style>
       </section>
 
-      {/* Strategic Ecosystem & Memberships */}
-      <section style={{ padding: isMobile ? '40px 24px 80px' : '60px 64px 120px', background: '#fff' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          {/* Strategic Partners Section */}
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: 11, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.4em', marginBottom: 24 }}>Our Strategic Ecosystem</div>
-            <h2 style={{ fontSize: isMobile ? 28 : 40, fontWeight: 900, color: 'var(--accent)', marginBottom: 48 }}>Elite Partners & Clients</h2>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: isMobile ? 24 : 48, marginBottom: 80 }}>
-              {[
-                "Ghana Tourism Authority",
-                "Enterprise Insurance",
-                "Shell Ghana",
-                "Kotoka International Airport",
-                "GCRA",
-                "ATLAS",
-                "Various Diplomats",
-                "High Net Worth Individuals"
-              ].map((p, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                  viewport={{ once: true }}
-                  style={{
-                    fontSize: isMobile ? 12 : 14,
-                    fontWeight: 800,
-                    color: 'var(--accent)',
-                    padding: '12px 24px',
-                    background: 'var(--bg-secondary)',
-                    borderRadius: 12,
-                    border: '1px solid var(--border-color)'
-                  }}
-                >
-                  {p}
-                </motion.div>
-              ))}
-            </div>
-
-            <div style={{ maxWidth: 800, margin: '0 auto' }}>
-              <div style={{ fontSize: 11, fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: 16 }}>Third Party Fleet Agreements</div>
-              <p style={{ color: '#64748b', fontSize: 15, lineHeight: 1.6, marginBottom: 32 }}>
-                Star Pace Rent-A-Car also provides vehicles to the following companies based on professional third-party agreements:
-              </p>
-
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: isMobile ? '1fr 1fr' : 'repeat(3, 1fr)',
-                gap: 16,
-                textAlign: 'left'
-              }}>
-                {[
-                  "Pergah Transport",
-                  "Ghana Limited",
-                  "Conship Ghana Ltd",
-                  "Technip",
-                  "1st Star Car Rentals",
-                  "J'S Car Rentals",
-                  "Nageo Car Rentals",
-                  "Worldlink Car Rentals",
-                  "Jobesh Car Rentals",
-                  "Hertz Car Rentals",
-                  "Avis Car Rentals"
-                ].map((c, i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                    <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--accent-gold)' }} />
-                    <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-primary)' }}>{c}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-
-          {/* Memberships & Licensing */}
-          <div style={{
-            marginTop: 100,
-            padding: '40px',
-            background: '#f8fafc',
-            borderRadius: 32,
-            display: 'flex',
-            flexDirection: isMobile ? 'column' : 'row',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: 32
-          }}>
-            <div style={{ maxWidth: isMobile ? '100%' : '50%' }}>
-              <h4 style={{ fontSize: 16, fontWeight: 800, color: 'var(--accent)', marginBottom: 12 }}>Strategic Memberships</h4>
-              <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.6, margin: 0 }}>
-                Our leadership is deeply integrated into the national transport ecosystem, with our CEO serving as the <strong>Vice President of the Ghana Car Rental Association (GCRA)</strong>.
-              </p>
-            </div>
-            <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', justifyContent: 'center' }}>
-              {[
-                { name: "GCRA Member", icon: <Shield size={18} /> },
-                { name: "GTA Licensed", icon: <MapPin size={18} /> },
-                { name: "ISO Standards", icon: <Award size={18} /> }
-              ].map((m, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 24px', background: '#fff', borderRadius: 16, border: '1px solid #e2e8f0' }}>
-                  <div style={{ color: 'var(--accent-gold)' }}>{m.icon}</div>
-                  <span style={{ fontSize: 13, fontWeight: 700, color: '#1a1b1e' }}>{m.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-      </section>
     </div>
   )
 }
