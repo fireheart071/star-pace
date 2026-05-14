@@ -49,10 +49,10 @@ function Counter({ value, duration = 2 }) {
 
 function Statistics() {
   const stats = [
-    { icon: <Heart size={56} strokeWidth={1.5} />, value: '5657', label: 'HAPPY GUESTS' },
+    { icon: <Heart size={56} strokeWidth={1.5} />, value: '5,657', label: 'HAPPY GUESTS' },
     { icon: <Car size={56} strokeWidth={1.5} />, value: '657', label: 'CARS & RESIDENCES' },
     { icon: <Flag size={56} strokeWidth={1.5} />, value: '1.255.657', label: 'JOURNEYS COMPLETED' },
-    { icon: <MessageCircle size={56} strokeWidth={1.5} />, value: '1255', label: 'CONCIERGE SUPPORTS' },
+    { icon: <MessageCircle size={56} strokeWidth={1.5} />, value: '1,255', label: 'CONCIERGE SUPPORTS' },
   ];
 
   return (
@@ -288,21 +288,21 @@ function Awards({ isMobile }) {
   const awards = [
     {
       icon: <Flag size={24} />,
-      title: "Industry Excellence",
-      subtitle: "CIMIG Hospitality & Allied Service Company of the Year",
-      description: "Recognized for outstanding hospitality and professional service delivery across our national operations."
+      title: "Star Pace Standard",
+      subtitle: "The Benchmark for Luxury Concierge",
+      description: "Setting the gold standard for high-end mobility and residential management in West Africa."
     },
     {
       icon: <Heart size={24} />,
-      title: "Regional Distinction",
-      subtitle: "Best Car Rental Company in Accra & Kumasi",
-      description: "Voted as the premier car rental provider in Ghana's two largest metropolitan hubs for superior fleet quality."
+      title: "Client Commitment",
+      subtitle: "Unmatched Hospitality & Discretion",
+      description: "Delivering a seamless blend of professional chauffeuring and elite property hosting since our inception."
     },
     {
       icon: <Shield size={24} />,
-      title: "National Legacy",
-      subtitle: "The Best Rental Company in Ghana 2018",
-      description: "A prestigious national honor cementing our status as the country's most trusted vehicle rental partner."
+      title: "Elite Legacy",
+      subtitle: "The Most Trusted Brand in Ghana",
+      description: "A storied history of serving world leaders, business executives, and discerning global travelers."
     }
   ];
 
@@ -349,7 +349,7 @@ function Awards({ isMobile }) {
               display: 'block',
               marginBottom: 20
             }}>
-              Distinction & Honor
+              Excellence Since Day One
             </span>
             <h2 style={{ 
               fontFamily: "'Playfair Display', serif", 
@@ -360,8 +360,8 @@ function Awards({ isMobile }) {
               lineHeight: 1.1,
               letterSpacing: '-0.02em'
             }}>
-              A Legacy of <br />
-              <span style={{ color: 'var(--accent-gold)' }}>Award-Winning</span> Service
+              Defining <br />
+              <span style={{ color: 'var(--accent-gold)' }}>Excellence</span> In Motion
             </h2>
             <p style={{ 
               fontSize: 18, 
@@ -402,7 +402,7 @@ function Awards({ isMobile }) {
               animation: 'spin-reverse 40s linear infinite'
             }} />
             <img 
-              src="/assets/award.jpeg" 
+              src="/assets/award-new.png" 
               alt="Awards Icon" 
               style={{ 
                 width: '100%', 
@@ -537,6 +537,7 @@ export default function Home() {
       <Statistics isMobile={isMobile} />
       <Awards isMobile={isMobile} />
       <Products limit={6} isMobile={isMobile} />
+      <Products limit={6} isMobile={isMobile} endpoint="/api/residence" />
       <Testimonials testimonials={testimonials} isMobile={isMobile} />
       <News newsItems={newsItems} isMobile={isMobile} />
     </>

@@ -1,5 +1,5 @@
 const IMAGES = {
-    hero: '/assets/hero1.jpeg',
+    hero: '',
     featured1: '/assets/lux.jpg',
     featured2: '/assets/sport.jpg',
     featured3: '/assets/tour.jpg',

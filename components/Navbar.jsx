@@ -43,9 +43,9 @@ export default function Navbar() {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      style={{ 
-        padding: isMobile 
-          ? (isTransparent ? '20px 20px' : '14px 20px') 
+      style={{
+        padding: isMobile
+          ? (isTransparent ? '20px 20px' : '14px 20px')
           : (scrolled ? '12px 24px' : '24px 48px'),
         background: isTransparent ? 'transparent' : 'rgba(249, 246, 240, 0.9)',
         borderBottomColor: isTransparent ? 'transparent' : 'var(--border-color)',
@@ -68,16 +68,16 @@ export default function Navbar() {
       `}</style>
       <Link href="/" onClick={() => setOpen(false)} style={{ textDecoration: 'none', color: 'inherit', zIndex: 100 }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img 
-            src="/favicon.png" 
-            alt="Star Pace Logo" 
-            style={{ 
-              height: isMobile 
-                ? (scrolled ? 28 : 36) 
-                : (scrolled ? 40 : 48), 
-              objectFit: 'contain', 
+          <img
+            src="STARPACE.png"
+            alt="Star Pace Logo"
+            style={{
+              height: isMobile
+                ? (scrolled ? 28 : 36)
+                : (scrolled ? 40 : 48),
+              objectFit: 'contain',
               transition: '0.4s cubic-bezier(0.16, 1, 0.3, 1)'
-            }} 
+            }}
           />
         </div>
       </Link>

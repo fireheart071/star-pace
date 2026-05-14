@@ -338,7 +338,7 @@ export default function Products({ limit, isMobile: propIsMobile, endpoint = '/a
                  fontStyle: 'italic',
                  lineHeight: 1.1
                }}>
-                 The Pace <span style={{ color: '#000' }}>Collection.</span>
+                 {isResidence ? 'Exquisite ' : 'The Elite '} <span style={{ color: '#000' }}>{isResidence ? 'Residences.' : 'Fleet.'}</span>
                </h2>
             </div>
           )}

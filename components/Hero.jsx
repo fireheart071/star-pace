@@ -29,11 +29,12 @@ export default function Hero() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        height: isMobile ? 'auto' : '100vh',
         minHeight: isMobile ? '85vh' : '100vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',
-        padding: isMobile ? '120px 24px 80px' : '0 72px',
+        padding: isMobile ? '140px 24px 60px' : '140px 72px 40px',
         position: 'relative',
         marginTop: 0,
       }}
@@ -62,14 +63,14 @@ export default function Hero() {
             background: 'rgba(255,255,255,0.08)',
             border: '1px solid rgba(255,255,255,0.15)',
             borderRadius: 999,
-            padding: '6px 16px',
+            padding: '6px 10px',
             marginBottom: isMobile ? 20 : 28,
             backdropFilter: 'blur(8px)',
           }}
         >
           <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--brand-stays)', display: 'inline-block' }} />
           <span style={{ fontSize: 10, fontWeight: 800, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.2em' }}>
-            Ghana's Finest Fleet
+            The Ultimate in Luxury & Mobility
           </span>
         </motion.div>
 
@@ -139,28 +140,50 @@ export default function Hero() {
             zIndex: 10
           }}
         >
-          {/* Search Tabs */}
-          <div style={{ display: 'flex', gap: 32, marginBottom: isMobile ? 12 : 16, paddingLeft: isMobile ? 4 : 8 }}>
-            <button 
+          {/* Search Toggle */}
+          <div style={{
+            display: 'inline-flex',
+            background: 'rgba(255,255,255,0.05)',
+            padding: 4,
+            borderRadius: 100,
+            marginBottom: isMobile ? 16 : 24,
+            backdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255,255,255,0.1)'
+          }}>
+            <button
               onClick={() => { setSearchType('fleet'); setCategory('All'); }}
               style={{
-                background: 'none', border: 'none', padding: '0 0 8px', cursor: 'pointer',
-                fontSize: isMobile ? 10 : 13, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.2em',
-                color: searchType === 'fleet' ? '#fff' : 'rgba(255,255,255,0.4)',
-                borderBottom: searchType === 'fleet' ? '2px solid var(--brand-stays)' : '2px solid transparent',
-                transition: '0.3s'
+                padding: isMobile ? '8px 16px' : '10px 24px',
+                borderRadius: 100,
+                background: searchType === 'fleet' ? 'var(--brand-stays)' : 'transparent',
+                color: '#fff',
+                border: 'none',
+                fontSize: isMobile ? 10 : 12,
+                fontWeight: 800,
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                cursor: 'pointer',
+                transition: '0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                opacity: searchType === 'fleet' ? 1 : 0.6
               }}
             >
               Elite Fleet
             </button>
-            <button 
+            <button
               onClick={() => { setSearchType('residence'); setCategory('All'); }}
               style={{
-                background: 'none', border: 'none', padding: '0 0 8px', cursor: 'pointer',
-                fontSize: isMobile ? 10 : 13, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.2em',
-                color: searchType === 'residence' ? '#fff' : 'rgba(255,255,255,0.4)',
-                borderBottom: searchType === 'residence' ? '2px solid var(--brand-stays)' : '2px solid transparent',
-                transition: '0.3s'
+                padding: isMobile ? '8px 16px' : '10px 24px',
+                borderRadius: 100,
+                background: searchType === 'residence' ? 'var(--brand-stays)' : 'transparent',
+                color: '#fff',
+                border: 'none',
+                fontSize: isMobile ? 10 : 12,
+                fontWeight: 800,
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                cursor: 'pointer',
+                transition: '0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                opacity: searchType === 'residence' ? 1 : 0.6
               }}
             >
               Exclusive Residences
@@ -351,28 +374,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      {!isMobile && (
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          style={{
-            position: 'absolute',
-            bottom: 40,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            color: 'rgba(255,255,255,0.5)',
-            fontSize: 12,
-            fontWeight: 600,
-            letterSpacing: '0.1em',
-            textTransform: 'uppercase',
-            zIndex: 1,
-          }}
-        >
-          Scroll to explore
-        </motion.div>
-      )}
     </section>
   )
 }
