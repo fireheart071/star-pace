@@ -16,8 +16,8 @@ export default function ContactPage() {
   const [loading, setLoading] = useState(false)
   const [L, setL] = useState(null)
   const [settings, setSettings] = useState({
-    supportPhone: '+233 30 230 1081 / +233 20 222 5878',
-    headquarters: 'Dansoman, Accra, Ghana',
+    supportPhone: '+233 000 000 000 / +233 000 000 000',
+    headquarters: 'Accra, Ghana',
     adminEmail: 'contact@starpaceghana.com'
   })
 
@@ -44,8 +44,8 @@ export default function ContactPage() {
       .then(data => {
         if (data) {
           setSettings({
-            supportPhone: data.supportPhone || '+233 30 230 1081 / +233 20 222 5878',
-            headquarters: data.headquarters || 'Dansoman, Accra, Ghana',
+            supportPhone: data.supportPhone || '+233 000 000 000 / +233 000 000 000',
+            headquarters: data.headquarters || 'Accra, Ghana',
             adminEmail: data.adminEmail || 'contact@starpaceghana.com'
           })
         }
@@ -117,92 +117,92 @@ export default function ContactPage() {
                 <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '28px', fontWeight: 900, color: 'var(--text-primary)', marginBottom: '32px', margin: 0 }}>
                   Send an Inquiry
                 </h2>
-                
+
                 <form onSubmit={handleSubmit} style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '24px' }}>
                   <div>
                     <label style={{ fontSize: '10px', fontWeight: 800, color: 'var(--brand-fleet)', textTransform: 'uppercase', marginBottom: '8px', display: 'block', letterSpacing: '0.05em' }}>Full Name *</label>
-                    <input 
-                      name="name" 
-                      required 
-                      type="text" 
-                      placeholder="John Doe" 
-                      style={{ 
-                        width: '100%', 
-                        padding: '14px 20px', 
-                        borderRadius: '12px', 
-                        border: '1.5px solid var(--border-color)', 
-                        background: '#ffffff', 
-                        outline: 'none', 
+                    <input
+                      name="name"
+                      required
+                      type="text"
+                      placeholder="John Doe"
+                      style={{
+                        width: '100%',
+                        padding: '14px 20px',
+                        borderRadius: '12px',
+                        border: '1.5px solid var(--border-color)',
+                        background: '#ffffff',
+                        outline: 'none',
                         fontSize: '14px',
                         color: 'var(--text-primary)',
-                        transition: 'border-color 0.3s' 
-                      }} 
+                        transition: 'border-color 0.3s'
+                      }}
                       onFocus={(e) => e.currentTarget.style.borderColor = 'var(--brand-fleet)'}
                       onBlur={(e) => e.currentTarget.style.borderColor = 'var(--border-color)'}
                     />
                   </div>
                   <div>
                     <label style={{ fontSize: '10px', fontWeight: 800, color: 'var(--brand-fleet)', textTransform: 'uppercase', marginBottom: '8px', display: 'block', letterSpacing: '0.05em' }}>Email Address *</label>
-                    <input 
-                      name="email" 
-                      required 
-                      type="email" 
-                      placeholder="john@example.com" 
-                      style={{ 
-                        width: '100%', 
-                        padding: '14px 20px', 
-                        borderRadius: '12px', 
-                        border: '1.5px solid var(--border-color)', 
-                        background: '#ffffff', 
-                        outline: 'none', 
+                    <input
+                      name="email"
+                      required
+                      type="email"
+                      placeholder="john@example.com"
+                      style={{
+                        width: '100%',
+                        padding: '14px 20px',
+                        borderRadius: '12px',
+                        border: '1.5px solid var(--border-color)',
+                        background: '#ffffff',
+                        outline: 'none',
                         fontSize: '14px',
                         color: 'var(--text-primary)',
-                        transition: 'border-color 0.3s' 
-                      }} 
+                        transition: 'border-color 0.3s'
+                      }}
                       onFocus={(e) => e.currentTarget.style.borderColor = 'var(--brand-fleet)'}
                       onBlur={(e) => e.currentTarget.style.borderColor = 'var(--border-color)'}
                     />
                   </div>
                   <div style={{ gridColumn: isMobile ? 'auto' : 'span 2' }}>
                     <label style={{ fontSize: '10px', fontWeight: 800, color: 'var(--brand-fleet)', textTransform: 'uppercase', marginBottom: '8px', display: 'block', letterSpacing: '0.05em' }}>Subject *</label>
-                    <input 
-                      name="subject" 
-                      required 
-                      type="text" 
-                      placeholder="Luxury Rental Inquiry" 
-                      style={{ 
-                        width: '100%', 
-                        padding: '14px 20px', 
-                        borderRadius: '12px', 
-                        border: '1.5px solid var(--border-color)', 
-                        background: '#ffffff', 
-                        outline: 'none', 
+                    <input
+                      name="subject"
+                      required
+                      type="text"
+                      placeholder="Luxury Rental Inquiry"
+                      style={{
+                        width: '100%',
+                        padding: '14px 20px',
+                        borderRadius: '12px',
+                        border: '1.5px solid var(--border-color)',
+                        background: '#ffffff',
+                        outline: 'none',
                         fontSize: '14px',
                         color: 'var(--text-primary)',
-                        transition: 'border-color 0.3s' 
-                      }} 
+                        transition: 'border-color 0.3s'
+                      }}
                       onFocus={(e) => e.currentTarget.style.borderColor = 'var(--brand-fleet)'}
                       onBlur={(e) => e.currentTarget.style.borderColor = 'var(--border-color)'}
                     />
                   </div>
                   <div style={{ gridColumn: isMobile ? 'auto' : 'span 2' }}>
                     <label style={{ fontSize: '10px', fontWeight: 800, color: 'var(--brand-fleet)', textTransform: 'uppercase', marginBottom: '8px', display: 'block', letterSpacing: '0.05em' }}>Your Message *</label>
-                    <textarea 
-                      name="message" 
-                      required 
-                      rows={isMobile ? 4 : 6} 
-                      placeholder="How can we assist you today?" 
-                      style={{ 
-                        width: '100%', 
-                        padding: '16px 20px', 
-                        borderRadius: '16px', 
-                        border: '1.5px solid var(--border-color)', 
-                        background: '#ffffff', 
-                        outline: 'none', 
+                    <textarea
+                      name="message"
+                      required
+                      rows={isMobile ? 4 : 6}
+                      placeholder="How can we assist you today?"
+                      style={{
+                        width: '100%',
+                        padding: '16px 20px',
+                        borderRadius: '16px',
+                        border: '1.5px solid var(--border-color)',
+                        background: '#ffffff',
+                        outline: 'none',
                         fontSize: '14px',
                         color: 'var(--text-primary)',
                         fontFamily: 'inherit',
-                        transition: 'border-color 0.3s' 
+                        transition: 'border-color 0.3s'
                       }}
                       onFocus={(e) => e.currentTarget.style.borderColor = 'var(--brand-fleet)'}
                       onBlur={(e) => e.currentTarget.style.borderColor = 'var(--border-color)'}
@@ -260,8 +260,8 @@ export default function ContactPage() {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
                           {settings.supportPhone.split('/').map((p, i) => (
                             <a key={i} href={`tel:${p.replace(/\s/g, '')}`} style={{ fontSize: '15px', fontWeight: 900, color: 'var(--text-primary)', textDecoration: 'none', transition: 'color 0.3s' }}
-                               onMouseEnter={(e) => e.currentTarget.style.color = 'var(--brand-fleet)'}
-                               onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-primary)'}>
+                              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--brand-fleet)'}
+                              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-primary)'}>
                               {p.trim()}
                             </a>
                           ))}
@@ -277,8 +277,8 @@ export default function ContactPage() {
                       <div>
                         <div style={{ fontSize: '9px', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '2px' }}>Email Support</div>
                         <a href={`mailto:${settings.adminEmail}`} style={{ fontSize: '15px', fontWeight: 900, color: 'var(--text-primary)', textDecoration: 'none', transition: 'color 0.3s' }}
-                           onMouseEnter={(e) => e.currentTarget.style.color = 'var(--brand-fleet)'}
-                           onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-primary)'}>
+                          onMouseEnter={(e) => e.currentTarget.style.color = 'var(--brand-fleet)'}
+                          onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-primary)'}>
                           {settings.adminEmail}
                         </a>
                       </div>
@@ -299,12 +299,12 @@ export default function ContactPage() {
                   {/* Operational Hours card */}
                   <div style={{ padding: '32px 24px', background: 'var(--brand-fleet)', borderRadius: '24px', color: '#ffffff', boxShadow: 'var(--shadow-sm)', position: 'relative', overflow: 'hidden' }}>
                     <div style={{ position: 'absolute', top: 0, left: '24px', width: '32px', height: '4px', background: '#ffffff', opacity: 0.3 }} />
-                    
+
                     <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: '20px' }}>
                       <Clock size={16} color="#ffffff" />
                       <span style={{ fontSize: '10px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.15em' }}>Operating Hours</span>
                     </div>
-                    
+
                     <div style={{ display: 'grid', gap: '12px' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '10px' }}>
                         <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px', fontWeight: 500 }}>Mon - Fri</span>
