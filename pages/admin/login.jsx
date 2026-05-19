@@ -1,15 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-const Lock = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={props.size || 24} height={props.size || 24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
-)
-const User = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={props.size || 24} height={props.size || 24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
-)
-const ArrowRight = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={props.size || 24} height={props.size || 24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-)
 
 export default function AdminLogin() {
   const router = useRouter()
@@ -40,14 +31,14 @@ export default function AdminLogin() {
   return (
     <div className="login-page">
       <Head>
-        <title>Secure Access | Atlas Rent-A-Car</title>
+        <title>Secure Access | Star Pace Administration</title>
       </Head>
 
       <div className="login-container">
         <div className="login-card">
           <div className="login-brand">
             <div className="brand-logo">
-              ATLAS
+              STAR PACE
             </div>
             <div className="brand-marker">
               Elite Administration
@@ -85,7 +76,7 @@ export default function AdminLogin() {
           </form>
 
           <div className="login-footer">
-            Atlas Rent-A-Car &bull; Professional Division
+            Star Pace &bull; Executive Portal
           </div>
         </div>
       </div>
@@ -96,47 +87,58 @@ export default function AdminLogin() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #fff;
+          background: transparent;
           padding: 24px;
           font-family: 'Inter', sans-serif;
         }
 
         .login-container {
           width: 100%;
-          max-width: 400px;
+          max-width: 420px;
+        }
+
+        .login-card {
+          background: rgba(12, 18, 32, 0.75);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border: 1px solid var(--glass-border);
+          border-radius: 24px;
+          padding: 48px 40px;
+          box-shadow: var(--shadow-glow);
         }
 
         .login-brand {
           text-align: center;
-          margin-bottom: 56px;
+          margin-bottom: 48px;
         }
 
         .brand-logo {
           font-family: 'Playfair Display', serif;
-          font-size: 32px;
-          color: #24276F;
-          letter-spacing: 0.1em;
+          font-size: 30px;
+          font-weight: 900;
+          color: #ffffff;
+          letter-spacing: 0.15em;
           margin-bottom: 8px;
         }
 
         .brand-marker {
           font-size: 10px;
           font-weight: 800;
-          color: #64748B;
-          letter-spacing: 0.3em;
+          color: var(--brand-fleet);
+          letter-spacing: 0.25em;
           text-transform: uppercase;
         }
 
         .login-form {
           display: grid;
-          gap: 32px;
+          gap: 28px;
         }
 
         .login-field label {
           display: block;
-          font-size: 10px;
+          font-size: 9px;
           font-weight: 800;
-          color: #64748B;
+          color: var(--text-secondary);
           margin-bottom: 8px;
           text-transform: uppercase;
           letter-spacing: 1.5px;
@@ -147,43 +149,59 @@ export default function AdminLogin() {
           height: 48px;
           background: transparent;
           border: none;
-          border-bottom: 2px solid #F1F5F9;
+          border-bottom: 2px solid var(--glass-border);
           padding: 0;
-          color: #0F172A;
+          color: #ffffff;
           font-size: 14px;
           font-weight: 500;
           outline: none;
           transition: border-color 0.3s ease;
         }
 
+        .login-field input:-webkit-autofill,
+        .login-field input:-webkit-autofill:hover, 
+        .login-field input:-webkit-autofill:focus, 
+        .login-field input:-webkit-autofill:active {
+          -webkit-box-shadow: 0 0 0 1000px #0c1220 inset !important;
+          -webkit-text-fill-color: #ffffff !important;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+
         .login-field input:focus {
-          border-color: #24276F;
+          border-color: var(--brand-fleet);
+        }
+
+        .login-field input::placeholder {
+          color: var(--text-muted);
         }
 
         .login-error {
           height: 14px;
-          color: #DC2626;
-          font-size: 11px;
+          color: #ef4444;
+          font-size: 12px;
           font-weight: 700;
           text-align: center;
         }
 
         .login-submit {
-          height: 48px;
-          background: #24276F;
-          color: white;
+          height: 52px;
+          background: var(--brand-fleet);
+          color: #070B18;
           border: none;
           border-radius: 12px;
-          font-size: 13px;
-          font-weight: 800;
+          font-size: 12px;
+          font-weight: 900;
           cursor: pointer;
           transition: all 0.3s ease;
-          margin-top: 16px;
-          letter-spacing: 0.5px;
+          margin-top: 12px;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
         }
 
         .login-submit:hover:not(:disabled) {
-          transform: translateY(-1px);
+          transform: translateY(-2px);
+          box-shadow: 0 15px 40px rgba(56, 189, 248, 0.3);
         }
 
         .login-submit:disabled {
@@ -192,9 +210,9 @@ export default function AdminLogin() {
         }
 
         .login-footer {
-          margin-top: 64px;
+          margin-top: 48px;
           text-align: center;
-          color: #64748B;
+          color: var(--text-muted);
           font-size: 9px;
           font-weight: 800;
           text-transform: uppercase;
