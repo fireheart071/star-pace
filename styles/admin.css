@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Atlas Brand Colors */
-  --primary: #7F1D1D; /* Burgundy 900 */
-  --primary-hover: #631717;
-  --primary-gold: #C5A059; /* Gold */
-  --primary-gold-hover: #B4914F;
-  --primary-bg: rgba(127, 29, 29, 0.08);
-  --danger: #FF3B30;
-  --success: #34C759;
+  /* Star Pace Brand Colors */
+  --primary: #38BDF8; /* Pleiades Cyan */
+  --primary-hover: #0EA5E9;
+  --primary-gold: #00E5FF; /* Electric Star Blue */
+  --primary-gold-hover: #00B5CC;
+  --primary-bg: rgba(56, 189, 248, 0.15);
+  --danger: #ef4444;
+  --success: #10B981;
 
   /* Layout & Spacing */
   --sidebar-w: 260px;
@@ -19,40 +19,40 @@
   --radius-xl: 24px;
 }
 
-/* Default Theme: Professional Elegant (Light-First) */
+/* Default Theme: Professional Elegant (Dark-First for Star Pace) */
 .admin-shell {
-  --bg-main: #F8FAFC; /* Clean Off-white */
-  --bg-card: #FFFFFF;
-  --bg-sidebar: #450a0a; /* Deep Burgundy Sidebar */
-  --header-bg: rgba(249, 246, 240, 0.95);
-  --sidebar-active: rgba(127, 29, 29, 0.15);
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
-  --text-muted: #94A3B8;
-  --border: #E2E8F0;
-  --divider: #F1F5F9;
-  --glass: rgba(255, 255, 255, 0.8);
-  --input-bg: #FFFFFF;
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 16px 40px -12px rgba(0, 0, 0, 0.08);
-  --shadow-accent: 0 10px 40px rgba(127, 29, 29, 0.1);
+  --bg-main: #060A13; /* Deep Cosmic Space Void */
+  --bg-card: #0C1220; /* Nebula Dark Blue */
+  --bg-sidebar: #070B18; /* Deep Void Navy Sidebar */
+  --header-bg: rgba(6, 10, 19, 0.85);
+  --sidebar-active: rgba(56, 189, 248, 0.15);
+  --text-primary: #F8FAFC; /* Starlight Silver-White */
+  --text-secondary: #94A3B8; /* Dusty Stellar Grey */
+  --text-muted: #64748B; /* Cosmic Slate */
+  --border: rgba(56, 189, 248, 0.15); /* Ice Blue Divider */
+  --divider: rgba(255, 255, 255, 0.05);
+  --glass: rgba(12, 18, 32, 0.75);
+  --input-bg: rgba(6, 10, 19, 0.5);
+  --shadow-sm: 0 8px 30px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --shadow-accent: 0 0 25px rgba(56, 189, 248, 0.2);
 }
 
-/* Dark Theme Overrides (Optional Toggle) */
+/* Dark Theme Overrides */
 [data-theme='dark'] {
-  --bg-main: #0B0B14;
-  --bg-card: #151525;
-  --bg-sidebar: #080810;
-  --header-bg: rgba(11, 11, 20, 0.85);
-  --sidebar-active: rgba(127, 29, 29, 0.1);
-  --text-primary: #FFFFFF;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --text-muted: rgba(255, 255, 255, 0.4);
-  --border: rgba(255, 255, 255, 0.08);
+  --bg-main: #060A13;
+  --bg-card: #0C1220;
+  --bg-sidebar: #070B18;
+  --header-bg: rgba(6, 10, 19, 0.85);
+  --sidebar-active: rgba(56, 189, 248, 0.15);
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --border: rgba(56, 189, 248, 0.15);
   --divider: rgba(255, 255, 255, 0.05);
-  --input-bg: rgba(255, 255, 255, 0.05);
-  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 20px 50px rgba(0, 0, 0, 0.7);
+  --input-bg: rgba(6, 10, 19, 0.5);
+  --shadow-sm: 0 8px 30px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -85,7 +85,7 @@
 .admin-sidebar {
   width: var(--sidebar-w);
   height: 100vh;
-  background: var(--bg-card) !important;
+  background: var(--bg-sidebar) !important;
   position: fixed;
   left: 0;
   top: 0;
@@ -248,7 +248,7 @@
 /* Header Styling */
 .admin-header {
   height: 80px;
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--header-bg);
   backdrop-filter: blur(20px);
   padding: 0 56px;
   display: flex;
@@ -565,9 +565,9 @@ select {
 }
 
 .btn-primary:hover {
-  background: var(--primary-gold-hover);
+  background: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 15px 40px rgba(223, 151, 56, 0.3);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.25);
 }
 
 .btn-outline {
@@ -966,4 +966,128 @@ select {
 .status-inactive {
   background: rgba(255, 255, 255, 0.05);
   color: var(--text-muted);
+}
+
+/* =========================================
+   STAR PACE BRANDING OVERRIDES (INLINE STYLE FIXES)
+========================================= */
+
+/* Force all input, select, textarea elements in the admin layout to dark theme */
+.admin-shell input,
+.admin-shell textarea,
+.admin-shell select {
+  background: var(--input-bg) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Force select option background to be dark */
+.admin-shell select option {
+  background: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Convert all inline white backgrounds to glassmorphic dark cards */
+.admin-shell .model-card,
+.admin-shell .article-card,
+.admin-shell .order-card,
+.admin-shell .card-grid > div,
+.admin-shell [style*="background: #fff"],
+.admin-shell [style*="background: #ffffff"],
+.admin-shell [style*="background: rgb(255, 255, 255)"],
+.admin-shell [style*="background:#fff"],
+.admin-shell [style*="background:#ffffff"] {
+  background: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+/* Convert inline light-gray/off-white backgrounds to dark inputs/glass */
+.admin-shell [style*="background: #F8FAFC"],
+.admin-shell [style*="background: #F1F5F9"],
+.admin-shell [style*="background: rgb(248, 250, 252)"],
+.admin-shell [style*="background: rgb(241, 245, 249)"] {
+  background: var(--input-bg) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Convert inline legacy brand blue (#24276F) buttons to Star Pace brand primary (cyan) */
+.admin-shell button[style*="background: #24276F"],
+.admin-shell button[style*="background: rgb(36, 39, 111)"],
+.admin-shell label[style*="background: #24276F"],
+.admin-shell label[style*="background: rgb(36, 39, 111)"] {
+  background: var(--primary) !important;
+  color: #070B18 !important;
+  font-weight: 800 !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.25) !important;
+}
+
+.admin-shell button[style*="background: #24276F"]:hover,
+.admin-shell button[style*="background: rgb(36, 39, 111)"]:hover {
+  background: var(--primary-hover) !important;
+}
+
+/* Convert inline legacy brand light grey buttons to outline glass buttons */
+.admin-shell button[style*="background: #F1F5F9"],
+.admin-shell button[style*="background: rgb(241, 245, 249)"],
+.admin-shell label[style*="background: #F1F5F9"],
+.admin-shell label[style*="background: rgb(241, 245, 249)"] {
+  background: var(--glass) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.admin-shell button[style*="background: #F1F5F9"]:hover,
+.admin-shell button[style*="background: rgb(241, 245, 249)"]:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Force dark text color inline styles to match Star Pace starlight silver/gray */
+.admin-shell [style*="color: #1E293B"],
+.admin-shell [style*="color: #0F172A"],
+.admin-shell [style*="color: #1a1a1a"],
+.admin-shell [style*="color: rgb(30, 41, 59)"],
+.admin-shell [style*="color: rgb(15, 23, 42)"],
+.admin-shell [style*="color: #475569"] {
+  color: var(--text-primary) !important;
+}
+
+.admin-shell [style*="color: #64748B"],
+.admin-shell [style*="color: rgb(100, 116, 139)"] {
+  color: var(--text-secondary) !important;
+}
+
+/* Specific fix for input placeholder text colors */
+.admin-shell input::placeholder,
+.admin-shell textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Specific fix for inputs and search boxes */
+.admin-shell input[placeholder*="Search"] {
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border) !important;
+  background: transparent !important;
+}
+
+/* Specific fix for select lists */
+.admin-shell select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2338BDF8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  background-size: 16px !important;
+  padding-right: 40px !important;
+}
+
+/* Modals styling overrides */
+.modal-card input,
+.modal-card select,
+.modal-card textarea {
+  background: var(--input-bg) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
 }
