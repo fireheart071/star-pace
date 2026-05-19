@@ -23,7 +23,7 @@ export default function AdminLayout({ title, children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', 'light')
+    document.documentElement.setAttribute('data-theme', 'dark')
   }, [])
 
   useEffect(() => {
@@ -44,7 +44,6 @@ export default function AdminLayout({ title, children }) {
     { href: '/admin/orders', label: 'Orders', icon: <ShoppingCart size={20} /> },
     { href: '/admin/vehicles', label: 'Vehicles', icon: <Box size={20} /> },
     { href: '/admin/residence', label: 'Elite Residences', icon: <Home size={20} /> },
-    { href: '/admin/blog', label: 'Editorial Blog', icon: <Newspaper size={20} /> },
     { href: '/admin/testimonials', label: 'Reviews', icon: <MessageSquare size={20} /> },
     { href: '/admin/gallery', label: 'Gallery', icon: <ImageIcon size={20} /> },
     { href: '/admin/team', label: 'Leadership', icon: <Users size={20} /> },
