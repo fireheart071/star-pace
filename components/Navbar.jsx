@@ -91,14 +91,14 @@ export default function Navbar() {
 
         {/* Main Luxury Brand Link */}
         <Link href="/" onClick={() => setOpen(false)} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
-          <img 
-            src={isTransparent ? "/STARPACE_white.png" : "/STARPACE_dark.png"} 
-            alt="Star Pace Logo" 
-            style={{ 
-              height: isMobile ? '32px' : '44px', 
+          <img
+            src={isTransparent ? "/STARPACE_white.png" : "/STARPACE_dark.png"}
+            alt="Star Pace Logo"
+            style={{
+              height: isMobile ? '32px' : '44px',
               objectFit: 'contain',
               transition: 'all 0.4s ease'
-            }} 
+            }}
           />
         </Link>
 
@@ -112,9 +112,9 @@ export default function Navbar() {
               <Link href="/about" className={router.pathname === '/about' ? 'active' : ''}>About</Link>
               <Link href="/gallery" className={router.pathname === '/gallery' ? 'active' : ''}>Gallery</Link>
               <Link href="/faqs" className={router.pathname === '/faqs' ? 'active' : ''}>FAQs</Link>
-              
-              <Link 
-                href="/contact" 
+
+              <Link
+                href="/contact"
                 className="cta"
                 style={{
                   borderLeft: '1px solid ' + (isTransparent ? 'rgba(255,255,255,0.2)' : 'var(--border-color)'),
@@ -179,10 +179,10 @@ export default function Navbar() {
               alignItems: 'center'
             }}>
               <Link href="/" onClick={() => setOpen(false)} style={{ textDecoration: 'none' }}>
-                <img 
-                  src="/STARPACE_white.png" 
-                  alt="Star Pace Logo" 
-                  style={{ height: '36px', objectFit: 'contain' }} 
+                <img
+                  src="/STARPACE_white.png"
+                  alt="Star Pace Logo"
+                  style={{ height: '36px', objectFit: 'contain' }}
                 />
               </Link>
               <button
@@ -215,20 +215,20 @@ export default function Navbar() {
                     exit={{ opacity: 0, x: -25 }}
                     transition={{ delay: index * 0.08, ease: [0.16, 1, 0.3, 1], duration: 0.6 }}
                   >
-                    <Link 
-                      href={item.href} 
-                      onClick={() => setOpen(false)} 
-                      style={{ 
-                        textDecoration: 'none', 
-                        display: 'flex', 
-                        alignItems: 'flex-start', 
-                        gap: '16px' 
+                    <Link
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      style={{
+                        textDecoration: 'none',
+                        display: 'flex',
+                        alignItems: 'flex-start',
+                        gap: '16px'
                       }}
                     >
-                      <span style={{ 
-                        fontSize: '11px', 
-                        fontWeight: 900, 
-                        color: isActive ? 'var(--brand-fleet)' : 'var(--text-muted)', 
+                      <span style={{
+                        fontSize: '11px',
+                        fontWeight: 900,
+                        color: isActive ? 'var(--brand-fleet)' : 'var(--text-muted)',
                         fontFamily: 'monospace',
                         marginTop: '4px',
                         letterSpacing: '0.05em'
@@ -236,22 +236,22 @@ export default function Navbar() {
                         {item.num}
                       </span>
                       <div style={{ display: 'flex', flexDirection: 'column' }}>
-                        <span style={{ 
-                          fontSize: '28px', 
-                          fontWeight: isActive ? 900 : 700, 
-                          color: isActive ? 'var(--brand-fleet)' : '#ffffff', 
-                          letterSpacing: '0.03em', 
+                        <span style={{
+                          fontSize: '28px',
+                          fontWeight: isActive ? 900 : 700,
+                          color: isActive ? 'var(--brand-fleet)' : '#ffffff',
+                          letterSpacing: '0.03em',
                           fontFamily: "'Playfair Display', serif",
                           transition: 'color 0.3s'
                         }}>
                           {item.name}
                         </span>
-                        <span style={{ 
-                          fontSize: '10px', 
-                          color: 'var(--text-secondary)', 
-                          textTransform: 'uppercase', 
-                          letterSpacing: '0.12em', 
-                          marginTop: '4px' 
+                        <span style={{
+                          fontSize: '10px',
+                          color: 'var(--text-secondary)',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.12em',
+                          marginTop: '4px'
                         }}>
                           {item.desc}
                         </span>
@@ -292,33 +292,33 @@ export default function Navbar() {
                 </motion.button>
               </Link>
 
-              <div style={{ 
-                borderTop: '1px solid rgba(255, 255, 255, 0.08)', 
-                paddingTop: '24px', 
-                display: 'flex', 
-                flexDirection: 'column', 
-                gap: '8px' 
+              <div style={{
+                borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+                paddingTop: '24px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '8px'
               }}>
-                <span style={{ 
-                  fontSize: '9px', 
-                  fontWeight: 900, 
-                  color: 'var(--text-muted)', 
-                  textTransform: 'uppercase', 
-                  letterSpacing: '0.15em' 
+                <span style={{
+                  fontSize: '9px',
+                  fontWeight: 900,
+                  color: 'var(--text-muted)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.15em'
                 }}>
                   ACCRA, GHANA
                 </span>
-                <a 
-                  href="tel:+233202225878" 
-                  style={{ 
-                    fontSize: '15px', 
-                    color: '#ffffff', 
-                    textDecoration: 'none', 
+                <a
+                  href="tel:+233000000000"
+                  style={{
+                    fontSize: '15px',
+                    color: '#ffffff',
+                    textDecoration: 'none',
                     fontWeight: 700,
-                    letterSpacing: '0.05em' 
+                    letterSpacing: '0.05em'
                   }}
                 >
-                  +233 20 222 5878
+                  +233 00 000 0000
                 </a>
                 <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
                   Airport Residential Area
