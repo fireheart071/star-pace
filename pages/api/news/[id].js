@@ -30,9 +30,24 @@ module.exports = async function handler(req, res) {
   if (req.method === "DELETE") {
     return verifyAdmin(req, res, async () => {
       const items = await storage.getNews();
-      const filtered = items.filter((i) => i.id !== id);
-      if (filtered.length === items.length)
+      const item = items.find((i) => i.id === id);
+      if (!item)
         return res.status(404).json({ error: "News item not found" });
+
+      // Delete images from S3
+      try {
+        const { deleteS3Image } = require("../../../lib/s3");
+        if (item.image) {
+          await deleteS3Image(item.image);
+        }
+        if (item.coverImage) {
+          await deleteS3Image(item.coverImage);
+        }
+      } catch (s3Err) {
+        console.error("Failed to delete news image from S3:", s3Err);
+      }
+
+      const filtered = items.filter((i) => i.id !== id);
       await storage.saveNews(filtered);
       return res.json({ ok: true });
     });
