@@ -22,6 +22,22 @@ export default async function handler(req, res) {
     return verifyAdmin(req, res, async () => {
       let items = await storage.getTeam();
       if (!Array.isArray(items)) items = [];
+      const item = items.find((i) => i.id === id);
+
+      if (item) {
+        try {
+          const { deleteS3Image } = require("../../../lib/s3");
+          if (item.image) {
+            await deleteS3Image(item.image);
+          }
+          if (item.avatar) {
+            await deleteS3Image(item.avatar);
+          }
+        } catch (s3Err) {
+          console.error("Failed to delete team member image from S3:", s3Err);
+        }
+      }
+
       const next = items.filter((i) => i.id !== id);
       await storage.saveTeam(next);
       return res.json({ success: true });
