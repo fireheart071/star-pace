@@ -28,6 +28,23 @@ export default async function handler(req, res) {
 
   if (req.method === "DELETE") {
     return verifyAdmin(req, res, async () => {
+      const items = await storage.getResidences();
+      const item = items.find((i) => String(i.id) === String(id));
+
+      if (item) {
+        try {
+          const { deleteS3Image, deleteS3Images } = require("../../../lib/s3");
+          if (item.image) {
+            await deleteS3Image(item.image);
+          }
+          if (item.gallery && item.gallery.length > 0) {
+            await deleteS3Images(item.gallery);
+          }
+        } catch (s3Err) {
+          console.error("Failed to delete residence images from S3:", s3Err);
+        }
+      }
+
       await storage.deleteResidence(id);
       return res.json({ success: true });
     });
