@@ -145,18 +145,18 @@ function CinematicPillars({ isMobile }) {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             style={{
               position: 'relative',
-              marginTop: isMobile ? 0 : '-40px'
+              marginTop: isMobile ? 0 : '0px'
             }}
           >
             <div style={{
               borderRadius: '20px',
               overflow: 'hidden',
-              height: isMobile ? '380px' : '580px',
+              height: isMobile ? '320px' : '480px',
               border: '1px solid var(--border-color)',
               boxShadow: 'var(--shadow-sm)'
             }}>
               <img 
-                src="https://images.unsplash.com/photo-1606148633266-06432b8966ba?q=80&w=800&fit=crop" 
+                src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=800&fit=crop" 
                 alt="Chauffeur Luxury Sedan" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
@@ -209,13 +209,13 @@ function CinematicPillars({ isMobile }) {
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             style={{
               position: 'relative',
-              marginTop: isMobile ? 0 : '80px'
+              marginTop: isMobile ? 0 : '0px'
             }}
           >
             <div style={{
               borderRadius: '20px',
               overflow: 'hidden',
-              height: isMobile ? '280px' : '440px',
+              height: isMobile ? '320px' : '480px',
               border: '1px solid var(--border-color)',
               boxShadow: 'var(--shadow-sm)'
             }}>
