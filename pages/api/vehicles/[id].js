@@ -34,6 +34,19 @@ module.exports = async function handler(req, res) {
       if (!model)
         return res.status(404).json({ error: "Model not found" });
 
+      // Delete images from S3
+      try {
+        const { deleteS3Image, deleteS3Images } = require("../../../lib/s3");
+        if (model.image) {
+          await deleteS3Image(model.image);
+        }
+        if (model.gallery && model.gallery.length > 0) {
+          await deleteS3Images(model.gallery);
+        }
+      } catch (s3Err) {
+        console.error("Failed to delete vehicle images from S3:", s3Err);
+      }
+
       // Prefer direct deletion to support Postgres storage correctly.
       if (typeof storage.deleteModel === "function") {
         await storage.deleteModel(model.id);
