@@ -36,6 +36,19 @@ export default async function handler(req, res) {
       const stay = stays.find((s) => sameId(s.id, id));
       if (!stay) return res.status(404).json({ error: "Stay not found" });
 
+      // Delete images from S3
+      try {
+        const { deleteS3Image, deleteS3Images } = require("../../../lib/s3");
+        if (stay.image) {
+          await deleteS3Image(stay.image);
+        }
+        if (stay.gallery && stay.gallery.length > 0) {
+          await deleteS3Images(stay.gallery);
+        }
+      } catch (s3Err) {
+        console.error("Failed to delete stay images from S3:", s3Err);
+      }
+
       if (typeof storage.deleteStay === "function") {
         await storage.deleteStay(stay.id);
       } else {
