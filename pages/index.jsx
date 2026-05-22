@@ -58,17 +58,17 @@ function Statistics({ isMobile }) {
   ];
 
   return (
-    <section style={{ 
-      padding: isMobile ? '48px 24px' : '64px 80px', 
-      backgroundColor: 'var(--bg-secondary)', 
+    <section style={{
+      padding: isMobile ? '48px 24px' : '64px 80px',
+      backgroundColor: 'var(--bg-secondary)',
       color: '#ffffff',
       borderBottom: '1px solid rgba(56, 189, 248, 0.08)'
     }}>
-      <div style={{ 
-        maxWidth: 1400, 
-        margin: '0 auto', 
-        display: 'grid', 
-        gridTemplateColumns: isMobile ? '1fr 1fr' : 'repeat(4, 1fr)', 
+      <div style={{
+        maxWidth: 1400,
+        margin: '0 auto',
+        display: 'grid',
+        gridTemplateColumns: isMobile ? '1fr 1fr' : 'repeat(4, 1fr)',
         gap: isMobile ? '32px' : '40px'
       }}>
         {stats.map((s, i) => (
@@ -78,37 +78,37 @@ function Statistics({ isMobile }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            style={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
               borderRight: (!isMobile && i < 3) ? '1px solid rgba(255,255,255,0.08)' : 'none',
               paddingRight: (!isMobile && i < 3) ? '40px' : '0px'
             }}
           >
-            <div style={{ 
-              marginBottom: 10, 
+            <div style={{
+              marginBottom: 10,
               color: 'var(--accent-gold)',
               opacity: 0.8
             }}>
               {s.icon}
             </div>
-            <div style={{ 
-              fontSize: isMobile ? '24px' : '36px', 
-              fontWeight: 300, 
-              color: '#ffffff', 
-              marginBottom: 4, 
+            <div style={{
+              fontSize: isMobile ? '24px' : '36px',
+              fontWeight: 300,
+              color: '#ffffff',
+              marginBottom: 4,
               letterSpacing: '-0.01em',
               fontFamily: "'Playfair Display', serif"
             }}>
               <Counter value={s.value} />+
             </div>
-            <div style={{ 
-              fontSize: '9px', 
-              fontWeight: 800, 
-              color: 'rgba(255,255,255,0.4)', 
-              textTransform: 'uppercase', 
-              letterSpacing: '0.25em' 
+            <div style={{
+              fontSize: '9px',
+              fontWeight: 800,
+              color: 'rgba(255,255,255,0.4)',
+              textTransform: 'uppercase',
+              letterSpacing: '0.25em'
             }}>
               {s.label}
             </div>
@@ -122,13 +122,13 @@ function Statistics({ isMobile }) {
 // Asymmetric Editorial Collage (Homepage Feature)
 function CinematicPillars({ isMobile }) {
   return (
-    <section style={{ 
-      padding: isMobile ? '80px 24px' : '160px 80px', 
+    <section style={{
+      padding: isMobile ? '80px 24px' : '160px 80px',
       backgroundColor: 'var(--bg-primary)',
       overflow: 'hidden'
     }}>
       <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-        
+
         {/* Asymmetric Magazine Spread Layout */}
         <div style={{
           display: 'grid',
@@ -136,7 +136,7 @@ function CinematicPillars({ isMobile }) {
           gap: isMobile ? '48px' : '64px',
           alignItems: 'center'
         }}>
-          
+
           {/* Column 1: Tall Vertical Image Block */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -155,10 +155,10 @@ function CinematicPillars({ isMobile }) {
               border: '1px solid var(--border-color)',
               boxShadow: 'var(--shadow-sm)'
             }}>
-              <img 
-                src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=800&fit=crop" 
-                alt="Chauffeur Luxury Sedan" 
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              <img
+                src="/img/hero-chauffeur-standing1.jpg"
+                alt="Chauffeur Luxury Sedan"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '80% center' }}
               />
             </div>
             <div style={{ marginTop: '16px' }}>
@@ -169,22 +169,22 @@ function CinematicPillars({ isMobile }) {
 
           {/* Column 2: Editorial Center Spacing & Text Narrative */}
           <div style={{ textAlign: isMobile ? 'left' : 'center', padding: isMobile ? 0 : '0 20px' }}>
-            <span style={{ 
-              fontSize: '10px', 
-              fontWeight: 900, 
-              color: 'var(--brand-fleet)', 
-              textTransform: 'uppercase', 
+            <span style={{
+              fontSize: '10px',
+              fontWeight: 900,
+              color: 'var(--brand-fleet)',
+              textTransform: 'uppercase',
               letterSpacing: '0.3em',
               display: 'block',
               marginBottom: '16px'
             }}>
               The Pace Philosophy
             </span>
-            <h2 style={{ 
-              fontFamily: "'Playfair Display', serif", 
-              fontSize: isMobile ? '32px' : '48px', 
-              fontWeight: 900, 
-              color: 'var(--text-primary)', 
+            <h2 style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: isMobile ? '32px' : '48px',
+              fontWeight: 900,
+              color: 'var(--text-primary)',
               margin: '0 0 24px',
               lineHeight: 1.15
             }}>
@@ -219,9 +219,9 @@ function CinematicPillars({ isMobile }) {
               border: '1px solid var(--border-color)',
               boxShadow: 'var(--shadow-sm)'
             }}>
-              <img 
-                src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=800&fit=crop" 
-                alt="Elite Residence Master Suite" 
+              <img
+                src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=800&fit=crop"
+                alt="Elite Residence Master Suite"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
@@ -240,21 +240,21 @@ function CinematicPillars({ isMobile }) {
 // Guestbook Testimonials Cards Grid
 function Testimonials({ testimonials, isMobile }) {
   const [expanded, setExpanded] = React.useState(false);
-  
+
   if (!testimonials || testimonials.length === 0) return null;
 
   const visibleTestimonials = expanded ? testimonials : testimonials.slice(0, 3);
   const hasMore = testimonials.length > 3;
 
   return (
-    <section style={{ 
-      padding: isMobile ? '80px 24px' : '140px 80px', 
+    <section style={{
+      padding: isMobile ? '80px 24px' : '140px 80px',
       background: 'var(--bg-secondary)',
       borderTop: '1px solid var(--border-color)',
       borderBottom: '1px solid var(--border-color)'
     }}>
       <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-        
+
         <div style={{ textAlign: 'center', marginBottom: isMobile ? '48px' : '80px' }}>
           <span style={{ fontSize: '10px', fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '0.3em', display: 'block', marginBottom: '12px' }}>
             VIP GUESTBOOK
@@ -264,10 +264,10 @@ function Testimonials({ testimonials, isMobile }) {
           </h2>
         </div>
 
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(320px, 1fr))', 
-          gap: '32px' 
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '32px'
         }}>
           {visibleTestimonials.map((testimonial, idx) => (
             <motion.div
@@ -290,7 +290,7 @@ function Testimonials({ testimonials, isMobile }) {
               <span style={{ fontSize: '64px', fontFamily: "'Playfair Display', serif", color: 'var(--border-color)', height: '24px', lineHeight: 0, display: 'block', marginBottom: '24px', opacity: 0.6 }}>
                 “
               </span>
-              
+
               <blockquote style={{
                 fontFamily: "'Playfair Display', serif",
                 fontSize: '16px',
@@ -303,10 +303,10 @@ function Testimonials({ testimonials, isMobile }) {
               }}>
                 {testimonial.quote}
               </blockquote>
-              
+
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginTop: 'auto', borderTop: '1px solid var(--border-color)', paddingTop: '24px' }}>
-                <img 
-                  src={testimonial.avatar || "https://images.unsplash.com/photo-1542362567-b054cd1321c1?q=80&w=150&fit=crop"} 
+                <img
+                  src={testimonial.avatar || "https://images.unsplash.com/photo-1542362567-b054cd1321c1?q=80&w=150&fit=crop"}
                   alt={testimonial.name}
                   style={{ width: '48px', height: '48px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }}
                 />
@@ -371,13 +371,13 @@ export default function Home() {
     window.addEventListener('resize', handleResize)
 
     let mounted = true
-    ;(async () => {
-      const t = await getTestimonials()
-      if (!mounted) return
-      setTestimonials(t)
-    })()
-    
-    return () => { 
+      ; (async () => {
+        const t = await getTestimonials()
+        if (!mounted) return
+        setTestimonials(t)
+      })()
+
+    return () => {
       mounted = false
       window.removeEventListener('resize', handleResize)
     }
@@ -392,20 +392,20 @@ export default function Home() {
 
       {/* 1. Cinematic Slideshow Hero */}
       <Hero />
-      
+
       {/* 2. Text-only Infinite Partners Ribbon */}
       <PartnerMarquee />
-      
+
       {/* 3. Sovereign Dashboard Statistics */}
       <Statistics isMobile={isMobile} />
-      
+
       {/* 4. Cinematic Asymmetric Narrative Pillars */}
       <CinematicPillars isMobile={isMobile} />
-      
+
       {/* 5. Elite Fleet Spotlight */}
       <section style={{ padding: isMobile ? '80px 24px' : '140px 80px', background: 'var(--bg-primary)' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          
+
           <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginBottom: '64px' }}>
             <div style={{ width: '4px', height: '48px', background: 'var(--brand-fleet)' }} />
             <div>
@@ -424,11 +424,11 @@ export default function Home() {
 
       {/* 6. VIP Guestbook Split Spread */}
       <Testimonials testimonials={testimonials} isMobile={isMobile} />
-      
+
       {/* 7. Exquisite Residences Spotlight */}
       <section style={{ padding: isMobile ? '80px 24px' : '140px 80px', background: 'var(--bg-primary)' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          
+
           <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginBottom: '64px' }}>
             <div style={{ width: '4px', height: '48px', background: 'var(--brand-fleet)' }} />
             <div>
