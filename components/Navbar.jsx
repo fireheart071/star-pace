@@ -58,10 +58,10 @@ export default function Navbar() {
           top: isMobile ? (scrolled ? '12px' : '16px') : (scrolled ? '16px' : '28px'),
           left: '50%',
           transform: 'translateX(-50%)',
-          background: isTransparent ? 'rgba(0, 0, 0, 0.25)' : 'rgba(249, 246, 240, 0.85)',
+          background: isTransparent ? 'rgba(0, 0, 0, 0.25)' : '#214DA2',
           borderColor: isTransparent ? 'rgba(255, 255, 255, 0.15)' : 'var(--glass-border)',
           boxShadow: isTransparent ? 'none' : '0 20px 40px rgba(0, 0, 0, 0.02)',
-          color: isTransparent ? '#ffffff' : 'var(--text-primary)',
+          color: '#ffffff',
           transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
           zIndex: 1000
         }}
