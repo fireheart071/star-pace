@@ -123,7 +123,7 @@ export default function MissionPage() {
               border: '1px solid var(--border-color)'
             }}>
               <img 
-                src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=800" 
+                src="/img/mission-prado-driveway.jpeg" 
                 alt="Luxury Mercedes Fleet" 
                 style={{ display: 'block', width: '100%', height: 'auto', objectFit: 'cover' }} 
               />
