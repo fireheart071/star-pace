@@ -5,7 +5,7 @@ import { Search, ChevronRight, ChevronLeft, Calendar, MapPin, X } from 'lucide-r
 
 const SLIDES = [
   {
-    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=1920&fit=crop',
+    image: '/img/hero-fleet-lineup.jpg',
     title: 'Precision Mobility.',
     subtitle: 'The Ultimate Chauffeur Fleet of Mercedes & Executive SUVs',
     tag: 'Elite Fleet'
@@ -17,10 +17,11 @@ const SLIDES = [
     tag: 'Exclusive Stays'
   },
   {
-    image: 'https://images.unsplash.com/photo-1606148633266-06432b8966ba?q=80&w=1920&fit=crop',
+    image: '/img/hero-chauffeur-standing1.jpg',
     title: 'Refined Authority.',
     subtitle: 'Autobiography Range Rovers & Armored Sedans',
-    tag: 'Professional Chauffeurs'
+    tag: 'Professional Chauffeurs',
+    position: '80% center'
   },
   {
     image: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1920&fit=crop',
@@ -35,7 +36,7 @@ export default function Hero() {
   const [isMobile, setIsMobile] = useState(false)
   const [drawerOpen, setDrawerOpen] = useState(false)
   const router = useRouter()
-  
+
   // Drawer States
   const [searchType, setSearchType] = useState('fleet')
   const [location, setLocation] = useState('')
@@ -87,7 +88,7 @@ export default function Hero() {
               inset: 0,
               backgroundImage: `url('${SLIDES[currentSlide].image}')`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundPosition: SLIDES[currentSlide].position || 'center',
               backgroundRepeat: 'no-repeat'
             }}
           />
@@ -116,7 +117,7 @@ export default function Hero() {
         textAlign: 'center',
         justifyContent: 'center'
       }}>
-        
+
         {/* Gold Active Slide Indicator */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -161,7 +162,7 @@ export default function Hero() {
           >
             {SLIDES[currentSlide].title}
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -295,7 +296,7 @@ export default function Hero() {
           <span style={{ fontSize: '9px', fontWeight: 800, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.3em', textTransform: 'uppercase' }}>
             SCROLL DOWN
           </span>
-          <motion.div 
+          <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
             style={{ width: '1px', height: '40px', background: 'var(--accent-gold)' }}
@@ -426,7 +427,7 @@ export default function Hero() {
 
               {/* Form Fields */}
               <div style={{ display: 'grid', gap: '28px', flex: 1 }}>
-                
+
                 {/* Field 1: Destination City */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   <label style={{ fontSize: '10px', fontWeight: 800, color: 'rgba(255, 255, 255, 0.4)', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
