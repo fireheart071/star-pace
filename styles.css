@@ -13,6 +13,7 @@
 *::-webkit-scrollbar {
   display: none;
 }
+
 * {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -20,43 +21,57 @@
 
 :root {
   /* Star Pace Signature Color Palette */
-  --bg-primary: transparent;  /* Transparent background to allow Starfield to show */
-  --bg-secondary: #0C1220;     /* Secondary Nebula Dark Blue */
-  --bg-inverse: #F9F6F0;       /* Pearl White contrast */
-  
-  --text-primary: #F8FAFC;     /* Starlight Silver-White */
-  --text-secondary: #94A3B8;   /* Dusty Stellar Grey */
-  --text-muted: #64748B;       /* Cosmic Slate */
-  --text-inverse: #060A13;     /* Deep Space Void */
-  
-  --brand-fleet: #38BDF8;      /* Vibrant Pleiades Cyan/Blue */
-  --brand-stays: #38BDF8; 
+  --bg-primary: transparent;
+  /* Transparent background to allow Starfield to show */
+  --bg-secondary: #0C1220;
+  /* Secondary Nebula Dark Blue */
+  --bg-inverse: #F9F6F0;
+  /* Pearl White contrast */
+
+  --text-primary: #F8FAFC;
+  /* Starlight Silver-White */
+  --text-secondary: #94A3B8;
+  /* Dusty Stellar Grey */
+  --text-muted: #64748B;
+  /* Cosmic Slate */
+  --text-inverse: #060A13;
+  /* Deep Space Void */
+
+  --brand-fleet: #38BDF8;
+  /* Vibrant Pleiades Cyan/Blue */
+  --brand-stays: #38BDF8;
   --accent: #38BDF8;
   --accent-hover: #0EA5E9;
-  
-  --accent-gold: #00E5FF;      /* Shimmering Electric Star Blue */
+
+  --accent-gold: #00E5FF;
+  /* Shimmering Electric Star Blue */
   --accent-gold-hover: #00B5CC;
-  
-  --border-color: rgba(56, 189, 248, 0.15); /* Ice Blue Divider */
+
+  --border-color: rgba(56, 189, 248, 0.15);
+  /* Ice Blue Divider */
   --border-light: rgba(56, 189, 248, 0.08);
-  
+
   --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 30px 70px rgba(0, 0, 0, 0.7);
   --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.25);
-  
+
   --glass-bg: rgba(6, 10, 19, 0.75);
   --glass-border: rgba(56, 189, 248, 0.18);
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #060A13;   /* Deep Cosmic Space solid background */
+  background-color: #060A13;
+  /* Deep Cosmic Space solid background */
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
   color: var(--text-primary);
@@ -146,7 +161,8 @@ p {
   font-family: 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #11223F;              /* High-contrast deep navy on light navbar */
+  color: #ffffff;
+  /* High-contrast deep navy on light navbar */
   text-transform: uppercase;
   letter-spacing: 0.2em;
   transition: all 0.4s ease;
@@ -169,15 +185,17 @@ p {
   width: 100%;
 }
 
-.nav .links a.active, 
+.nav .links a.active,
 .nav .links a:hover {
-  color: #0284c7;              /* Darker blue for contrast on light background */
+  color: #0284c7;
+  /* Darker blue for contrast on light background */
 }
 
 /* Elegant Text CTA instead of generic bulky pill */
 .nav .links a.cta {
   background: transparent;
-  color: #11223F !important;   /* High-contrast deep navy to match other navbar links */
+  color: #ffffff !important;
+  /* High-contrast deep navy to match other navbar links */
   font-family: 'Inter', sans-serif;
   font-weight: 800;
   font-size: 11px;
@@ -185,9 +203,11 @@ p {
   border-left: 1px solid var(--border-color);
   padding: 4px 0 4px 20px;
 }
+
 .nav .links a.cta::after {
   display: none;
 }
+
 .nav .links a.cta:hover {
   color: var(--accent-gold) !important;
 }
@@ -213,7 +233,8 @@ p {
 ========================================= */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2-Column Majestic Editorial Grid */
+  grid-template-columns: repeat(2, 1fr);
+  /* 2-Column Majestic Editorial Grid */
   gap: 64px 48px;
 }
 
@@ -239,7 +260,8 @@ p {
 /* The visual panel itself */
 .product-card-img-wrap {
   width: 100%;
-  height: 420px; /* Reduced from 480px for better layout balance */
+  height: 420px;
+  /* Reduced from 480px for better layout balance */
   background: var(--bg-secondary);
   overflow: hidden;
   border-radius: 20px;
@@ -279,6 +301,7 @@ p {
   .product-card-content {
     padding: 12px 0 0 0 !important;
   }
+
   .quick-view-badge {
     display: none !important;
   }
@@ -286,7 +309,8 @@ p {
 
 .product-card h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 22px; /* Adjusted to match custom editorial typography */
+  font-size: 22px;
+  /* Adjusted to match custom editorial typography */
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 8px;
@@ -302,7 +326,8 @@ p {
 
 .product-price {
   font-family: 'Inter', sans-serif;
-  font-size: 11px; /* Adjusted to match custom editorial typography */
+  font-size: 11px;
+  /* Adjusted to match custom editorial typography */
   font-weight: 800;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -315,6 +340,7 @@ p {
     font-size: 9px !important;
     margin-bottom: 6px !important;
   }
+
   .product-card .btn-outline {
     font-size: 8px !important;
   }
@@ -473,9 +499,11 @@ p {
     top: 12px;
     padding: 14px 24px;
   }
+
   .site-footer {
     padding: 100px 40px 40px;
   }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 48px;
@@ -486,12 +514,15 @@ p {
   .asymmetric-section {
     padding: 100px 24px;
   }
+
   .product-card-img-wrap {
     height: 320px;
   }
+
   .site-footer {
     padding: 80px 24px 40px;
   }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 40px;
