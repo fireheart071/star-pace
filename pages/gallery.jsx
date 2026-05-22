@@ -200,9 +200,6 @@ export default function GalleryPage() {
                             {item.category || 'General'}
                           </span>
                         </div>
-                        <h3 style={{ fontFamily: "'Playfair Display', serif", color: '#ffffff', fontSize: '20px', fontWeight: 900, margin: 0, lineHeight: 1.25 }}>
-                          {item.caption}
-                        </h3>
                       </div>
 
                       {/* Expand Button */}
@@ -324,9 +321,11 @@ export default function GalleryPage() {
                 }}>
                   {selected.category || 'General'}
                 </span>
-                <h2 style={{ fontFamily: "'Playfair Display', serif", color: '#ffffff', fontSize: '24px', fontWeight: 900, marginTop: '12px', margin: 0 }}>
-                  {selected.caption}
-                </h2>
+                {selected.caption && !selected.caption.includes('WhatsApp Image') && !selected.caption.match(/\.(jpe?g|png|webp|gif)$/i) && (
+                  <h2 style={{ fontFamily: "'Playfair Display', serif", color: '#ffffff', fontSize: '24px', fontWeight: 900, marginTop: '12px', margin: 0 }}>
+                    {selected.caption}
+                  </h2>
+                )}
               </div>
             </motion.div>
           </motion.div>
