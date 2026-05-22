@@ -29,17 +29,17 @@ export default function AboutPage() {
     const handleResize = () => setIsMobile(window.innerWidth <= 768)
     window.addEventListener('resize', handleResize)
 
-    ;(async () => {
-      const data = await getTeam()
-      setTeamItems(Array.isArray(data) ? data : [])
-    })()
+      ; (async () => {
+        const data = await getTeam()
+        setTeamItems(Array.isArray(data) ? data : [])
+      })()
 
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
   return (
     <div style={{ background: 'var(--bg-primary)', color: 'var(--text-primary)', overflowX: 'hidden' }}>
-      
+
       {/* 1. Cinematic Founder Hero Section */}
       <section style={{
         position: 'relative',
@@ -51,15 +51,15 @@ export default function AboutPage() {
         overflow: 'hidden'
       }}>
         <img
-          src="/araba_pace_founder_portrait_1778704289401.png"
-          alt="Araba Pace"
+          src="/img/about-hero-prado.jpeg"
+          alt="Star Pace Luxury SUV"
           style={{
             position: 'absolute',
             inset: 0,
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            objectPosition: 'center 15%',
+            objectPosition: 'center',
             zIndex: 0
           }}
         />
@@ -113,7 +113,7 @@ export default function AboutPage() {
               lineHeight: 1.6,
               margin: 0
             }}>
-              Founded by Araba Pace, Star Pace merges high-performance mobility with five-star luxury stays. We are your premium host in West Africa.
+              Star Pace merges high-performance mobility with five-star luxury stays. We are your premium host in West Africa.
             </p>
           </motion.div>
         </div>
@@ -123,7 +123,7 @@ export default function AboutPage() {
       <section style={{ padding: isMobile ? '80px 24px' : '140px 80px', background: 'transparent' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1.1fr 0.9fr', gap: isMobile ? '48px' : '100px', alignItems: 'center' }}>
-            
+
             {/* Left: Poetic Brand Motto & Image */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -152,7 +152,7 @@ export default function AboutPage() {
                 We Don't Rent Assets. <br />
                 <span style={{ color: 'var(--brand-fleet)' }}>We Host Journeys.</span>
               </h2>
-              
+
               <div style={{
                 borderLeft: '3px solid var(--brand-fleet)',
                 paddingLeft: '24px',
@@ -169,7 +169,7 @@ export default function AboutPage() {
                   "Luxury is in the details—the silent engine, the perfect room temperature, and the warm, knowing smile."
                 </blockquote>
               </div>
-              
+
               <p style={{ fontSize: '15px', color: 'var(--text-secondary)', lineHeight: 1.7, margin: 0 }}>
                 From our corporate fleets catering to multinational oil companies, to elite beachfront properties curated for attachés and travelers, we guarantee absolute discretion, security, and effortless execution.
               </p>
@@ -184,8 +184,8 @@ export default function AboutPage() {
               style={{ position: 'relative', borderRadius: '32px', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', height: isMobile ? '300px' : '520px' }}
             >
               <img
-                src="/star_pace_luxury_fleet_estate_1778704315807.png"
-                alt="Luxury Fleet"
+                src="/img/about-mission-fleet.jpeg"
+                alt="Star Pace SUV Fleet Lineup"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </motion.div>
@@ -198,7 +198,7 @@ export default function AboutPage() {
       {teamItems.length > 0 && (
         <section style={{ padding: isMobile ? '80px 24px' : '140px 80px', background: 'transparent' }}>
           <div style={{ maxWidth: 1440, margin: '0 auto' }}>
-            
+
             <div style={{ marginBottom: '60px' }}>
               <span style={{
                 fontSize: '11px',
@@ -260,7 +260,7 @@ export default function AboutPage() {
                   <div style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '12px' }}>
                     {person.role}
                   </div>
-                  
+
                   <div style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -381,7 +381,7 @@ export default function AboutPage() {
       {/* 6. Professional Advantages Cards (BROCHURE style) */}
       <section style={{ padding: isMobile ? '80px 24px' : '140px 80px', background: 'rgba(12, 18, 32, 0.65)', borderTop: '1px solid var(--border-color)', borderBottom: '1px solid var(--border-color)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto' }}>
-          
+
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
             <span style={{
               fontSize: '11px',
@@ -478,7 +478,7 @@ export default function AboutPage() {
       {/* 7. Vetted Hospitality Services Dashboard */}
       <section style={{ padding: isMobile ? '80px 24px' : '140px 80px', background: 'transparent' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto' }}>
-          
+
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexDirection: isMobile ? 'column' : 'row', gap: '20px', marginBottom: '60px' }}>
             <div>
               <span style={{
