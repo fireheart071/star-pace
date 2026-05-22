@@ -92,7 +92,7 @@ export default function Navbar() {
         {/* Main Luxury Brand Link */}
         <Link href="/" onClick={() => setOpen(false)} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
           <img
-            src={isTransparent ? "/STARPACE_white.png" : "/STARPACE_dark.png"}
+            src="/img/logodamn.jpg"
             alt="Star Pace Logo"
             style={{
               height: isMobile ? '32px' : '44px',
@@ -180,7 +180,7 @@ export default function Navbar() {
             }}>
               <Link href="/" onClick={() => setOpen(false)} style={{ textDecoration: 'none' }}>
                 <img
-                  src="/STARPACE_white.png"
+                  src="/img/logodamn.jpg"
                   alt="Star Pace Logo"
                   style={{ height: '36px', objectFit: 'contain' }}
                 />
