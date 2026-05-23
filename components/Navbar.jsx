@@ -58,9 +58,9 @@ export default function Navbar() {
           top: isMobile ? (scrolled ? '12px' : '16px') : (scrolled ? '16px' : '28px'),
           left: '50%',
           transform: 'translateX(-50%)',
-          background: isTransparent ? 'rgba(0, 0, 0, 0.25)' : '#214DA2',
-          borderColor: isTransparent ? 'rgba(255, 255, 255, 0.15)' : 'var(--glass-border)',
-          boxShadow: isTransparent ? 'none' : '0 20px 40px rgba(0, 0, 0, 0.02)',
+          background: 'rgba(10, 10, 10, 0.85)',
+          borderColor: 'rgba(255, 255, 255, 0.2)',
+          boxShadow: '0 20px 40px rgba(0, 0, 0, 0.1)',
           color: '#ffffff',
           transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
           zIndex: 1000
@@ -92,10 +92,10 @@ export default function Navbar() {
         {/* Main Luxury Brand Link */}
         <Link href="/" onClick={() => setOpen(false)} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
           <img
-            src="/img/logodamn.jpg"
+            src="/img/logodamn.png"
             alt="Star Pace Logo"
             style={{
-              height: isMobile ? '32px' : '44px',
+              height: isMobile ? '36px' : '48px',
               objectFit: 'contain',
               transition: 'all 0.4s ease'
             }}
@@ -136,7 +136,7 @@ export default function Navbar() {
                 background: 'none',
                 border: 'none',
                 cursor: 'pointer',
-                color: isTransparent ? '#ffffff' : '#11223F', /* High-contrast navy when navbar is white */
+                color: '#ffffff',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
@@ -180,7 +180,7 @@ export default function Navbar() {
             }}>
               <Link href="/" onClick={() => setOpen(false)} style={{ textDecoration: 'none' }}>
                 <img
-                  src="/img/logodamn.jpg"
+                  src="/img/logodamn.png"
                   alt="Star Pace Logo"
                   style={{ height: '36px', objectFit: 'contain' }}
                 />
@@ -222,7 +222,7 @@ export default function Navbar() {
                         textDecoration: 'none',
                         display: 'flex',
                         alignItems: 'flex-start',
-                        gap: '16px'
+                        height: '40px',
                       }}
                     >
                       <span style={{
