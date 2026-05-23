@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-grid">
         <div className="footer-brand">
-          <img src="/img/logodamn.jpg" alt="Star Pace Logo" style={{ height: 48, objectFit: 'contain', marginBottom: 16 }} />
+          <img src="/img/logodamn.png" alt="Star Pace Logo" style={{ height: 48, objectFit: 'contain', marginBottom: 16 }} />
           <p>
             The premium standard for luxury vehicle rentals and elite residences across Ghana.
             Experience unrivaled comfort, safety, and exclusivity.
