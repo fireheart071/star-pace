@@ -161,7 +161,7 @@ p {
   font-family: 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #ffffff;
+  color: #11223F;
   /* High-contrast deep navy on light navbar */
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -194,7 +194,7 @@ p {
 /* Elegant Text CTA instead of generic bulky pill */
 .nav .links a.cta {
   background: transparent;
-  color: #ffffff !important;
+  color: #11223F !important;
   /* High-contrast deep navy to match other navbar links */
   font-family: 'Inter', sans-serif;
   font-weight: 800;
