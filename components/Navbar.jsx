@@ -49,7 +49,7 @@ export default function Navbar() {
   return (
     <>
       <motion.header
-        className={`nav ${scrolled ? 'scrolled' : ''} ${isTransparent ? 'transparent-nav-override' : ''}`}
+        className={`nav ${scrolled ? 'scrolled' : ''} transparent-nav-override`}
         initial={{ y: -60, x: '-50%', opacity: 0 }}
         animate={{ y: 0, x: '-50%', opacity: 1 }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
@@ -222,19 +222,10 @@ export default function Navbar() {
                         textDecoration: 'none',
                         display: 'flex',
                         alignItems: 'flex-start',
+                        justifyContent: 'center',
                         height: '40px',
                       }}
                     >
-                      <span style={{
-                        fontSize: '11px',
-                        fontWeight: 900,
-                        color: isActive ? 'var(--brand-fleet)' : 'var(--text-muted)',
-                        fontFamily: 'monospace',
-                        marginTop: '4px',
-                        letterSpacing: '0.05em'
-                      }}>
-                        {item.num}
-                      </span>
                       <div style={{ display: 'flex', flexDirection: 'column' }}>
                         <span style={{
                           fontSize: '28px',
@@ -242,7 +233,9 @@ export default function Navbar() {
                           color: isActive ? 'var(--brand-fleet)' : '#ffffff',
                           letterSpacing: '0.03em',
                           fontFamily: "'Playfair Display', serif",
-                          transition: 'color 0.3s'
+                          transition: 'color 0.3s',
+                          display: 'flex',
+                          justifyContent: 'center'
                         }}>
                           {item.name}
                         </span>
@@ -297,6 +290,8 @@ export default function Navbar() {
                 paddingTop: '24px',
                 display: 'flex',
                 flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
                 gap: '8px'
               }}>
                 <span style={{
