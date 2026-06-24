@@ -492,25 +492,27 @@ export default function RentalPage() {
                     </div>
                   </div>
 
-                  <div style={{ padding: '20px', background: 'rgba(12, 18, 32, 0.4)', borderRadius: 16, border: '1px solid var(--glass-border)', display: 'grid', gap: 24 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                      <div>
-                        <div style={{ fontSize: 13, fontWeight: 800, color: '#ffffff' }}>
-                          {model.isResidence ? 'Add Personal Chef' : 'Add Chauffeur'}
+                  {(!model.isResidence ? model.chauffeurEnabled !== false : true) && (
+                    <div style={{ padding: '20px', background: 'rgba(12, 18, 32, 0.4)', borderRadius: 16, border: '1px solid var(--glass-border)', display: 'grid', gap: 24 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                        <div>
+                          <div style={{ fontSize: 13, fontWeight: 800, color: '#ffffff' }}>
+                            {model.isResidence ? 'Add Personal Chef' : 'Add Chauffeur'}
+                          </div>
+                          <div style={{ fontSize: 11, color: 'var(--text-secondary)', marginTop: '2px' }}>
+                            {model.isResidence ? '+GHS 250/day · Bespoke culinary dining' : '+GHS 250/day · Professional driver'}
+                          </div>
                         </div>
-                        <div style={{ fontSize: 11, color: 'var(--text-secondary)', marginTop: '2px' }}>
-                          {model.isResidence ? '+GHS 250/day · Bespoke culinary dining' : '+GHS 250/day · Professional driver'}
-                        </div>
+                        <input 
+                          type="checkbox" 
+                          name="addChauffeur" 
+                          checked={form.addChauffeur} 
+                          onChange={update}
+                          style={{ width: 20, height: 20, accentColor: 'var(--brand-fleet)', cursor: 'pointer' }}
+                        />
                       </div>
-                      <input 
-                        type="checkbox" 
-                        name="addChauffeur" 
-                        checked={form.addChauffeur} 
-                        onChange={update}
-                        style={{ width: 20, height: 20, accentColor: 'var(--brand-fleet)', cursor: 'pointer' }}
-                      />
                     </div>
-                  </div>
+                  )}
 
                   {!model.isResidence && (
                     <div className="input-group">

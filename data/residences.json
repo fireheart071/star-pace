@@ -1,0 +1,115 @@
+[
+  {
+    "id": "skyline-penthouse",
+    "name": "The Skyline Penthouse",
+    "category": "Luxury Residences",
+    "price": "4500",
+    "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=1200",
+    "gallery": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=1200",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "desc": "Panoramic city views with world-class amenities in the city center.",
+    "features": [
+      "3 Master Bedrooms",
+      "Private Rooftop Pool",
+      "Personal Chef Available",
+      "High-Speed Starlink Wifi",
+      "Smart Home Integration",
+      "24/7 Security & Valet"
+    ],
+    "status": "active",
+    "specs": {
+      "battery": "3 Bedrooms",
+      "drive": "4 Baths",
+      "seats": "6 Guests",
+      "transmission": "Penthouse",
+      "fuelType": "Wifi Included"
+    }
+  },
+  {
+    "id": "coastal-villa",
+    "name": "Coastal Breeze Villa",
+    "category": "Coastal Villas",
+    "price": "3800",
+    "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&q=80&w=1200",
+    "gallery": [
+      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&q=80&w=1200",
+      "https://images.unsplash.com/photo-1475855581690-80accde3ae2b?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "desc": "A serene, luxurious beachfront escape by the ocean.",
+    "features": [
+      "4 Bedrooms",
+      "Direct Beach Access",
+      "Outdoor Infinity Pool",
+      "Garden & BBQ Area",
+      "Daily Housekeeping",
+      "Private Gate & Parking"
+    ],
+    "status": "active",
+    "specs": {
+      "battery": "4 Bedrooms",
+      "drive": "5 Baths",
+      "seats": "8 Guests",
+      "transmission": "Beachfront",
+      "fuelType": "Breakfast Included"
+    }
+  },
+  {
+    "id": "royal-palm-suite",
+    "name": "The Royal Palm Suite",
+    "category": "Elite Suites",
+    "price": "2800",
+    "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1200",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1200",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4db85b?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "desc": "An exclusive elite suite designed for ultimate relaxation and executive business privacy.",
+    "features": [
+      "2 Bedrooms",
+      "Private Lounge Access",
+      "High-speed Starlink Wifi",
+      "Dedicated Concierge Support",
+      "Mini Bar Included",
+      "24/7 Power Backup"
+    ],
+    "status": "active",
+    "specs": {
+      "battery": "2 Bedrooms",
+      "drive": "2.5 Baths",
+      "seats": "4 Guests",
+      "transmission": "Suite",
+      "fuelType": "Wifi Included"
+    }
+  },
+  {
+    "id": "mahogany-villa",
+    "name": "Mahogany Premium Residence",
+    "category": "Premium Residences",
+    "price": "3200",
+    "image": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=1200",
+    "gallery": [
+      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=1200",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "desc": "Modern premium living in the heart of East Legon, featuring custom timber details and a sleek design.",
+    "features": [
+      "3 Master Bedrooms",
+      "Fully Equipped Kitchen",
+      "Smart Home Automation",
+      "High-speed Internet",
+      "Swimming Pool Access",
+      "Executive Boardroom Access"
+    ],
+    "status": "active",
+    "specs": {
+      "battery": "3 Bedrooms",
+      "drive": "3 Baths",
+      "seats": "6 Guests",
+      "transmission": "Residence",
+      "fuelType": "All Inclusive"
+    }
+  }
+]

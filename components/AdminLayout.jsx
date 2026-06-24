@@ -44,7 +44,8 @@ export default function AdminLayout({ title, children }) {
     { href: '/admin/orders', label: 'Orders', icon: <ShoppingCart size={20} /> },
     { href: '/admin/vehicles', label: 'Vehicles', icon: <Box size={20} /> },
     { href: '/admin/residence', label: 'Elite Residences', icon: <Home size={20} /> },
-    { href: '/admin/testimonials', label: 'Reviews', icon: <MessageSquare size={20} /> },
+    { href: '/admin/testimonials', label: 'Testimonials', icon: <MessageSquare size={20} /> },
+    { href: '/admin/reviews', label: 'Client Reviews', icon: <MessageSquare size={20} /> },
     { href: '/admin/gallery', label: 'Gallery', icon: <ImageIcon size={20} /> },
     { href: '/admin/team', label: 'Leadership', icon: <Users size={20} /> },
     { href: '/admin/settings', label: 'Settings', icon: <Settings size={20} /> }
