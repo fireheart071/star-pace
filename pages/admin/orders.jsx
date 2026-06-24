@@ -71,6 +71,14 @@ export default function AdminOrders() {
     } catch (e) { return dateStr }
   }
 
+  // Calculate number of days between two dates
+  const diffDays = (start, end) => {
+    if (!start || !end) return '—';
+    const ms = new Date(end) - new Date(start);
+    const days = Math.round(ms / (1000 * 60 * 60 * 24));
+    return isNaN(days) ? '—' : days;
+  };
+
   const updateStatus = async (id, status) => {
     setUpdating(true)
     try {
@@ -148,7 +156,7 @@ export default function AdminOrders() {
           {/* List Header */}
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: '56px 2fr 1fr 1fr 120px', 
+            gridTemplateColumns: '56px 2fr 1fr 1fr 1fr 120px', 
             gap: 32, 
             padding: '16px 0', 
             borderBottom: '1px solid #E2E8F0',
@@ -161,6 +169,7 @@ export default function AdminOrders() {
             <span>Type</span>
             <span>Customer & Asset</span>
             <span>Schedule</span>
+            <span>Days</span>
             <span>Investment</span>
             <span style={{ textAlign: 'right' }}>Actions</span>
           </div>
@@ -169,7 +178,7 @@ export default function AdminOrders() {
             <div key={o.id} style={{ 
                padding: '28px 0',
                display: 'grid',
-               gridTemplateColumns: '56px 2fr 1fr 1fr 120px',
+               gridTemplateColumns: '56px 2fr 1fr 1fr 1fr 120px',
                gap: 32,
                alignItems: 'center',
                borderBottom: '1px solid #F8FAFC'
@@ -185,9 +194,12 @@ export default function AdminOrders() {
                   </div>
                </div>
 
-               <div style={{ fontSize: 13, fontWeight: 600, color: '#475569' }}>
-                  {formatDate(o.createdAt)}
-               </div>
+                <div>
+                   <div style={{ fontSize: 13, fontWeight: 600, color: '#475569' }}>{formatDate(o.start)}</div>
+                </div>
+                <div>
+                   <div style={{ fontSize: 13, fontWeight: 600, color: '#475569' }}>{diffDays(o.start, o.end)}</div>
+                </div>
 
                <div>
                   <div style={{ fontSize: 15, fontWeight: 700, color: '#24276F' }}>₵{o.price || o.rate}</div>

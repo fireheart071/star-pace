@@ -32,6 +32,7 @@ function empty() {
     rate: '',
     features: '',
     gallery: [],
+    chauffeurEnabled: true,
     specs: {
       battery: '',
       drive: '',
@@ -176,6 +177,7 @@ export default function AdminVehicles() {
       zeroToSixty: item.zeroToSixty || '',
       zeroToSixtyUnit: item.zeroToSixtyUnit || 's',
       rate: item.rate || '',
+      chauffeurEnabled: typeof item.chauffeurEnabled !== 'undefined' ? item.chauffeurEnabled : true,
       specs: {
         battery: item.specs?.battery || '',
         drive: item.specs?.drive || '',
@@ -308,7 +310,7 @@ export default function AdminVehicles() {
           {/* List Header */}
           <div className="admin-list-header" style={{ 
             display: 'grid', 
-            gridTemplateColumns: '80px 2fr 1fr 1fr 1fr 120px', 
+            gridTemplateColumns: '80px 2fr 1fr 1fr 1fr 1fr 120px', 
             gap: 24, 
             padding: '16px 0', 
             borderBottom: '1px solid #E2E8F0',
@@ -322,6 +324,7 @@ export default function AdminVehicles() {
             <span>Identity</span>
             <span>Category</span>
             <span>Status</span>
+            <span>Chauffeur</span>
             <span>Daily Rate</span>
             <span style={{ textAlign: 'right' }}>Actions</span>
           </div>
@@ -330,7 +333,7 @@ export default function AdminVehicles() {
             <div key={item.id} className="admin-list-row" style={{ 
                padding: '24px 0',
                display: 'grid',
-               gridTemplateColumns: '80px 2fr 1fr 1fr 1fr 120px',
+               gridTemplateColumns: '80px 2fr 1fr 1fr 1fr 1fr 120px',
                gap: 24,
                alignItems: 'center',
                borderBottom: '1px solid #F8FAFC'
@@ -363,6 +366,7 @@ export default function AdminVehicles() {
                     <div style={{ width: 8, height: 8, borderRadius: '50%', background: item.status === 'active' ? '#10B981' : '#CBD5E1' }} />
                     <span style={{ fontSize: 12, fontWeight: 700, color: item.status === 'active' ? '#0F172A' : '#64748B', textTransform: 'capitalize' }}>{item.status}</span>
                   </div>
+                  <div style={{ fontSize: 12, fontWeight: 600, color: item.chauffeurEnabled !== false ? '#059669' : '#D97706' }}>{item.chauffeurEnabled !== false ? 'Chauffeur On' : 'Chauffeur Off'}</div>
                </div>
 
                {/* Rate */}
@@ -403,10 +407,21 @@ export default function AdminVehicles() {
                 <option value="Economic Cars">Economic Tier</option>
               </select>
             </div>
+            <div className="field-group">
+              <label style={{ fontSize: 10, fontWeight: 800, color: '#64748B', display: 'block', marginBottom: 8, textTransform: 'uppercase', letterSpacing: 1.5 }}>Availability Status</label>
+              <select name="status" value={form.status} onChange={onChange} style={{ width: '100%', height: 44, borderRadius: 8, border: '1px solid #E2E8F0', padding: '0 12px', outline: 'none', background: '#fff', fontSize: 14, fontWeight: 500 }}>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+              </select>
+            </div>
           </div>
           <div className="field-group" style={{ marginTop: 32 }}>
             <label style={{ fontSize: 10, fontWeight: 800, color: '#64748B', display: 'block', marginBottom: 8, textTransform: 'uppercase', letterSpacing: 1.5 }}>Vehicle Description</label>
             <textarea name="desc" value={form.desc} onChange={onChange} style={{ width: '100%', height: 100, borderRadius: 8, border: '1px solid #E2E8F0', padding: '12px', outline: 'none', fontSize: 14, fontWeight: 500, fontFamily: 'inherit' }} />
+          </div>
+          <div className="field-group" style={{ marginTop: 24 }}>
+            <label style={{ fontSize: 10, fontWeight: 800, color: '#64748B', display: 'block', marginBottom: 8, textTransform: 'uppercase', letterSpacing: 1.5 }}>Chauffeur Available</label>
+            <input type="checkbox" name="chauffeurEnabled" checked={form.chauffeurEnabled} onChange={(e) => setForm(f => ({ ...f, chauffeurEnabled: e.target.checked }))} />
           </div>
 
           <div className="field-group" style={{ marginTop: 32 }}>
