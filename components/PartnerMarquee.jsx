@@ -1,59 +1,50 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const ELITE_PARTNERS = [
-  "TULLOW GHANA",
-  "NEWMOUNT MINING",
-  "DELTA AIRLINES",
-  "KEMPINSKI HOTELS",
-  "PECAN ENERGIES",
-  "DATABANK",
-  "QUANTUM TERMINALS",
-  "KOREA EXIM BANK",
-  "CLARON HEALTH",
-  "KULENDI @ LAW",
-  "SINOPEC CO.",
-  "DANISH EMBASSY"
+const ELITE_LOGOS = [
+  '/clidownload.jpg',
+  '/clidownload (1).jpg',
+  '/clidownload (1).png',
+  '/clidownload (2).png'
 ]
 
 export default function PartnerMarquee() {
-  const marqueeItems = [...ELITE_PARTNERS, ...ELITE_PARTNERS, ...ELITE_PARTNERS]
+  // Duplicate logos list to ensure smooth infinite loop
+  const marqueeItems = [...ELITE_LOGOS, ...ELITE_LOGOS, ...ELITE_LOGOS, ...ELITE_LOGOS]
 
   return (
     <section style={{ 
       background: 'var(--bg-secondary)', 
-      padding: '24px 0', 
+      padding: '32px 0', 
       borderBottom: '1px solid var(--border-color)',
       overflow: 'hidden',
       position: 'relative'
     }}>
       <div style={{ display: 'flex', width: 'fit-content' }}>
         <motion.div
-          animate={{ x: ["0%", "-33.33%"] }}
+          animate={{ x: ["0%", "-25%"] }}
           transition={{
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 40,
+              duration: 25,
               ease: "linear",
             },
           }}
-          style={{ display: 'flex', gap: 100, alignItems: 'center', whiteSpace: 'nowrap' }}
+          style={{ display: 'flex', gap: 80, alignItems: 'center', whiteSpace: 'nowrap' }}
         >
-          {marqueeItems.map((partner, i) => (
-            <span 
+          {marqueeItems.map((logo, i) => (
+            <img 
               key={i} 
+              src={logo}
+              alt="Elite Client Logo"
               style={{ 
-                fontFamily: "'Inter', sans-serif",
-                fontSize: '10px',
-                fontWeight: 900,
-                letterSpacing: '0.4em',
-                color: 'var(--text-muted)',
-                opacity: 0.6
+                height: '40px',
+                width: 'auto',
+                objectFit: 'contain',
+                transition: 'all 0.3s ease'
               }}
-            >
-              {partner}
-            </span>
+            />
           ))}
         </motion.div>
       </div>
