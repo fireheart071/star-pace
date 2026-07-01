@@ -4,6 +4,7 @@ const {
   sendAdminOrderEmail,
   sendCustomerOrderSms,
   sendCustomerOrderEmail,
+  scheduleCustomerFeedbackSms,
 } = require("../../../lib/api-utils/notifications");
 const { verifyAdmin } = require("../../../lib/api-middleware/auth");
 
@@ -22,6 +23,25 @@ async function handler(req, res) {
   if (req.method === "POST") {
     try {
       const orders = await storage.getOrders();
+
+      // Validate date overlap
+      const s1 = new Date(req.body.start)
+      const e1 = new Date(req.body.end)
+      if (isNaN(s1.getTime()) || isNaN(e1.getTime())) {
+        return res.status(400).json({ error: 'Invalid start or end date.' })
+      }
+      const hasConflict = (Array.isArray(orders) ? orders : [])
+        .filter(o => String(o.productId) === String(req.body.productId) && o.status !== 'Cancelled')
+        .some(o => {
+          const s2 = new Date(o.start)
+          const e2 = new Date(o.end)
+          return (s1 <= e2 && e1 >= s2)
+        })
+
+      if (hasConflict) {
+        return res.status(400).json({ error: 'The selected dates are already booked by another reservation.' })
+      }
+
       const id = Date.now().toString(36);
       const order = Object.assign(
         { id, createdAt: new Date().toISOString() },
@@ -38,6 +58,7 @@ async function handler(req, res) {
             sendAdminOrderEmail(order),
             sendCustomerOrderSms(order),
             sendCustomerOrderEmail(order),
+            scheduleCustomerFeedbackSms(order),
           ]);
         } catch (e) {
           console.error("Notification error", e);
