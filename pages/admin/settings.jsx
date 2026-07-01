@@ -12,6 +12,7 @@ export default function AdminSettings() {
         supportPhone: '',
         headquarters: '',
         featuredBrands: '',
+        bookingConditions: '',
         isGmailApiActive: false
     })
     const [loading, setLoading] = useState(true)
@@ -38,6 +39,7 @@ export default function AdminSettings() {
                     supportPhone: data.supportPhone || '',
                     headquarters: data.headquarters || '',
                     featuredBrands: data.featuredBrands || '',
+                    bookingConditions: data.bookingConditions || '',
                     isGmailApiActive: data.isGmailApiActive || false
                 })
             }
@@ -126,6 +128,28 @@ export default function AdminSettings() {
                         <div className="field-group">
                             <label style={{ fontSize: 10, fontWeight: 800, color: '#64748B', display: 'block', marginBottom: 8, textTransform: 'uppercase', letterSpacing: 1.5 }}>Featured Brand Partners</label>
                             <input type="text" value={settings.featuredBrands} onChange={e => setSettings({ ...settings, featuredBrands: e.target.value })} placeholder="Rolls Royce, Bentley, Mercedes-Benz" style={{ width: '100%', height: 44, borderRadius: 8, border: '1px solid #E2E8F0', padding: '0 12px', outline: 'none', background: 'transparent', fontSize: 14, fontWeight: 500 }} />
+                        </div>
+                    </div>
+
+                    {/* Section: Booking Conditions */}
+                    <div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 32 }}>
+                            <Info size={18} strokeWidth={2} style={{ color: '#64748B' }} />
+                            <h3 style={{ margin: 0, fontSize: 13, fontWeight: 800, color: '#24276F', textTransform: 'uppercase', letterSpacing: 1.5 }}>Booking Policy</h3>
+                        </div>
+
+                        <div className="field-group">
+                            <label style={{ fontSize: 10, fontWeight: 800, color: '#64748B', display: 'block', marginBottom: 8, textTransform: 'uppercase', letterSpacing: 1.5 }}>Special Booking Conditions</label>
+                            <span style={{ fontSize: 11, color: '#64748B', display: 'block', marginBottom: 12 }}>Enter each condition on a new line. These will be shown to users for confirmation before completing stays or charter reservations.</span>
+                            <textarea 
+                                value={settings.bookingConditions} 
+                                onChange={e => setSettings({ ...settings, bookingConditions: e.target.value })} 
+                                placeholder={`Provide a valid driver's license (self-drive) or ID/passport upon check-in/pickup.
+Fuel is not included in vehicle rates unless explicitly specified.
+Cancellations must be requested at least 48 hours in advance for a refund.
+Any damages incurred during the rental/stay period will be fully billed to the customer.`} 
+                                style={{ width: '100%', height: 160, borderRadius: 8, border: '1px solid #E2E8F0', padding: '12px', outline: 'none', background: 'transparent', fontSize: 14, fontWeight: 500, fontFamily: 'inherit', resize: 'vertical', lineHeight: 1.6 }} 
+                            />
                         </div>
                     </div>
 

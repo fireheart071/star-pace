@@ -14,7 +14,8 @@ export default async function handler(req, res) {
             adminSmsNumber: settings?.adminSmsNumber || '',
             supportPhone: settings?.supportPhone || '',
             headquarters: settings?.headquarters || '',
-            featuredBrands: settings?.featuredBrands || ''
+            featuredBrands: settings?.featuredBrands || '',
+            bookingConditions: settings?.bookingConditions || ''
         })
     } catch (e) {
         return res.status(500).json({ error: 'Failed to load settings' })
