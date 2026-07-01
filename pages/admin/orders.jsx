@@ -230,7 +230,8 @@ export default function AdminOrders() {
                 { label: 'Asset', value: viewItem.productName },
                 { label: 'Investment', value: `${viewItem.price || viewItem.rate} GHS` },
                 { label: 'Check-In', value: viewItem.start },
-                { label: 'Check-Out', value: viewItem.end }
+                { label: 'Check-Out', value: viewItem.end },
+                { label: 'Conditions Accepted', value: viewItem.conditionsAccepted ? 'Yes' : 'No' }
               ].map((spec, i) => (
                 <div key={i}>
                    <div style={{ fontSize: 10, fontWeight: 800, color: '#64748B', textTransform: 'uppercase', letterSpacing: 1.5, marginBottom: 8 }}>{spec.label}</div>
