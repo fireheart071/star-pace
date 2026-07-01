@@ -148,6 +148,35 @@ function CinematicPillars({ isMobile }) {
               marginTop: isMobile ? 0 : '0px'
             }}
           >
+            <div style={{ marginBottom: '24px', display: 'flex', justifyContent: 'center' }}>
+              <Link href="/vehicles" style={{ textDecoration: 'none' }}>
+                <button style={{
+                  padding: '12px 32px',
+                  borderRadius: '30px',
+                  border: '1px solid var(--accent-gold)',
+                  background: 'transparent',
+                  color: 'var(--accent-gold)',
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: '10px',
+                  fontWeight: 900,
+                  letterSpacing: '0.2em',
+                  cursor: 'pointer',
+                  textTransform: 'uppercase',
+                  transition: 'all 0.3s ease',
+                  boxShadow: 'var(--shadow-sm)'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.background = 'rgba(0, 229, 255, 0.08)'
+                  e.currentTarget.style.boxShadow = 'var(--shadow-glow)'
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.background = 'transparent'
+                  e.currentTarget.style.boxShadow = 'var(--shadow-sm)'
+                }}>
+                  Book Fleet
+                </button>
+              </Link>
+            </div>
             <div style={{
               borderRadius: '20px',
               overflow: 'hidden',
@@ -212,6 +241,35 @@ function CinematicPillars({ isMobile }) {
               marginTop: isMobile ? 0 : '0px'
             }}
           >
+            <div style={{ marginBottom: '24px', display: 'flex', justifyContent: 'center' }}>
+              <Link href="/residence" style={{ textDecoration: 'none' }}>
+                <button style={{
+                  padding: '12px 32px',
+                  borderRadius: '30px',
+                  border: '1px solid var(--accent-gold)',
+                  background: 'transparent',
+                  color: 'var(--accent-gold)',
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: '10px',
+                  fontWeight: 900,
+                  letterSpacing: '0.2em',
+                  cursor: 'pointer',
+                  textTransform: 'uppercase',
+                  transition: 'all 0.3s ease',
+                  boxShadow: 'var(--shadow-sm)'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.background = 'rgba(0, 229, 255, 0.08)'
+                  e.currentTarget.style.boxShadow = 'var(--shadow-glow)'
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.background = 'transparent'
+                  e.currentTarget.style.boxShadow = 'var(--shadow-sm)'
+                }}>
+                  Book Residences
+                </button>
+              </Link>
+            </div>
             <div style={{
               borderRadius: '20px',
               overflow: 'hidden',
